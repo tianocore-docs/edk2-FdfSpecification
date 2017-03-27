@@ -100,9 +100,9 @@ This document uses the typographic and illustrative conventions described below:
 **Note:** Due to management and file size considerations, only the first
 occurrence of the reference on each page is an active link. Subsequent
 references on the same page will not be actively linked to the definition and
-will use the standard, non-underlined **BOLD Monospace** _typeface. Find the
+will use the standard, non-underlined **BOLD Monospace** typeface. Find the
 first instance of the name (in the underlined **BOLD Monospace** typeface) on
-the page and click on the word to jump to the function or type definition._
+the page and click on the word to jump to the function or type definition.
 **********
 
 The following typographic conventions are used in this document to illustrate

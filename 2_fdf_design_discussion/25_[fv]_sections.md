@@ -77,7 +77,7 @@ The build system permits a recovery feature that allows placing two copies of a
 swapped to the top and work.
 
 The backup must be the same as the top _PEI.fv_ although it is placed into
-another place.  Therefore, the backup FV must be rebased to run at another
+another place. Therefore, the backup FV must be rebased to run at another
 address. The `FvBaseAddress` and the optional `FvForceRebase` attributes must be
 above `FvAlignment` attribute.
 
