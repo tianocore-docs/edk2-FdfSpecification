@@ -52,8 +52,18 @@ statement, if present, provides the information for VendorCode in an
                   <TS> "IMAGE_TYPE_ID" <Eq> <RegistryFormatGUID> <EOL>
                   [<TS> "IMAGE_INDEX" <Eq> <Hex2> <EOL>]
                   [<TS> "HARDWARE_INSTANCE" <Eq> <Hex2> <EOL>]
+                  [<TS> “MONOTONIC_COUNT”<Eq> <NumValUint64> <EOL>]
+                  [<TS> “CERTIFICATE_GUID”<Eq> <RegistryFormatGUID><EOL>]
 <FmpFileData> ::= <TS> "FILE" <Space> "DATA" <Eq> <Filename> <EOL>
 ```
+
+**********
+**Note:** The `CERTIFICATE_GUID` and `MONOTONIC_COUNT` must work as a pair.
+If `CERTIFICATE_GUID` is provided, the FMP payload is processed as UEFI FMP
+Authentication format, and `MONOTONIC_COUNT` **MUST** be provided. If
+`CERTIFICATE_GUID` is not provided, the FMP payload is processed as UEFI FMP
+non-Authentication format, and `MONOTONIC_COUNT` **MUST NOT** be provided.
+**********
 
 #### Example
 

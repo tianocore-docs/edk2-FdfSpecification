@@ -157,11 +157,13 @@ Conditional statements may be used anywhere within this section.
                         {<Filename>} {<SectionData>} <TS> <TS> "}" [<EOL>]
 <Options2>          ::= [<Use>] [<FileOpts>] <MTS>
                         "{" [<EOL>]
-                        {<Filename>} {<SectionData>} <TS> "}" [<EOL>]
+                        <TS> {<Filename>} {<FileList>+} {<SectionData> <EOL>}
+                        "}" <EOL>
+<FileList>          ::= <TS> [<FfsAlignment>] <NormalFile> <EOL>
 <FileOpts>          ::= ["FIXED" <MTS>] ["CHECKSUM" <MTS>]
                         [<FfsAlignment>]
 <FfsAlignment>      ::= "Align" <Eq> <FfsAlignmentValues> <MTS>
-<Filename>          ::= {<FvImage>} {<FdImage>} {<NormalFile>}
+<Filename>          ::= <TS> {<FvImage>} {<FdImage>} {<NormalFile>} <EOL>
 <FvImage>           ::= <TS> "FV" <Eq> <FvUiName> <EOL>
 <FdImage>           ::= <TS> "FD" <Eq> <FdUiName> <EOL>
 <FdUiName>          ::= {<Word>} {"common"}
@@ -415,4 +417,14 @@ INF $(SAMPLE)/Universal/Network/Tcp4/Dxe/Tcp4.inf
 INF $(SAMPLE)/Universal/Network/Dhcp4/Dxe/Dhcp4.inf
 INF $(SAMPLE)/Universal/Network/Mtftp4/Dxe/Mtftp4.inf
 INF $(SAMPLE)/Universal/Network/SnpNt32/Dxe/SnpNt32.inf
+
+FILE RAW = 197DB236-F856-4924-90F8-CDF12FB975F3 {
+  $(OUTPUT_DIRECTORY)/$(TARGET)_$(TOOL_CHAIN_TAG)/$PLATFORM_ARCH)/File.bin
+}
+
+FILE RAW = 197DB236-F856-4924-90F8-CDF12FB975F3 {
+  Align=16 $(PLATFORM_PACKAGE)/Binaries/File1.pdb
+  Align=16 $(PLATFORM_PACKAGE)/Binaries/File2.pdb
+  Align=16 $(PLATFORM_PACKAGE)/Binaries/File3.pdb
+}
 ```

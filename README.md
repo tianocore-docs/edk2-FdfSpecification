@@ -194,9 +194,12 @@ Copyright (c) 2006-2017, Intel Corporation. All rights reserved.
 |            | PACKAGES_PATH and EDK_TOOLS_BIN, used by the build system.                                                                                                                 |               |
 |            | Allow INF statements in FD regions.                                                                                                                                        |               |
 |            | Clarified [UserExtensions] content in chapter 2 (to match implementation)                                                                                                  |               |
-| 1.28       | Convert to GitBooks                                                                                                                                                        | March 2017    |
+| 1.28       | Convert to GitBooks                                                                                                                                                        | April 2017    |
 |            | [#426](https://bugzilla.tianocore.org/show_bug.cgi?id=426) IMAGE_TYPE_ID must be provided with value, FDF should mark it as required section                               |               |
 |            | [#373](https://bugzilla.tianocore.org/show_bug.cgi?id=373) Conditional statement examples incorrect                                                                        |               |
 |            | [#461](https://bugzilla.tianocore.org/show_bug.cgi?id=461) FDF Spec: add a super script number for the <FmpFileData>                                                       |               |
 |            | [#249](https://bugzilla.tianocore.org/show_bug.cgi?id=249) FDF spec miss '<UiFmpName>' definition                                                                          |               |
 |            | [#350](https://bugzilla.tianocore.org/show_bug.cgi?id=350) [FDF Spec] Extend the macro usage in the !include statement                                                     |               |
+|            | Changed the FDF_SPECIFICATION value from 0x0001001A to 0x0001001B or 1.27                                                                                                  |               |
+|            | Extended the FV and Capsule, FILE RAW statement formats to support multiple binary files.                                                                                  |               |
+|            | Changed section 3.8 [FmpPayload] to add definitions for MONOTONIC_COUNT and CERTIFICATE_GUID, plus some notes about how these are used.                                    |               |

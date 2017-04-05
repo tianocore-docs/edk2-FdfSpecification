@@ -50,10 +50,10 @@ The EDK II Build generates UEFI and PI specification compliant binary images.
 The tools provided in the EDK and the EdkCompatibilityPkg module support
 earlier versions of the specifications.
 
-This revision of the specification adds support for multiple EDK II Packages
-directories outside of the WORKSPACE. FDF files that use this feature must
-use the new `FDF_SPECIFICATION = 0x00010019` in the `[Defines]` section. Older
-FDF files do not need to update the `FDF_SPECIFICATION` value.
+This revision of the specification adds support for multiple binary files in
+an FV FILE RAW statement. FDF files that use this feature must use the new
+`FDF_SPECIFICATION = 0x0001001B` in the `[Defines]` section. Older FDF files
+do not need to update the `FDF_SPECIFICATION` value.
 
 The EDK II build system has been updated to allow the setting of multiple paths
 that will be searched when attempting to resolve the location of EDK II

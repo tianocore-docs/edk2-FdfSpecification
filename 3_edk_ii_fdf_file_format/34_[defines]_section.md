@@ -40,14 +40,15 @@ This section describes the defines section content in the FDF files. This file
 can be created by a developer and is an input to the EDK II build tool parsing
 utilities. Elements may appear in any order within this section.
 
-The code for this version of the FDF specification is "0x0001001A" and new
-versions of this specification must increment the minor (001A) portion of the
-specification code for backward compatible changes, and increment the major
-number for non-backward compatible specification changes.
+The code for this version of the FDF specification is "0x0001001B". New
+versions of this specification must increment the minor (001B) portion of the
+specification code for backward-compatible changes, and increment the major
+specification number for non-backward-compatible changes.
 
-This revision of the specification adds FMP Capsule support. Any FDF file that
-uses this feature must use the 0x0001001A FDF_SPECIFICATION value. Older FDF
-files that do not use this feature do not need to update the value.
+This revision of the specification adds support for multiple binaries in an
+FV or Capsule RAW FILE statement. Any FDF file that uses this feature must use
+the value `0x0001001B` in the `FDF_SPECIFICATION` statement. Older FDF files
+that do not use this feature do not need to update the value.
 
 Conditional statements may be used anywhere within this section.
 

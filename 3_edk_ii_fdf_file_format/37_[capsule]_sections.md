@@ -121,15 +121,16 @@ Conditional statements may be used anywhere within this section.
                         <EOL>
 <Options2>          ::= [<Use>] [<FileOpts>]
                         "{" [<EOL>]
-                        <TS> {<Filename>} {<SectionData>} [<EOL>]
+                        {<Filename>} {<FileList>+} {<SectionData> <EOL>}
                         <TS> "}" <EOL>
+<FileList>          ::= <TS> [<FfsAlignment>] <NormalFile> <EOL>
 <FileOpts>          ::= ["FIXED" <MTS>] ["CHECKSUM" <MTS>]
                         [<FfsAlignment>]
 <FfsAlignment>      ::= "Align" <Eq> <FfsAlignmentValues>
 <FvAlignment>       ::= [<TS> "FvBaseAddress" <Eq> <UINT64> <EOL>]
                         [<TS> "FvForceRebase" <Eq> <TrueFalse> <EOL>]
                         "FvAlignment" <Eq> <FvAlignmentValues> <EOL>
-<Filename>          ::= {<FvImage>} {<FdImage>} {<NormalFile>}
+<Filename>          ::= <TS> {<FvImage>} {<FdImage>} {<NormalFile>} <EOL>
 <FvImage>           ::= "FV" <Eq> <FvUiName> <EOL>
 <FdImage>           ::= "FD" <Eq> <FdUiName> <EOL>
 <FdUiName>          ::= {<Word>} {"common"}
