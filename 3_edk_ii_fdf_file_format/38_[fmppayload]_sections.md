@@ -34,12 +34,19 @@
 These are optional sections that describes the FMP payload content for FMP
 Capsule files.
 
+There must be at least one and at most two `<FmpFileData>` statements.  The
+`<FmpFileData>` statements start with `FILE DATA`.  The first <FmpFileData>
+statement provides the information for UpdateImage in an
+`EFI_FIRMWARE_MANAGEMENT_CAPSULE_IMAGE_HEADER`.  The second <FmpFileData>
+statement, if present, provides the information for VendorCode in an
+`EFI_FIRMWARE_MANAGEMENT_CAPSULE_IMAGE_HEADER`.
+
 #### Prototype
 
 ```c
 <FmpPayload>  ::= "[FmpPayload" <UiFmpName> "]" <EOL>
                   <FmpTokens>
-                  <FmpFileData>
+                  <FmpFileData>{1,2}
 <FmpTokens>   ::= [<TS> "IMAGE_HEADER_INIT_VERSION" <Eq> <Hex2> <EOL>]
                   <TS> "IMAGE_TYPE_ID" <Eq> <RegistryFormatGUID> <EOL>
                   [<TS> "IMAGE_INDEX" <Eq> <Hex2> <EOL>]
