@@ -196,3 +196,4 @@ Copyright (c) 2006-2017, Intel Corporation. All rights reserved.
 |            | Clarified [UserExtensions] content in chapter 2 (to match implementation)                                                                                                  |               |
 | 1.28       | Convert to GitBooks                                                                                                                                                        | March 2017    |
 |            | [#426](https://bugzilla.tianocore.org/show_bug.cgi?id=426) IMAGE_TYPE_ID must be provided with value, FDF should mark it as required section                               |               |
+|            | [#373](https://bugzilla.tianocore.org/show_bug.cgi?id=373) Conditional statement examples incorrect                                                                        |               |

@@ -600,7 +600,7 @@ The following is an example of conditional statements.
 ```ini
 !if ("MSFT" in $(FAMILY)) or ("INTEL" in $(FAMILY))
 ... statements
-!else if $(FAMILY) == "GCC"
+!elseif $(FAMILY) == "GCC"
 ... statements
 !endif
 
@@ -610,7 +610,7 @@ The following is an example of conditional statements.
   !else
     # FOO defined, BAR is defined
   !endif
-!elseif BARFOO
+!elseif $(BARFOO)
   # FOO is not defined, BARFOO is defined as TRUE
 !elseif $(BARFOO) == "FOOBAR"
   # FOO is not defined, BARFOO is defined as FOOBAR
