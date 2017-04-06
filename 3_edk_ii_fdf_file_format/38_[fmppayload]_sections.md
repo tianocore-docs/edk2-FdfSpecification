@@ -41,7 +41,7 @@ Capsule files.
                   <FmpTokens>
                   <FmpFileData>
 <FmpTokens>   ::= [<TS> "IMAGE_HEADER_INIT_VERSION" <Eq> <Hex2> <EOL>]
-                  [<TS> "IMAGE_TYPE_ID" <Eq> <RegistryFormatGUID> <EOL>]
+                  <TS> "IMAGE_TYPE_ID" <Eq> <RegistryFormatGUID> <EOL>
                   [<TS> "IMAGE_INDEX" <Eq> <Hex2> <EOL>]
                   [<TS> "HARDWARE_INSTANCE" <Eq> <Hex2> <EOL>]
 <FmpFileData> ::= <TS> "FILE" <Space> "DATA" <Eq> <Filename> <EOL>
