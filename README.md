@@ -198,3 +198,4 @@ Copyright (c) 2006-2017, Intel Corporation. All rights reserved.
 |            | [#426](https://bugzilla.tianocore.org/show_bug.cgi?id=426) IMAGE_TYPE_ID must be provided with value, FDF should mark it as required section                               |               |
 |            | [#373](https://bugzilla.tianocore.org/show_bug.cgi?id=373) Conditional statement examples incorrect                                                                        |               |
 |            | [#461](https://bugzilla.tianocore.org/show_bug.cgi?id=461) FDF Spec: add a super script number for the <FmpFileData>                                                       |               |
+|            | [#249](https://bugzilla.tianocore.org/show_bug.cgi?id=249) FDF spec miss '<UiFmpName>' definition                                                                          |               |

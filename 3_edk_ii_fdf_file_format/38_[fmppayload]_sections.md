@@ -44,9 +44,10 @@ statement, if present, provides the information for VendorCode in an
 #### Prototype
 
 ```c
-<FmpPayload>  ::= "[FmpPayload" <UiFmpName> "]" <EOL>
+<FmpPayload>  ::= "[FmpPayload" "." <UiFmpName> "]" <EOL>
                   <FmpTokens>
                   <FmpFileData>{1,2}
+<UiFmpName>   ::= <Word>
 <FmpTokens>   ::= [<TS> "IMAGE_HEADER_INIT_VERSION" <Eq> <Hex2> <EOL>]
                   <TS> "IMAGE_TYPE_ID" <Eq> <RegistryFormatGUID> <EOL>
                   [<TS> "IMAGE_INDEX" <Eq> <Hex2> <EOL>]

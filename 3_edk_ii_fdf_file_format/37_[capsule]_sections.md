@@ -304,6 +304,7 @@ Conditional statements may be used anywhere within this section.
 <SmmDepexExp>       ::= "SECTION" <MTS> [<FfsAlignment>] "SMM_DEPEX_EXP"
                         <Eq> "{" [<EOL>] <DxeDepex> "}" <EOL>
 <FmpPayload>        ::= <TS> "FMP_PAYLOAD" <Eq> <UiFmpName> <EOL>
+<UiFmpName>         ::= <Word>
 <FmpFileStatement>  ::= <TS> "FILE" <Space> "DATA" <Eq> <Filename> <EOL>
 ```
 
