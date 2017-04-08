@@ -199,3 +199,4 @@ Copyright (c) 2006-2017, Intel Corporation. All rights reserved.
 |            | [#373](https://bugzilla.tianocore.org/show_bug.cgi?id=373) Conditional statement examples incorrect                                                                        |               |
 |            | [#461](https://bugzilla.tianocore.org/show_bug.cgi?id=461) FDF Spec: add a super script number for the <FmpFileData>                                                       |               |
 |            | [#249](https://bugzilla.tianocore.org/show_bug.cgi?id=249) FDF spec miss '<UiFmpName>' definition                                                                          |               |
+|            | [#350](https://bugzilla.tianocore.org/show_bug.cgi?id=350) [FDF Spec] Extend the macro usage in the !include statement                                                     |               |

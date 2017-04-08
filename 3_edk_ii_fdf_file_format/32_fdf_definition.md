@@ -636,16 +636,20 @@ completely new sections of the same section type. If the included file contains
 new sections, then the section being processed in the Platform FDF file is
 considered to have been terminated.
 
-If the filename is a filename, the tools will look for the file in the same
-directory as the FDF file. If the file is not found, and the directory
-containing this FDF file is not the same directory as the directory containing
-the DSC, the tools must attempt to locate the file in the directory tree that
-contains the DSC file. If the filename starts with a "$", then the system
-environment variable will be used to locate the file. If none of these methods
-find the file, and a directory separator is in the filename, the tools will
-attempt to find the file in a WORKSPACE (or directory listed in the
-PACKAGES_PATH) relative path. If the file cannot be found, the build system
-must exit with an appropriate error message.
+If the `<Filename>` contains "$" characters, then macros defined in the DSC
+file, FDF file, and the system environment variables, `$(WORKSPACE)`,
+`$(EDK_SOURCE)`, `$(EFI_SOURCE)`, and `$(ECP_SOURCE)` are substituted into
+`<Filename>`.
+
+The tools look for `<Filename>` relative to the directory the FDF file resides.
+If the file is not found, and the directory containing this FDF file is not the
+same directory as the directory containing the DSC file, the tools must attempt
+to locate the file relaitive to the directory that contains the DSC file.
+
+If none of these methods find the file, and a directory separator is in
+`<Filename>`, the tools attempt to find the file in a WORKSPACE (or a directory
+listed in the PACKAGES_PATH) relative path. If the file cannot be found, the
+build system must exit with an appropriate error message.
 
 The `!include` file cannot contain additional `!include` statements.
 
@@ -658,4 +662,6 @@ The `!include` file cannot contain additional `!include` statements.
 ```
 !include myPlatform/NvRamDefs.txt
 !include myFeatures.mak
+!include $(WORKSPACE)/PackageDir/Features.dsc
+!include $(MACRO1)/AnotherDir/$(MACRO2)/Features.dsc
 ```
