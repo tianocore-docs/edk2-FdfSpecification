@@ -278,7 +278,7 @@ FFS file specification syntax is one of the following:
 OR
 
 ```c
-FILE Type $ (NAMED_GUID) [Options] {
+FILE Type $(NAMED_GUID) [Options] {
   SECTION SECTION_TYPE = FileName
   SECTION SECTION_TYPE = FileName
 }
@@ -371,7 +371,7 @@ The following is an example for using additional sections:
 #Encapsulation - Compress
 FILE FOO = 12345678-0000-AAAA-FFFF-0123ABCD12BD {
   SECTION COMPRESS {
-    SECTION PE32 = $ (WORKSPACE) / EdkModulePkg / Core / Dxe / DxeMain.inf
+    SECTION PE32 = $(WORKSPACE)/EdkModulePkg/Core/Dxe/DxeMain.inf
     SECTION VERSION = "1.2.3"
   }
 }
@@ -379,13 +379,13 @@ FILE FOO = 12345678-0000-AAAA-FFFF-0123ABCD12BD {
 # Encapsulation - GUIDED
 FILE FV_IMAGE = 87654321-FFFF-BBBB-2222-9874561230AB {
   SECTION GUIDED gEfiTianoCompressionScheme {
-    SECTION PE32 = $ (WORKSPACE) / EdkModulePkg / Core / Dxe / DxeMain.inf
+    SECTION PE32 = $(WORKSPACE)/EdkModulePkg/Core/Dxe/DxeMain.inf
   }
 }
 
 # LEAF Section
 FILE DXE_CORE = B5596C75-37A2-4b69-B40B-72ABD6DD8708 {
-  SECTION VERSION $ (BUILD_DIR)/$(ARCH)/D6A2CB7F-6A18-4E2F-B43B-9920A733700A-DxeMain.ver
+  SECTION VERSION $(BUILD_DIR)/$(ARCH)/D6A2CB7F-6A18-4E2F-B43B-9920A733700A-DxeMain.ver
 }
 ```
 
@@ -418,12 +418,12 @@ specify a string, that will be used to create an EFI section.
 The `GUIDED` encapsulation section uses one of the following formats.
 
 ```c
-SECTION GUIDED $ (GUID_CNAME) [auth] {
+SECTION GUIDED $(GUID_CNAME) [auth] {
   SECTION EFI_SECTION_TYPE = FILENAME
   SECTION EFI_SECTION_TYPE = "string"
 }
 
-SECTION GUIDED $ (GUID_CNAME) [auth] FILENAME
+SECTION GUIDED $(GUID_CNAME) [auth] FILENAME
 ```
 
 The required argument is the `GUIDED` name followed by an optional "auth"

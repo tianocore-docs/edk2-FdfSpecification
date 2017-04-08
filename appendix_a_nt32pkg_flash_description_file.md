@@ -369,7 +369,7 @@ FILE FREEFORM = PCD(gEfiIntelFrameworkModulePkgTokenSpaceGuid.PcdLogoFile) {
   }
 
 [Rule.Common.PEIM]
-  FILE PEIM = $ (NAMED_GUID){
+  FILE PEIM = $(NAMED_GUID){
     PEI_DEPEX PEI_DEPEX                 Optional $(INF_OUTPUT)/$(MODULE_NAME).depex
     PE32      PE32 Align=4K             $(INF_OUTPUT)/$(MODULE_NAME).efi
     UI        STRING = "$(MODULE_NAME)" Optional
@@ -377,7 +377,7 @@ FILE FREEFORM = PCD(gEfiIntelFrameworkModulePkgTokenSpaceGuid.PcdLogoFile) {
   }
 
 [Rule.Common.DXE_CORE]
-  FILE DXE_CORE = $ (NAMED_GUID) {
+  FILE DXE_CORE = $(NAMED_GUID) {
     COMPRESS PI_STD {
       PE32    PE32                      $(INF_OUTPUT)/$(MODULE_NAME).efi
       UI      STRING = "$(MODULE_NAME)" Optional
@@ -386,7 +386,7 @@ FILE FREEFORM = PCD(gEfiIntelFrameworkModulePkgTokenSpaceGuid.PcdLogoFile) {
   }
 
 [Rule.Common.UEFI_DRIVER]
-  FILE DRIVER = $ (NAMED_GUID) {
+  FILE DRIVER = $(NAMED_GUID) {
     DXE_DEPEX DXE_DEPEX Optional $(INF_OUTPUT)/$(MODULE_NAME).depex
     COMPRESS PI_STD {
       GUIDED {
@@ -398,7 +398,7 @@ FILE FREEFORM = PCD(gEfiIntelFrameworkModulePkgTokenSpaceGuid.PcdLogoFile) {
   }
 
 [Rule.Common.UEFI_DRIVER.TIANOCOMPRESSED]
-  FILE DRIVER = $ (NAMED_GUID) {
+  FILE DRIVER = $(NAMED_GUID) {
     DXE_DEPEX DXE_DEPEX Optional $(INF_OUTPUT)/$(MODULE_NAME).depex
     GUIDED A31280AD-481E-41B6-95E8-127F4C984779 PROCESSING_REQUIRED = TRUE {
       PE32    PE32                      $(INF_OUTPUT)/$(MODULE_NAME).efi
@@ -408,7 +408,7 @@ FILE FREEFORM = PCD(gEfiIntelFrameworkModulePkgTokenSpaceGuid.PcdLogoFile) {
   }
 
 [Rule.Common.DXE_DRIVER]
-  FILE DRIVER = $ (NAMED_GUID) {
+  FILE DRIVER = $(NAMED_GUID) {
     DXE_DEPEX   DXE_DEPEX Optional        $(INF_OUTPUT)/$(MODULE_NAME).depex
     COMPRESS PI_STD {
       GUIDED {
@@ -420,7 +420,7 @@ FILE FREEFORM = PCD(gEfiIntelFrameworkModulePkgTokenSpaceGuid.PcdLogoFile) {
   }
 
 [Rule.Common.DXE_RUNTIME_DRIVER]
-  FILE DRIVER = $ (NAMED_GUID) {
+  FILE DRIVER = $(NAMED_GUID) {
     DXE_DEPEX   DXE_DEPEX Optional        $(INF_OUTPUT)/$(MODULE_NAME).depex
     COMPRESS PI_STD {
       GUIDED {
@@ -432,7 +432,7 @@ FILE FREEFORM = PCD(gEfiIntelFrameworkModulePkgTokenSpaceGuid.PcdLogoFile) {
   }
 
 [Rule.Common.UEFI_APPLICATION]
-  FILE APPLICATION = $ (NAMED_GUID) {
+  FILE APPLICATION = $(NAMED_GUID) {
     COMPRESS PI_STD {
       GUIDED {
         PE32    PE32                      $(INF_OUTPUT)/$(MODULE_NAME).efi
