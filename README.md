@@ -203,3 +203,4 @@ Copyright (c) 2006-2017, Intel Corporation. All rights reserved.
 |            | Changed the FDF_SPECIFICATION value from 0x0001001A to 0x0001001B or 1.27                                                                                                  |               |
 |            | Extended the FV and Capsule, FILE RAW statement formats to support multiple binary files.                                                                                  |               |
 |            | Changed section 3.8 [FmpPayload] to add definitions for MONOTONIC_COUNT and CERTIFICATE_GUID, plus some notes about how these are used.                                    |               |
+|            | [#142](https://bugzilla.tianocore.org/show_bug.cgi?id=142) Update EDK II FDF Specification to allow sections in any order                                                  |               |

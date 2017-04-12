@@ -33,7 +33,10 @@
 
 The FDF definitions define the final properties for a flash image - PCD
 settings in this file override any other PCD settings that may have been set in
-the platform description (DSC) file.
+the platform description (DSC) file. The `[Defines]` section, when specified,
+must appear before any other section except the header. (The header, when
+specified, is always the first section of an FDF file.) The remaining sections
+may be specified in any order within the FDF file.
 
 #### Summary
 
@@ -43,14 +46,14 @@ EBNF).
 ```c
 <EDK_II_FDF> ::= [<Header>]
                  [<Defines>]
-                 <FD>
-                 <FV>
-                 <Capsule>
-                 <FmpPayload>
-                 <VTF>
-                 <Rules>
-                 <OptionRom>
-                 <UserExtensions>
+                 <FD>*
+                 <FV>*
+                 <Capsule>*
+                 <FmpPayload>*
+                 <VTF>*
+                 <Rules>*
+                 <OptionRom>*
+                 <UserExtensions>*
 ```
 
 **********
@@ -61,9 +64,6 @@ override any variable/value assignment defined in the FDF file.
 **********
 **Note:** Conditional statements may be used anywhere within the FDF file, with
 the ability to group any item within a section as well as entire sections.
-**********
-**Note:** The sections must be listed in the above order within the FDF file.
-Changing the order may cause the build to break.
 **********
 
 ### 3.2.1 Common Definitions
