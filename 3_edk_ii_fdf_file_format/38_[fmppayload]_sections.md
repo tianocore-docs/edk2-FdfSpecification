@@ -44,17 +44,28 @@ statement, if present, provides the information for VendorCode in an
 #### Prototype
 
 ```c
-<FmpPayload>  ::= "[FmpPayload" "." <UiFmpName> "]" <EOL>
-                  <FmpTokens>
-                  <FmpFileData>{1,2}
-<UiFmpName>   ::= <Word>
-<FmpTokens>   ::= [<TS> "IMAGE_HEADER_INIT_VERSION" <Eq> <Hex2> <EOL>]
-                  <TS> "IMAGE_TYPE_ID" <Eq> <RegistryFormatGUID> <EOL>
-                  [<TS> "IMAGE_INDEX" <Eq> <Hex2> <EOL>]
-                  [<TS> "HARDWARE_INSTANCE" <Eq> <Hex2> <EOL>]
-                  [<TS> “MONOTONIC_COUNT”<Eq> <NumValUint64> <EOL>]
-                  [<TS> “CERTIFICATE_GUID”<Eq> <RegistryFormatGUID><EOL>]
-<FmpFileData> ::= <TS> "FILE" <Space> "DATA" <Eq> <Filename> <EOL>
+<FmpPayload>       ::= "[FmpPayload" "." <UiFmpName> "]" <EOL>
+                       <FmpTokens>
+                       <FmpFileData>{1,2}
+<UiFmpName>        ::= <Word>
+<FmpTokens>        ::= [<TS> "IMAGE_HEADER_INIT_VERSION" <Eq> <Hex2> <EOL>]
+                       <TS> "IMAGE_TYPE_ID" <Eq> <RegistryFormatGUID> <EOL>
+                       [<TS> "IMAGE_INDEX" <Eq> <Hex2> <EOL>]
+                       [<TS> "HARDWARE_INSTANCE" <Eq> <Hex2> <EOL>]
+                       [<TS> "MONOTONIC_COUNT"<Eq> <NumValUint64> <EOL>]
+                       [<TS> "CERTIFICATE_GUID"<Eq> <RegistryFormatGUID><EOL>]
+<FmpFileData>      ::= <FileStatements>*
+                       <FvStatements>*
+                       <FdStatenents>*
+<FileStatements>   ::= <TS> "FILE" <Space> "DATA" <Eq> <Filename> <EOL>
+<FvStatements>     ::= "FV" <Eq> <FvNameOrFilename> <EOL>
+<FvNameOrFilename> ::= {<FvUiName>} {<FvFilename>}
+<FvUiName>         ::= {<Word>} {"common"}
+<FvFilename>       ::= [<PATH>] <Word> "." "fv"
+<FdStatements>     ::= "FD" <Eq> <FdNameOrFilename> <EOL>
+<FdNameOrFilename> ::= {<FdUiName>} {<FdFilename>}
+<FdUiName>         ::= {<Word>} {"common"}
+<FdFilename>       ::= [<PATH>] <Word> "." "fd"
 ```
 
 **********

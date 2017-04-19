@@ -204,3 +204,4 @@ Copyright (c) 2006-2017, Intel Corporation. All rights reserved.
 |            | Extended the FV and Capsule, FILE RAW statement formats to support multiple binary files.                                                                                  |               |
 |            | Changed section 3.8 [FmpPayload] to add definitions for MONOTONIC_COUNT and CERTIFICATE_GUID, plus some notes about how these are used.                                    |               |
 |            | [#142](https://bugzilla.tianocore.org/show_bug.cgi?id=142) Update EDK II FDF Specification to allow sections in any order                                                  |               |
+|            | [#478](https://bugzilla.tianocore.org/show_bug.cgi?id=478) FDF spec: extend the <FmpFileData> to support <FvStatements> and <FdStatenents>                                 |               |
