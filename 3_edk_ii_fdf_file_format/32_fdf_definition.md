@@ -651,8 +651,6 @@ If none of these methods find the file, and a directory separator is in
 listed in the PACKAGES_PATH) relative path. If the file cannot be found, the
 build system must exit with an appropriate error message.
 
-The `!include` file cannot contain additional `!include` statements.
-
 #### Prototype
 
 `<IncludeStatement> ::= <TS> "!include" <MTS> <Filename> <EOL>`
