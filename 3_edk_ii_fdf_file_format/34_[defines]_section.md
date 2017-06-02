@@ -45,10 +45,10 @@ versions of this specification must increment the minor (001B) portion of the
 specification code for backward-compatible changes, and increment the major
 specification number for non-backward-compatible changes.
 
-This revision of the specification adds support for multiple binaries in an
-FV or Capsule RAW FILE statement. Any FDF file that uses this feature must use
-the value `0x0001001B` in the `FDF_SPECIFICATION` statement. Older FDF files
-that do not use this feature do not need to update the value.
+This revision of the specification adds new features. Any FDF file that uses
+these new features must use the value `0x0001001B` in the `FDF_SPECIFICATION`
+statement. Older FDF files that do not use these new feature do not need to
+update the value.
 
 Conditional statements may be used anywhere within this section.
 
@@ -80,14 +80,13 @@ may be used by other user interface tools.
 
 **_FDF_SPECIFICATION_**
 
-For this specification, the version value is 0x0001001A. Tools that process
+For this specification, the version value is 0x0001001B. Tools that process
 this version of the FDF file can successfully process earlier versions of the
 FDF files (this is a backward compatible update). If an FDF file with an
-earlier version of the `FDF_SPECIFICATION` is modified to use the FMP Payload
-section and FMP Capsule definitions, the version value should be updated to
-0x0001001A. There is no requirement to change existing entries if no other
-content changes. This value may also be specified as decimal value, such as
-1.26.
+earlier version of the `FDF_SPECIFICATION` is modified to use a feature added
+in the 1.27 version of this specification must be updated to 0x0001001B. There
+is no requirement to change existing entries if no other content changes. This
+value may also be specified as decimal value, such as 1.27.
 
 **_PcdNames_**
 
@@ -100,7 +99,7 @@ meta-data files.
 
 ```ini
 [Defines]
-  FDF_SPECIFICATION                          = 0x0001001A
+  FDF_SPECIFICATION                          = 0x0001001B
   DEFINE BIG_STUFF                           = False
   SET gEfiMyPlatformTokenSpaceGuid.MyUsbFlag = True
 ```

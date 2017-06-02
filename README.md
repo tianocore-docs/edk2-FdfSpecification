@@ -194,7 +194,7 @@ Copyright (c) 2006-2017, Intel Corporation. All rights reserved.
 |            | PACKAGES_PATH and EDK_TOOLS_BIN, used by the build system.                                                                                                                 |               |
 |            | Allow INF statements in FD regions.                                                                                                                                        |               |
 |            | Clarified [UserExtensions] content in chapter 2 (to match implementation)                                                                                                  |               |
-| 1.28       | Convert to GitBooks                                                                                                                                                        | May 2017      |
+| 1.28       | Convert to GitBooks                                                                                                                                                        | June 2017     |
 |            | [#426](https://bugzilla.tianocore.org/show_bug.cgi?id=426) IMAGE_TYPE_ID must be provided with value, FDF should mark it as required section                               |               |
 |            | [#373](https://bugzilla.tianocore.org/show_bug.cgi?id=373) Conditional statement examples incorrect                                                                        |               |
 |            | [#461](https://bugzilla.tianocore.org/show_bug.cgi?id=461) FDF Spec: add a super script number for the <FmpFileData>                                                       |               |
@@ -207,3 +207,4 @@ Copyright (c) 2006-2017, Intel Corporation. All rights reserved.
 |            | [#478](https://bugzilla.tianocore.org/show_bug.cgi?id=478) FDF spec: extend the <FmpFileData> to support <FvStatements> and <FdStatenents>                                 |               |
 |            | [#353](https://bugzilla.tianocore.org/show_bug.cgi?id=353) Build spec: Allow nested includes in DSC and FDF files                                                          |               |
 |            | [#520](https://bugzilla.tianocore.org/show_bug.cgi?id=520) FDF spec: Update Precedence of PCD Values                                                                       |               |
+|            | [#585](https://bugzilla.tianocore.org/show_bug.cgi?id=585) FDF Spec: Update the FDF_SPECIFICATION version to 0x0001001B or 1.27                                            |               |
