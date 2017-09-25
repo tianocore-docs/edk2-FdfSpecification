@@ -227,7 +227,9 @@ The following are common definitions used by multiple section types.
                            {"8M"} {"16M"} {"32M"} {"64M"}
                            {"128M"} {"256M"} {"512M"} {"1G"} {"2G"}
 <FfsAlignmentValues>   ::= {"Auto"} {"8"} {"16"} {"32"} {"64"} {"128"}
-                           {"512"} {"1K"} {"4K"} {"32K"} {"64K"}
+                           {"512"} {"1K"} {"4K"} {"32K"} {"64K"} {"128K"}
+                           {"256K"} {"512K"} {"1M"} {"2M"} {"4M"} {"8M"}
+                           {"16M"}
 ```
 
 **********

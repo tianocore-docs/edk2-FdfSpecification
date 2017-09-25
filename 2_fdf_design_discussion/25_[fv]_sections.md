@@ -341,8 +341,8 @@ The Alignment attribute requires the "= value".
 
 * `Fixed` - File can not be moved, default (not specified) is relocate-able.
 
-* `Alignment` - Data (value is one of: 1, 2 4, 8, 16, 32, 64 128, 512, 1K, 2K,
-  4K, 8K, 16K, 32K, 64K) byte aligned
+* `Alignment` - Data (value is one of: 1, 2, 4, 8, 16, 32, 64, 128, 512, 1K, 2K,
+  4K, 8K, 16K, 32K, 64K, 128K, 256K, 512K, 1M, 2M, 4M, 8M, 16M) byte aligned
 
 * `Checksum` - It is recommended that this be controlled on an entire FV basis
   not at the file level, however, we are including this attribute for

@@ -208,3 +208,4 @@ Copyright (c) 2006-2017, Intel Corporation. All rights reserved.
 |            | [#353](https://bugzilla.tianocore.org/show_bug.cgi?id=353) Build spec: Allow nested includes in DSC and FDF files                                                          |               |
 |            | [#520](https://bugzilla.tianocore.org/show_bug.cgi?id=520) FDF spec: Update Precedence of PCD Values                                                                       |               |
 |            | [#585](https://bugzilla.tianocore.org/show_bug.cgi?id=585) FDF Spec: Update the FDF_SPECIFICATION version to 0x0001001B or 1.27                                            |               |
+|            | Per PI 1.6 to extend FFS alignment to 16M                                                                                                                                  |               |
