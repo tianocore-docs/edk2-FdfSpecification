@@ -59,7 +59,7 @@ entry is present and set to TRUE in an `[FV]` section, the tools will generate
 an `FvNameString` entry in FV EXT header using the `UiFvName`.
 
 This section also specifies how to define content for PI FV Extensions which
-provides a mapping between a GUID and an OEM file type. The size of
+provides a mapping for a GUID, an OEM file type and FV used size. The size of
 `EFI_FIRMWARE_VOLUME_EXT_HEADER` and `EFI_FIRMWARE_VOLUME_EXT_ENTRY` sizes will
 be calculated based on content, while the `EFI_FIRMWARE_VOLUME_EXT_ENTRY` type
 must be defined by the platform integrator based on the PI specification,

@@ -76,6 +76,7 @@ Conditional statements may be used anywhere within this section.
                         [<FvAttributes>]
                         [<FileSystemGuid>]
                         [<FvNameGuid>]
+                        [<FvUsedSize>]
                         [<FvNameString>]
                         [<PeiAprioriSection>]
                         [<DxeAprioriSection>]
@@ -110,6 +111,7 @@ Conditional statements may be used anywhere within this section.
                         [<TS> "ERASE_POLARITY" <Eq> {"0"} {"1"} <EOL>]
 <FileSystemGuid>    ::= <TS> "FileSystemGuid" <Eq> <NamedGuid> <EOL>
 <FvNameGuid>        ::= <TS> "FvNameGuid" <Eq> <NamedGuid> <EOL>
+<FvUsedSize>        ::= <TS> "FvUsedSizeEnable" <Eq> <TrueFalse> <EOL>
 <FvNameString>      ::= <TS> "FvNameString" <Eq> <TrueFalse> <EOL>
 <PeiAprioriSection> ::= <TS> "APRIORI" <MTS> "PEI" <MTS>
                         "{" <EOL>
