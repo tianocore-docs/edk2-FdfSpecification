@@ -1,7 +1,7 @@
 <!--- @file
   2 FDF Design Discussion
 
-  Copyright (c) 2006-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2006-2018, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -52,7 +52,7 @@ earlier versions of the specifications.
 
 This revision of the specification adds support for multiple binary files in
 an FV FILE RAW statement. FDF files that use this feature must use the new
-`FDF_SPECIFICATION = 0x0001001B` in the `[Defines]` section. Older FDF files
+`FDF_SPECIFICATION = 0x0001001C` in the `[Defines]` section. Older FDF files
 do not need to update the `FDF_SPECIFICATION` value.
 
 The EDK II build system has been updated to allow the setting of multiple paths

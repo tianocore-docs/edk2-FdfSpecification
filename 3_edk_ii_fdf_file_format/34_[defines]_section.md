@@ -1,7 +1,7 @@
 <!--- @file
   3.4 [Defines] Section
 
-  Copyright (c) 2006-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2006-2018, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -40,13 +40,13 @@ This section describes the defines section content in the FDF files. This file
 can be created by a developer and is an input to the EDK II build tool parsing
 utilities. Elements may appear in any order within this section.
 
-The code for this version of the FDF specification is "0x0001001B". New
-versions of this specification must increment the minor (001B) portion of the
+The code for this version of the FDF specification is "0x0001001C". New
+versions of this specification must increment the minor (001C) portion of the
 specification code for backward-compatible changes, and increment the major
 specification number for non-backward-compatible changes.
 
 This revision of the specification adds new features. Any FDF file that uses
-these new features must use the value `0x0001001B` in the `FDF_SPECIFICATION`
+these new features must use the value `0x0001001C` in the `FDF_SPECIFICATION`
 statement. Older FDF files that do not use these new feature do not need to
 update the value.
 
@@ -80,13 +80,13 @@ may be used by other user interface tools.
 
 **_FDF_SPECIFICATION_**
 
-For this specification, the version value is 0x0001001B. Tools that process
+For this specification, the version value is 0x0001001C. Tools that process
 this version of the FDF file can successfully process earlier versions of the
 FDF files (this is a backward compatible update). If an FDF file with an
 earlier version of the `FDF_SPECIFICATION` is modified to use a feature added
-in the 1.27 version of this specification must be updated to 0x0001001B. There
+in the 1.28 version of this specification must be updated to 0x0001001C. There
 is no requirement to change existing entries if no other content changes. This
-value may also be specified as decimal value, such as 1.27.
+value may also be specified as decimal value, such as 1.28.
 
 **_PcdNames_**
 
@@ -99,7 +99,7 @@ meta-data files.
 
 ```ini
 [Defines]
-  FDF_SPECIFICATION                          = 0x0001001B
+  FDF_SPECIFICATION                          = 0x0001001C
   DEFINE BIG_STUFF                           = False
   SET gEfiMyPlatformTokenSpaceGuid.MyUsbFlag = True
 ```
