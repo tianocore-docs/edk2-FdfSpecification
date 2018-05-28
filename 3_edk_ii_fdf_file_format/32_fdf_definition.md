@@ -1,7 +1,7 @@
 <!--- @file
   3.2 FDF Definition
 
-  Copyright (c) 2006-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2006-2018, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -664,4 +664,32 @@ build system must exit with an appropriate error message.
 !include myFeatures.mak
 !include $(WORKSPACE)/PackageDir/Features.dsc
 !include $(MACRO1)/AnotherDir/$(MACRO2)/Features.dsc
+```
+
+### 3.2.5 !error Statements
+
+Use of this statement is optional.
+
+#### Summary
+This section defines the `!error` statement in EDK II FDF files.
+This statement is used to cause build tool to stop at the location where the
+statement is encountered and error message following the `!error` statement
+is output as a message.
+
+#### Prototype
+
+`<ErrorStatement> ::= <TS> "!error" <MTS> <ErrorMessage> <EOL>`
+`<ErrorMessage>   ::= <AsciiString>`
+
+#### Parameters
+
+**_ErrorMessage_**
+
+It should in the same line with `!error` statement, and it can consist of several
+words not necessarily in quotes.
+
+#### Example (EDK II FDF)
+
+```
+!error "unsupported feature!"
 ```

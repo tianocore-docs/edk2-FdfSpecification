@@ -211,3 +211,4 @@ Copyright (c) 2006-2017, Intel Corporation. All rights reserved.
 | 1.28       | Update version to 1.28                                                                                                                                                     | March 2018    |
 |            | Per PI 1.6 to extend FFS alignment to 16M                                                                                                                                  |               |
 |            | Per PI 1.6 to support FV extended header entry contain the used size of FV                                                                                                 |               |
+|            | Add !error statement section                                                                                                                                               |               |

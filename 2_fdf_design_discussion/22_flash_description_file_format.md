@@ -617,7 +617,22 @@ The following is an example of conditional statements.
 !endif
 ```
 
-### 2.2.9 Expressions
+### 2.2.9 !error Statement
+
+The `!error` statement may appear within any section of EDK II FDF file. The
+argument of this statement is an error message, it causes build tool to stop
+at the location where the statement is encountered and error message following
+the `!error` statement is output as a message.
+
+The following example show the valid usage of the `!error` statement.
+
+```ini
+!if $(FEATURE_ENABLE) == TRUE
+  !error "unsupported feature!"
+!endif
+```
+
+### 2.2.10 Expressions
 
 Expressions can be used in conditional directive comparison statements and in
 value fields for Macros and PCDs in the DSC and FDF files.
