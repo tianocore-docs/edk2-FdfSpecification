@@ -212,7 +212,7 @@ gEfiMyTokenSpaceGuid.PcdFlashFvMainBaseAddress | gEfiMyTokenSpaceGuid.PcdFlashFv
 FV = FvMain
 
 0x000000|0x0C0000
-SET gEfiMyTokenSpaceGuid.PcdFlashFvMainBaseAddress = 0x000000
+SET gEfiMyTokenSpaceGuid.PcdFlashFvMainBaseAddress = 0x000000 + $(BaseAddress)
 SET gEfiMyTokenSpaceGuid.PcdFlashFvMainSize        = 0x0C0000
 FV = FvMain
 ```
