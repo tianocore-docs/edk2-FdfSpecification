@@ -86,7 +86,7 @@ Conditional statements may be used anywhere within this section.
 <BlockStatements>   ::= <FixedBlocks>
 <FixedBlocks>       ::= [<TS> "BlockSize" <Eq> <UINT32> <EOL>]
                         [<TS> "NumBlocks" <Eq> <UINT32> <EOL>]
-<SetStatements>     ::= <TS> "SET" <MTS> <PcdName> <Eq> <VALUE> <EOL>
+<SetStatements>     ::= <TS> "SET" <MTS> {<PcdName>} {<PcdFieldName>} <Eq> <VALUE> <EOL>
 <VALUE>             ::= {<Number>} {<Boolean>} {<GUID>} {<CArray>}
                         {<CString>} {<UnicodeString>} {<Expression>}
 <FvAlignment>       ::= [<TS> "FvBaseAddress" <Eq> <UINT64> <EOL>]

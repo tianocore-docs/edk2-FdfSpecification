@@ -62,11 +62,11 @@ Conditional statements may be used anywhere within this section.
                        <TS> "Size" <Eq> <UINT64> [<SetPcd>] <EOL>
                        <TS> "ErasePolarity" <Eq> {"0"} {"1"} <EOL>
                        <BlockStatements>+
-<SetPcd>           ::= <FS> <PcdName>
+<SetPcd>           ::= <FS> {<PcdName>} {<PcdFieldName>}
 <BlockStatements>  ::= <TS> "BlockSize" <Eq> <UINT32> [<SetPcd>]
                        <EOL>
                        [<TS> "NumBlocks" <Eq> <UINT32> <EOL>]
-<SetStatements>    ::= <TS> "SET" <PcdName> <Eq> <VALUE> <EOL>
+<SetStatements>    ::= <TS> "SET" {<PcdName>} {<PcdFieldName>} <Eq> <VALUE> <EOL>
 <VALUE>            ::= {<Number>} {<Boolean>} {<GUID>} {<CArray>}
                        {<CString>} {<UnicodeString>} {<Expression>}
 <RegionLayout>     ::= <TS> <Offset> <FS> <Size> <EOL>
@@ -86,8 +86,8 @@ Conditional statements may be used anywhere within this section.
 <InfFile>          ::= <PATH> <Word> ".inf" [<FS> <RelocFlags>]
 <RelocFlags>       ::= {"RELOCS_STRIPPED"} {"RELOCS_RETAINED"}
 <CapsuleRegion>    ::= <TS> "CAPSULE" <Eq> UiCapsuleName <EOL>
-<PcdOffset>        ::= <PcdName>
-<PcdSize>          ::= <PcdName>
+<PcdOffset>        ::= {<PcdName>} {<PcdFieldName>}
+<PcdSize>          ::= {<PcdName>} {<PcdFieldName>}
 <FvType>           ::= <TS> "FV" <Eq> <FvNameOrFilename> <EOL>
 <FileType>         ::= <TS> "FILE" <Eq> <BinaryFile> <EOL>
 <DataType>         ::= <TS> "DATA" <Eq>

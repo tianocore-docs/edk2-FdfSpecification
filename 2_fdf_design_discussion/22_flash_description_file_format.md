@@ -492,9 +492,9 @@ Unique PCDs are identified using the format to identify the named PCD:
 
 `PcdTokenSpaceGuidCName.PcdCName`
 
-The PCD's Name (`PcdName`) is defined as PCD Token Space Guid C name and the
-PCD C name - separated by a period "." character. PCD C names are used in C
-code and must follow the C variable name rules.
+The PCD's Name (`PcdName`) is defined as PCD Token Space Guid C name, the
+PCD C name and the optional field name - separated by a period "." character. 
+PCD C names are used in C code and must follow the C variable name rules.
 
 A PCD's values are positional with in the FDF file, and may be set by either
 the automatic setting grammar defined in this specification, or through `SET`

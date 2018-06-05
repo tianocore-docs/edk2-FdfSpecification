@@ -145,10 +145,11 @@ region, so the `SET` statement can occur anywhere within an FD section.
 
 `SET PcdName = VALUE`
 
-Additionally, a PCD Name is made up of two parts, separated by a period "."
-character. The format for a `PcdName` is:
+Additionally, a PCD Name is made up of two parts or three parts, separated 
+by a period "." character. The format for a `PcdName` is:
 
 `PcdTokenSpaceGuidCName.PcdCName`
+or `PcdTokenSpaceGuidCName.PcdCName.PcdFieldName`
 
 The following is an example of the `SET` statement:
 

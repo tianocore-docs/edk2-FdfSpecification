@@ -174,9 +174,11 @@ The following are common definitions used by multiple section types.
 <BoolType>             ::= {<TRUE>} {<FALSE>}
 <MACRO>                ::= (A-Z)(A-Z0-9_)*
 <MACROVAL>             ::= "$(" <MACRO> ")"
+<PcdFieldName>         ::= <TokenSpaceGuidCName> "." <PcdCName> "." <Field>
 <PcdName>              ::= <TokenSpaceGuidCName> "." <PcdCName>
 <PcdCName>             ::= <CName>
 <TokenSpaceGuidCName>  ::= <CName>
+<Field>                ::= <CName>
 <PCDVAL>               ::= "PCD(" <PcdName> ")"
 <UINT8>                ::= {"0x"} {"0X"} (\x0 - \xFF)
 <UINT16>               ::= "0x"} {"0X"} (\x0 - \xFFFF)

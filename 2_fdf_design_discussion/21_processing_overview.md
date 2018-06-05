@@ -108,6 +108,7 @@ FDF file.
 The PCDs used in the FDF file must be specified as:
 
 `PcdTokenSpaceGuidCName.PcdCName`
+or `PcdTokenSpaceGuidCName.PcdCName.PcdFieldName`
 
 ### 2.1.2 Precedence of PCD Values
 

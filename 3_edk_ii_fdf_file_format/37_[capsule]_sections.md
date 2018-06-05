@@ -49,7 +49,7 @@ Conditional statements may be used anywhere within this section.
                         <UefiTokens>
                         <CapsuleStmts>*
 <UiCapsuleName>     ::= "." <Word>
-<SetStatements>     ::= <TS> "SET" <MTS> <PcdName> <Eq> <VALUE> <EOL>
+<SetStatements>     ::= <TS> "SET" <MTS> {<PcdName>} {<PcdFieldName>} <Eq> <VALUE> <EOL>
 <VALUE>             ::= {<Number>} {<Boolean>} {<GUID>} {<CArray>}
                         {<CString>} {<UnicodeString>} {<Expression>}
 <UefiTokens>        ::= <TS> "CAPSULE_GUID" <Eq> <GuidValue> <EOL>
