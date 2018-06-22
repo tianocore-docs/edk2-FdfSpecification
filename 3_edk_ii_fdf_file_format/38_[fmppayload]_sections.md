@@ -49,11 +49,11 @@ statement, if present, provides the information for VendorCode in an
                        <FmpFileData>{1,2}
 <UiFmpName>        ::= <Word>
 <FmpTokens>        ::= [<TS> "IMAGE_HEADER_INIT_VERSION" <Eq> <Hex2> <EOL>]
-                       <TS> "IMAGE_TYPE_ID" <Eq> <RegistryFormatGUID> <EOL>
+                       <TS> "IMAGE_TYPE_ID" <Eq> <NamedGuidOrPcd> <EOL>
                        [<TS> "IMAGE_INDEX" <Eq> <Hex2> <EOL>]
                        [<TS> "HARDWARE_INSTANCE" <Eq> <Hex2> <EOL>]
                        [<TS> "MONOTONIC_COUNT"<Eq> <NumValUint64> <EOL>]
-                       [<TS> "CERTIFICATE_GUID"<Eq> <RegistryFormatGUID><EOL>]
+                       [<TS> "CERTIFICATE_GUID"<Eq> <NamedGuidOrPcd><EOL>]
 <FmpFileData>      ::= <FileStatements>*
                        <FvStatements>*
                        <FdStatenents>*

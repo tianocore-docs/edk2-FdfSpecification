@@ -1,7 +1,7 @@
 <!--- @file
   3.6 [FV] Sections
 
-  Copyright (c) 2006-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2006-2018, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -109,8 +109,8 @@ Conditional statements may be used anywhere within this section.
                         [<TS> "READ_DISABLED_CAP" <Eq> <TrueFalse> <EOL>]
                         [<TS> "READ_STATUS" <Eq> <TrueFalse> <EOL>]
                         [<TS> "ERASE_POLARITY" <Eq> {"0"} {"1"} <EOL>]
-<FileSystemGuid>    ::= <TS> "FileSystemGuid" <Eq> <NamedGuid> <EOL>
-<FvNameGuid>        ::= <TS> "FvNameGuid" <Eq> <NamedGuid> <EOL>
+<FileSystemGuid>    ::= <TS> "FileSystemGuid" <Eq> <NamedGuidOrPcd> <EOL>
+<FvNameGuid>        ::= <TS> "FvNameGuid" <Eq> <NamedGuidOrPcd> <EOL>
 <FvUsedSize>        ::= <TS> "FvUsedSizeEnable" <Eq> <TrueFalse> <EOL>
 <FvNameString>      ::= <TS> "FvNameString" <Eq> <TrueFalse> <EOL>
 <PeiAprioriSection> ::= <TS> "APRIORI" <MTS> "PEI" <MTS>
@@ -141,19 +141,17 @@ Conditional statements may be used anywhere within this section.
 <RelocFlags>        ::= {"RELOCS_STRIPPED"} {"RELOCS_RETAINED"}
 <FileStatements>    ::= {<type1>} {<type2>} {<type3>} {<type4>}
                         {<type5>} <EOL>
-<type1>             ::= <TS> "FILE" <MTS> <FvType1> <Eq> <NamedGuid> <Options1>
-<type2>             ::= <TS> "FILE" <MTS> <FvType2> <Eq> <NamedGuid> <Options2>
+<type1>             ::= <TS> "FILE" <MTS> <FvType1> <Eq> <NamedGuidOrPcd> <Options1>
+<type2>             ::= <TS> "FILE" <MTS> <FvType2> <Eq> <NamedGuidOrPcd> <Options2>
 <type3>             ::= <TS> "FILE" <MTS> "RAW" <Eq> <NamedGuidOrPcd>
                         <Options2>
-<type4>             ::= <TS> "FILE" <MTS> "NON_FFS_FILE" <Eq> [<NamedGuid>]
+<type4>             ::= <TS> "FILE" <MTS> "NON_FFS_FILE" <Eq> [<NamedGuidOrPcd>]
                         <Options2>
 <type5>             ::= <TS> "FILE" <MTS> "FV_IMAGE" <Eq>
                         <NamedGuidOrPcd> <Options2>
 <FvType1>           ::= {"SEC"} {"PEI_CORE"} {"PEIM"}
 <FvType2>           ::= {"FREEFORM"} {"PEI_DXE_COMBO"} {"DRIVER"}
                         {"DXE_CORE"} {"APPLICATION"} {"SMM_CORE"} {"SMM"}
-<NamedGuidOrPcd>    ::= {<NamedGuid>} {"PCD(" <PcdName> ")"}
-<NamedGuid>         ::= {<RegistryFormatGUID>} {"$(NAMED_GUID)"} {<GuidCName>}
 <Options1>          ::= [<Use>] [<FileOpts>] <RelocFlags> <MTS>
                         "{" [<EOL>]
                         {<Filename>} {<SectionData>} <TS> <TS> "}" [<EOL>]
@@ -206,7 +204,7 @@ Conditional statements may be used anywhere within this section.
                         {"FV_IMAGE"} {"DXE_DEPEX"} {"SMM_DEPEX"}
                         {"UI"} {"PEI_DEPEX"} {"VERSION"}
 <SubTypeGuid>       ::= <TS> "SECTION" <MTS> [<FfsAlignment>] <STG_Data>
-<STG_Data>          ::= "SUBTYPE_GUID" <MTS> <GuidValue> <Eq>
+<STG_Data>          ::= "SUBTYPE_GUID" <MTS> <NamedGuidOrPcd> <Eq>
                         <NormalFile> <EOL>
 <ChkReloc>          ::= if ((LeafSectionType == "PE32"
                         || LeafSectionType == "TE")
@@ -223,7 +221,7 @@ Conditional statements may be used anywhere within this section.
                         <LeafSections>*
                         <TS> "}" [<EOL>]
 <CompType>          ::= {"PI_STD"} {"PI_NONE"} <MTS>
-<GuidedSection>     ::= "GUIDED" <MTS> <NamedGuid> <MTS>
+<GuidedSection>     ::= "GUIDED" <MTS> <NamedGuidOrPcd> <MTS>
                         [<GuidedOptions>]
                         "{" <EOL>
                         <EncapSec>*
@@ -265,7 +263,6 @@ Conditional statements may be used anywhere within this section.
 <BoolStmt>          ::= {<Bool>} {<BoolExpress>}
                         {<GuidCName>} {<EOL>} {<MTS>}
 <Bool>              ::= {"TRUE"} {"FALSE"} {<GuidCName>}
-<GuidCName>         ::= <CName> # A Guid C Name
 <BoolExpress>       ::= [<Not>] <GuidCName> [<OP> [<Not>] <GuidCName> ]*
 <Not>               ::= "NOT" <MTS>
 <OP>                ::= <MTS> {"AND"} {"OR"} <MTS>
@@ -316,10 +313,6 @@ Section of type: EFI_SECTION_FREEFORM_SUBTYPE_GUID. A single
 
 `EFI_SECTION_FREEFORM_SUBTYPE_GUID` section is permitted in an FFS File of type
 `EFI_FV_FILETYPE_FREEFORM`
-
-**_GuidCName_**
-
-A word that is a valid C variable for a GUID.
 
 **_Expression_**
 

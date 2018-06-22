@@ -138,6 +138,7 @@ The following are common definitions used by multiple section types.
 <Minor>                ::= <HexDigit> <HexDigit> <HexDigit> <HexDigit>
 <DecimalVersion>       ::= {"0"} {(1-9) [(0-9)]*} ["." (0-9)+]
 <VersionVal>           ::= {<HexVersion>} {(0-9)+ "." (0-99)}
+<NamedGuidOrPcd>       ::= {"PCD(" <PcdName> ")"} {<RegistryFormatGUID>} {<GuidCName>}
 <GUID>                 ::= {<RegistryFormatGUID>} {<CFormatGUID>}
 <RegistryFormatGUID>   ::= <RHex8> "-" <RHex4> "-" <RHex4> "-" <RHex4> "-"
                            <RHex12>
@@ -174,6 +175,7 @@ The following are common definitions used by multiple section types.
 <BoolType>             ::= {<TRUE>} {<FALSE>}
 <MACRO>                ::= (A-Z)(A-Z0-9_)*
 <MACROVAL>             ::= "$(" <MACRO> ")"
+<GuidCName>            ::= <CName>
 <PcdFieldName>         ::= <TokenSpaceGuidCName> "." <PcdCName> "." <Field>
 <PcdName>              ::= <TokenSpaceGuidCName> "." <PcdCName>
 <PcdCName>             ::= <CName>
@@ -241,6 +243,9 @@ expression must be encapsulated in open "(" and close ")" parenthesis.
 **Note:** Comments may appear anywhere within a FDF file, provided they follow
 the rules that a comment may not be enclosed within Section headers, and that
 in line comments must appear at the end of a statement.
+**********
+**Note:** The PCD item used in `<NamedGuidOrPcd>` must be defined as FixedAtBuild
+type and VOID* datum type, and the size of the PCD must be 16 bytes.
 **********
 
 ### Parameter Definitions

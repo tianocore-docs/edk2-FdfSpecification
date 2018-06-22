@@ -212,3 +212,4 @@ Copyright (c) 2006-2017, Intel Corporation. All rights reserved.
 |            | Per PI 1.6 to extend FFS alignment to 16M                                                                                                                                  |               |
 |            | Per PI 1.6 to support FV extended header entry contain the used size of FV                                                                                                 |               |
 |            | Add !error statement section                                                                                                                                               |               |
+|            | clean up the <NamedGuidOrPcd> and <NamedGuid> usage in spec                                                                                                                |               |

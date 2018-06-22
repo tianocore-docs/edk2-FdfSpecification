@@ -1,7 +1,7 @@
 <!--- @file
   3.7 [Capsule] Sections
 
-  Copyright (c) 2006-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2006-2018, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -52,15 +52,12 @@ Conditional statements may be used anywhere within this section.
 <SetStatements>     ::= <TS> "SET" <MTS> {<PcdName>} {<PcdFieldName>} <Eq> <VALUE> <EOL>
 <VALUE>             ::= {<Number>} {<Boolean>} {<GUID>} {<CArray>}
                         {<CString>} {<UnicodeString>} {<Expression>}
-<UefiTokens>        ::= <TS> "CAPSULE_GUID" <Eq> <GuidValue> <EOL>
+<UefiTokens>        ::= <TS> "CAPSULE_GUID" <Eq> <NamedGuidOrPcd> <EOL>
                         [<TS> "CAPSULE_HEADER_SIZE" <Eq> <Bytes> <EOL>] [<TS>
                         "CAPSULE_FLAGS" <Eq> <Flags> <EOL>]
                         [<TS> "CAPSULE_HEADER_INIT_VERSION" <Eq> <Hex2> <EOL>]
 <CapsuleStmts>      ::= {<MacroDefinition>} {<SetStatements>}
                         {<CapsuleData>}
-<GuidValue>         ::= {<GuidCName>} {<GuidStructure>}
-<GuidCName>         ::= <CName>
-<GuidStructure>     ::= {<RegistryFormatGUID>} {<CFormatGUID>}
 <Flags>             ::= <FlagName>
 <FlagName>          ::= {"PersistAcrossReset"}
                         {"PersistAcrossReset" "," "InitiateReset"}
@@ -103,18 +100,16 @@ Conditional statements may be used anywhere within this section.
 <Target>            ::= {Target} {"$(TARGET)"}
 <TagName>           ::= {TagName} {"$(TOOL_CHAIN_TAG)"}
 <FileStatements>    ::= <TS> {<type1>} {<type2>} {<type3>} {<type4>}
-<type1>             ::= "FILE" <FvType1> <Eq> <NamedGuid> <Options1>
-<type2>             ::= "FILE" <FvType2> <Eq> <NamedGuid> <Options2>
+<type1>             ::= "FILE" <FvType1> <Eq> <NamedGuidOrPcd> <Options1>
+<type2>             ::= "FILE" <FvType2> <Eq> <NamedGuidOrPcd> <Options2>
 <type3>             ::= "FILE" "RAW" <Eq> <NamedGuidOrPcd>
                         <Options2>
-<type4>             ::= "FILE" "NON_FFS_FILE" <Eq> [<NamedGuid>] <Options2>
+<type4>             ::= "FILE" "NON_FFS_FILE" <Eq> [<NamedGuidOrPcd>] <Options2>
 <type5>             ::= "FILE" "FV_IMAGE" <Eq> <NamedGuidOrPcd>
                         <Options2>
 <FvType1>           ::= {"SEC"} {"PEI_CORE"} {"PEIM"}
 <FvType2>           ::= {"FREEFORM"} {"PEI_DXE_COMBO"} {"DRIVER"}
                         {"DXE_CORE"} {"APPLICATION"} {"SMM_CORE"} {"SMM"}
-<NamedGuid>         ::= {<RegistryFormatGUID>} {"$(NAMED_GUID)"}
-<NamedGuidOrPcd>    ::= {<NamedGuid>} {"PCD(" <PcdName> ")"}
 <Options1>          ::= [<Use>] [<FileOpts>] [<RelocFlags>]
                         "{" [<EOL>]
                         <TS> {<Filename>} {<SectionData>} [<EOL>] <TS> "}"
@@ -199,11 +194,8 @@ Conditional statements may be used anywhere within this section.
                         {"FV_IMAGE"} {"DXE_DEPEX"} {"SMM_DEPEX"}
                         {"UI"} {"PEI_DEPEX"} {"VERSION"}
 <SubTypeGuid>       ::= <TS> "SECTION" <MTS> [<FfsAlignment>] <SgData>
-<SgData>            ::= "SUBTYPE_GUID" <MTS> <GuidValue> <Eq>
+<SgData>            ::= "SUBTYPE_GUID" <MTS> <NamedGuidOrPcd> <Eq>
                         <NormalFile> <EOL>
-<GuidValue>         ::= {<GuidCName>} {<GuidStructure>}
-<GuidCName>         ::= <CName>
-<GuidStructure>     ::= {<RegistryFormatGUID>} {<CFormatGUID>}
 <ChkReloc>          ::= if ((LeafSecType == "PE32"
                         || LeafSecType == "TE")
                         && (MODULE_TYPE == "SEC"
@@ -221,7 +213,7 @@ Conditional statements may be used anywhere within this section.
                         <LeafSections>*
                         <TS> "}" <EOL>
 <CompType>          ::= {"PI_STD"} {"PI_NONE"} <MTS>
-<GuidedSection>     ::= "GUIDED" <NamedGuid> [<GuidedOptions>]
+<GuidedSection>     ::= "GUIDED" <NamedGuidOrPcd> [<GuidedOptions>]
                         "{" <EOL>
                         <MacroDefinition>*
                         [<PeiAprioriSection>]
@@ -256,7 +248,7 @@ Conditional statements may be used anywhere within this section.
                         [<TS> "READ_ENABLED_CAP" <Eq> <TrueFalse> <EOL>]
                         [<TS> "READ_DISABLED_CAP" <Eq> <TrueFalse> <EOL>]
                         [<TS> "READ_STATUS" <Eq> <TrueFalse> <EOL>]
-<FileSystemGuid>    ::= "FileSystemGuid" <Eq> <NamedGuid>
+<FileSystemGuid>    ::= "FileSystemGuid" <Eq> <NamedGuidOrPcd>
 <DepexExpSection>   ::= if ( COMPONENT_TYPE == "LIBRARY"
                         || LIBRARY_CLASS is declared in defines section of the
                         INF
@@ -288,7 +280,6 @@ Conditional statements may be used anywhere within this section.
 <BoolStmt>          ::= {<Boolean>} {<BoolExpress>}
                         {<GuidCName>} <EOL>
 <Boolean>           ::= {"TRUE"} {"FALSE"} {<GuidCName>}
-<GuidCName>         ::= <CName> # A Guid C Name
 <BoolExpress>       ::= <GuidCName> [<OP> ["NOT"] <GuidCName> ]*
 <OP>                ::= <MTS> {"AND"} {"OR"} <MTS>
 <DepInstruct>       ::= "push" <Filename>
@@ -323,10 +314,10 @@ environment variable.
 
 Only specific architectures are permitted - use of "common" is prohibited.
 
-**_GuidValue_**
+**_NamedGuidOrPcd_**
 
 When specifying the CAPSULE_GUID value for an FMP Capsule, the GUID value must
-be set to 6dcbd5ed-e82d-4c44-bda1-7194199ad92a.
+be same as 6dcbd5ed-e82d-4c44-bda1-7194199ad92a.
 
 #### Parameters
 

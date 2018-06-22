@@ -1,7 +1,7 @@
 <!--- @file
   3.9 [Rule] Sections
 
-  Copyright (c) 2006-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2006-2018, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -102,18 +102,11 @@ Conditional statements may be used anywhere within this section.
 <FileStatement1>    ::= <NamedGuid> [<RelocFlags> <MTS>] [<Options>] <EOL>
 <FileStatement2>    ::= <TS> "FILE" <MTS> <FvType2> <Eq> <NamedGuid>
                         [<Options>] <EOL>
-<FileStatement3>    ::= <TS> "FILE" <MTS> "RAW" <Eq> <NamedGuidOrPcd>
+<FileStatement3>    ::= <TS> "FILE" <MTS> "RAW" <Eq> <NamedGuid>
                         [<Options>] <EOL>
 <FileStatement4>    ::= <TS> "FILE" <MTS> "FV_IMAGE" <Eq>
-                        <NamedGuidOrPcd> [<Options>] <EOL>
-<NamedGuid>         ::= {"$(NAMED_GUID)"} {<RegistryFormatGUID>}
-                        {<Sym>} <MTS>
-<Sym>               ::= "$(" <Word> ")"
-<NamedGuidOrPcd>    ::= <NamedGuid> <MTS>
-                        {"PCD(" <PcdName> ")"} {<GuidValue>} <MTS>
-<GuidValue>         ::= {<GuidCName>} {<GuidStructure>}
-<GuidCName>         ::= <CName>
-<GuidStructure>     ::= {<RegistryFormatGUID>} {<CFormatGUID>}
+                        <NamedGuid> [<Options>] <EOL>
+<NamedGuid>         ::= {"$(NAMED_GUID)"} {<NamedGuidOrPcd>}
 <FvType1>           ::= {"SEC"} {"PEI_CORE"} {"PEIM"} {"PEI_DXE_COMBO"}
 <FvType2>           ::= {"FREEFORM"} {"DRIVER"} {"DXE_CORE"}
                         {"APPLICATION"} {"SMM_CORE"} {"SMM"}
@@ -133,7 +126,7 @@ Conditional statements may be used anywhere within this section.
 <LeafSecType>       ::= {"COMPAT16"} {"PE32"} {"PIC"} {"TE"}
                         {"FV_IMAGE"} {"RAW"} {"DXE_DEPEX"} {"UI"}
                         {"PEI_DEPEX"} {"SMM_DEPEX"} {"VERSION"}
-<SbtGuid>           ::= "SUBTYPE_GUID" <MTS> <GuidValue> <MTS> <FName> <EOL>
+<SbtGuid>           ::= "SUBTYPE_GUID" <MTS> <NamedGuid> <MTS> <FName> <EOL>
 <VarFile>           ::= {<FilenameVariable>} {<FName>} {<Ext>}
 <FName>             ::= [<PATH>] <Word> "." <Word>
 <FilenameVariable>  ::= "$(INF_OUTPUT)/$(MODULE_NAME)" "." <Word>
@@ -148,7 +141,7 @@ Conditional statements may be used anywhere within this section.
                         <LeafSections> <EOL>*
                         <TS> "}" <EOL>
 <CompType>          ::= {"PI_STD"} {"PI_NONE"} <MTS>
-<GuidedSection>     ::= "GUIDED" <MTS> "$(NAMED_GUID)" <MTS> [<GAttr>]
+<GuidedSection>     ::= "GUIDED" <MTS> <NamedGuid> <MTS> [<GAttr>]
                         "{" <EOL>
                         <EncapSec>*
                         <LeafSections>*
@@ -172,7 +165,7 @@ Conditional statements may be used anywhere within this section.
 <VerSec>            ::= "VERSION" <MTS> <VerFileType> [<FileOrExt>] <EOL>
 <PeiDepSec>         ::= "PEI_DEPEX" <MTS> <PdFileType>
                         [<FileOrExt>] <EOL>
-<SubtypeGuidSec>    ::= "SUBTYPE_GUID" <MTS> <GuidValue> <MTS>
+<SubtypeGuidSec>    ::= "SUBTYPE_GUID" <MTS> <NamedGuid> <MTS>
                         <File> <EOL>
 <FileOrExt>         ::= {<VarFile>} {<Ext>} <MTS>
 <FileOrExtOrPcd>    ::= {<VarFile>} {<Ext>} {"PCD(" <PcdName> ")"}
