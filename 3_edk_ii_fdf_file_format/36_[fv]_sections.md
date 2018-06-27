@@ -108,6 +108,7 @@ Conditional statements may be used anywhere within this section.
                         [<TS> "READ_ENABLED_CAP" <Eq> <TrueFalse> <EOL>]
                         [<TS> "READ_DISABLED_CAP" <Eq> <TrueFalse> <EOL>]
                         [<TS> "READ_STATUS" <Eq> <TrueFalse> <EOL>]
+                        [<TS> "WEAK_ALIGNMENT" <Eq> <TrueFalse> <EOL>]
                         [<TS> "ERASE_POLARITY" <Eq> {"0"} {"1"} <EOL>]
 <FileSystemGuid>    ::= <TS> "FileSystemGuid" <Eq> <NamedGuidOrPcd> <EOL>
 <FvNameGuid>        ::= <TS> "FvNameGuid" <Eq> <NamedGuidOrPcd> <EOL>
