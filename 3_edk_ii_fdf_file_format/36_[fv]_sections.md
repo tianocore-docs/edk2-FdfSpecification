@@ -75,6 +75,10 @@ Conditional statements may be used anywhere within this section.
                         [<FvAlignment>]
                         [<FvAttributes>]
                         [<FileSystemGuid>]
+                        [<VariableSignatureGuid>]
+                        [<VariabeRegionSize>]
+                        [<FtwWorkingSpaceSize>]
+                        [<FtwSpareSpaceSize>]
                         [<FvNameGuid>]
                         [<FvUsedSize>]
                         [<FvNameString>]
@@ -111,6 +115,10 @@ Conditional statements may be used anywhere within this section.
                         [<TS> "WEAK_ALIGNMENT" <Eq> <TrueFalse> <EOL>]
                         [<TS> "ERASE_POLARITY" <Eq> {"0"} {"1"} <EOL>]
 <FileSystemGuid>    ::= <TS> "FileSystemGuid" <Eq> <NamedGuidOrPcd> <EOL>
+<VariableSignatureGuid> ::= <TS> "VariableSignatureGuid" <Eq> <NamedGuidOrPcd> <EOL>
+<VariabeRegionSize> ::= <TS> "VariabeRegionSize" <Eq> <UINT32> <EOL>
+<FtwWorkingSpaceSize>   ::= <TS> "FtwWorkingSpaceSize" <Eq> <UINT32> <EOL>
+<FtwSpareSpaceSize>     ::= <TS> "FtwSpareSpaceSize" <Eq> <UINT32> <EOL>
 <FvNameGuid>        ::= <TS> "FvNameGuid" <Eq> <NamedGuidOrPcd> <EOL>
 <FvUsedSize>        ::= <TS> "FvUsedSizeEnable" <Eq> <TrueFalse> <EOL>
 <FvNameString>      ::= <TS> "FvNameString" <Eq> <TrueFalse> <EOL>
@@ -280,6 +288,11 @@ Conditional statements may be used anywhere within this section.
 <SmmDepexExp>       ::= <TS> "SECTION" <MTS> [<FfsAlignment>] "SMM_DEPEX_EXP"
                         <Eq> "{" [<EOL>] <DxeDepex> "}" <EOL>
 ```
+
+**********
+**Note:** The `VariableSignatureGuid` and `VariabeRegionSize` must exist when
+`FileSystemGuid` value is same as FFF12B8D-7696-4C8B-A9852747075B4F50.
+**********
 
 #### Restrictions
 

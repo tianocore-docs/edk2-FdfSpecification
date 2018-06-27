@@ -214,3 +214,4 @@ Copyright (c) 2006-2017, Intel Corporation. All rights reserved.
 |            | Add !error statement section                                                                                                                                               |               |
 |            | clean up the <NamedGuidOrPcd> and <NamedGuid> usage in spec                                                                                                                |               |
 |            | document WEAK_ALIGNMENT attribute                                                                                                                                          |               |
+|            | support varstore template generation with a [FV] section                                                                                                                   |               |
