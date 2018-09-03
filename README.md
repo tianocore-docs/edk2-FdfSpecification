@@ -215,3 +215,4 @@ Copyright (c) 2006-2017, Intel Corporation. All rights reserved.
 |            | clean up the <NamedGuidOrPcd> and <NamedGuid> usage in spec                                                                                                                |               |
 |            | document WEAK_ALIGNMENT attribute                                                                                                                                          |               |
 |            | support varstore template generation with a [FV] section                                                                                                                   |               |
+|            | [#1110](https://bugzilla.tianocore.org/show_bug.cgi?id=1110) Extend exclamation statement's keyword to case-insensitive                                                    |               |

@@ -427,6 +427,8 @@ C pre-processor.
 
 * Conditional directive blocks may be nested.
 
+* Keyword `!ifdef, !ifndef, !if, !elseif, !else, !endif` are case-insensitive.
+
 * Directives can be used to encapsulate entire sections or elements within a
   single section, such that they do not break the integrity of the section
   definitions.
@@ -660,6 +662,8 @@ If none of these methods find the file, and a directory separator is in
 listed in the PACKAGES_PATH) relative path. If the file cannot be found, the
 build system must exit with an appropriate error message.
 
+The keyword `!include` is case-insensitive.
+
 #### Prototype
 
 `<IncludeStatement> ::= <TS> "!include" <MTS> <Filename> <EOL>`
@@ -682,6 +686,8 @@ This section defines the `!error` statement in EDK II FDF files.
 This statement is used to cause build tool to stop at the location where the
 statement is encountered and error message following the `!error` statement
 is output as a message.
+
+The keyword `!error` is case-insensitive.
 
 #### Prototype
 
