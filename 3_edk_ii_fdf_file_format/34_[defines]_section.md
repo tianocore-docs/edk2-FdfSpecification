@@ -61,7 +61,7 @@ Conditional statements may be used anywhere within this section.
 <DefStmts>   ::= {<MacroDefinition>} {<SetStmts>} {<IncludeStatement>}
 <UiNameType> ::= <AsciiString>
 <SpecVer>    ::= {<HexVersion>} {(0-9)+ "." (0-9)+}
-<SetStmts>   ::= <TS> "SET" <MTS> <PcdName> <Eq> [<VALUE>] <EOL>
+<SetStmts>   ::= <TS> "SET" <MTS> {<PcdName>} {<PcdFieldName>} <Eq> [<VALUE>] <EOL>
 <VALUE>      ::= {<Number>} {<Boolean>} {<GUID>} {<CArray>}
                  {<CString>} {<UnicodeString>} {<Expression>}
 ```
