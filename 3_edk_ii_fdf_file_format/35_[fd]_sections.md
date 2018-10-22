@@ -152,9 +152,9 @@ file.
 **_PcdValue_**
 
 The PCD Value may be a specific numeric value, an array of numeric bytes, a
-GUID, a quoted string, an L quoted string (representing a unicode string), an
+GUID, a quoted string, an `L` quoted string (representing a unicode string), an
 arithmetic expression, a logic expression or a macro from a previously defined
-macro statement.
+macro statement or a `$(PCD) format.
 
 **_Expression_**
 

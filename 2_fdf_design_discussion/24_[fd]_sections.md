@@ -164,7 +164,7 @@ hex byte array), as in `{0x20, 0x01, 0x50, 0x00, 0x32, 0xFF, 0x00, 0xAA, {0xFF, 
 For other PCD datum types, the value may be a boolean or a hex value, as in
 `0x0000000F,` with a value that is consistent with the PCD's datum type.
 
-The value may also be a macro or it may be computed, using arithmetic
+The value may also be a macro or `$(PCD)` or it may be computed, using arithmetic
 operations, arithmetic expressions and or logical expressions. The value
 portion of the `SET` statement, when using any of these computations are in-fix
 expressions that are evaluated left to right, with items within parenthesis
