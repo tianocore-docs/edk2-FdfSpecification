@@ -1,7 +1,7 @@
 <!--- @file
   1.2 Terms
 
-  Copyright (c) 2006-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2006-2018, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -220,9 +220,10 @@ module types supported by this package, see module type.
 **Module Type**
 
 All libraries and components belong to one of the following module types: `BASE`,
-`SEC`, `PEI_CORE`, `PEIM`, `SMM_CORE`, `DXE_CORE`, `DXE_DRIVER`, `DXE_RUNTIME_DRIVER`,
-`DXE_SMM_DRIVER`, `DXE_SAL_DRIVER`, `UEFI_DRIVER`, or `UEFI_APPLICATION`. These
-definitions provide a framework that is consistent with a similar set of
+`SEC`, `PEI_CORE`, `PEIM`, `SMM_CORE`, `MM_CORE_STANDALONE`, `DXE_CORE`,
+`DXE_DRIVER`, `DXE_RUNTIME_DRIVER`, `DXE_SMM_DRIVER`, `MM_STANDALONE`,
+`DXE_SAL_DRIVER`, `UEFI_DRIVER`, or `UEFI_APPLICATION`.
+These definitions provide a framework that is consistent with a similar set of
 requirements. A module that is of module type BASE, depends only on headers and
 libraries provided in the MDE, while a module that is of module type DXE_DRIVER
 depends on common DXE components. For a definition of the various module types,

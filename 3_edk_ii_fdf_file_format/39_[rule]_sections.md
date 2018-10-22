@@ -61,6 +61,7 @@ Conditional statements may be used anywhere within this section.
 <Edk2ModuleType>    ::= {"SEC"} {"PEI_CORE"} {"PEIM"} {"SMM_CORE"}
                         {"DXE_CORE"} {"DXE_DRIVER"}
                         {"DXE_SAL_DRIVER"} {"DXE_SMM_DRIVER"}
+                        {"MM_CORE_STANDALONE"} {"MM_STANDALONE"}
                         {"DXE_RUNTIME_DRIVER"} {"UEFI_DRIVER"}
                         {"UEFI_APPLICATION"} {"USER_DEFINED"}
 <EdkComponentType>  ::= {"LIBRARY"} {"APPLICATION"} {"AcpiTable"}
@@ -77,26 +78,28 @@ Conditional statements may be used anywhere within this section.
                         || MODULE_TYPE == "PEIM"
                         || COMPONENT_TYPE == "PEI_CORE"
                         || COMPONENT_TYPE == "PIC_PEIM"
-                        || COMPONENT_TYPE == "RELOCATABLE_PEIM" ||
-                        COMPONENT_TYPE == "SECURITY_CORE"
+                        || COMPONENT_TYPE == "RELOCATABLE_PEIM"
+                        || COMPONENT_TYPE == "SECURITY_CORE"
                         || COMPONENT_TYPE == "PE32_PEIM" ):
                         <TS> "FILE" <MTS> <FvType1> <Eq>
                         <FileStatement1>
-                        elif (MODULE_TYPE == "DXE_CORE" || MODULE_TYPE ==
-                        "DXE_DRIVER"
-                        || MODULE_TYPE == "DXE_SAL_DRIVER" || MODULE_TYPE ==
-                        "SMM_CORE"
+                        elif (MODULE_TYPE == "DXE_CORE" 
+                        || MODULE_TYPE == "DXE_DRIVER"
+                        || MODULE_TYPE == "DXE_SAL_DRIVER"
+                        || MODULE_TYPE == "SMM_CORE"
+                        || MODULE_TYPE == "MM_CORE_STANDALONE"
                         || MODULE_TYPE == "DXE_SMM_DRIVER"
+                        || MODULE_TYPE == "MM_STANDALONE"
                         || MODULE_TYPE == "UEFI_DRIVER"
                         || MODULE_TYPE == "UEFI_APPLICATION"
                         || MODULE_TYPE == "USER_DEFINED"
                         || COMPONENT_TYPE == "BS_DRIVER"
-                        || COMPONENT_TYPE ==
-                        "COMBINED_PEIM_DRIVER"
+                        || COMPONENT_TYPE == "COMBINED_PEIM_DRIVER"
                         || COMPONENT_TYPE == "APPLICATION"):
                         {<FileStatement2>} {<FileStatement3>}
                         elif (MODULE_TYPE == "FV_IMAGE"):
-                        <FileStatement4> else:
+                        <FileStatement4>
+                        else:
                         <TS> "FILE" <MTS> "NON_FFS_FILE" <Eq>
                         [<NamedGuid>] [<Options>] <EOL>
 <FileStatement1>    ::= <NamedGuid> [<RelocFlags> <MTS>] [<Options>] <EOL>
@@ -110,6 +113,7 @@ Conditional statements may be used anywhere within this section.
 <FvType1>           ::= {"SEC"} {"PEI_CORE"} {"PEIM"} {"PEI_DXE_COMBO"}
 <FvType2>           ::= {"FREEFORM"} {"DRIVER"} {"DXE_CORE"}
                         {"APPLICATION"} {"SMM_CORE"} {"SMM"}
+                        {"MM_CORE_STANDALONE"} {"MM_STANDALONE"}
 <RelocFlags>        ::= {"RELOCS_STRIPPED" <MTS>}
                         {"RELOCS_RETAINED" <MTS>}
 <Options>           ::= [<UseLocal>] [<FileOpts>] <FileSpec>

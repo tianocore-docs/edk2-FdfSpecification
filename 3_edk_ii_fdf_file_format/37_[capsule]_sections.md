@@ -110,6 +110,7 @@ Conditional statements may be used anywhere within this section.
 <FvType1>           ::= {"SEC"} {"PEI_CORE"} {"PEIM"}
 <FvType2>           ::= {"FREEFORM"} {"PEI_DXE_COMBO"} {"DRIVER"}
                         {"DXE_CORE"} {"APPLICATION"} {"SMM_CORE"} {"SMM"}
+                        {"MM_CORE_STANDALONE"} {"MM_STANDALONE"}
 <Options1>          ::= [<Use>] [<FileOpts>] [<RelocFlags>]
                         "{" [<EOL>]
                         <TS> {<Filename>} {<SectionData>} [<EOL>] <TS> "}"
@@ -250,26 +251,31 @@ Conditional statements may be used anywhere within this section.
                         [<TS> "READ_STATUS" <Eq> <TrueFalse> <EOL>]
 <FileSystemGuid>    ::= "FileSystemGuid" <Eq> <NamedGuidOrPcd>
 <DepexExpSection>   ::= if ( COMPONENT_TYPE == "LIBRARY"
-                        || LIBRARY_CLASS is declared in defines section of the
-                        INF
+                        || LIBRARY_CLASS is declared in defines section of INF
                         || MODULE_TYPE == "USER_DEFINED" ):
                         [<Depex>]
                         else if ( MODULE_TYPE == "PEIM"
                         || MODULE_TYPE == "DXE_DRIVER"
                         || MODULE_TYPE == "DXE_RUNTIME_DRIVER"
-                        || MODULE_TYPE == "DXE_SAL_DRIVER" || MODULE_TYPE ==
-                        "DXE_SMM_DRIVER" ):
+                        || MODULE_TYPE == "DXE_SAL_DRIVER"
+                        || MODULE_TYPE == "MM_STANDALONE"
+                        || MODULE_TYPE == "DXE_SMM_DRIVER" ):
                         <Depex>
-                        elif ( MODULE_TYPE == "UEFI_APPLICATION"
+                        else if ( MODULE_TYPE == "UEFI_APPLICATION"
                         || MODULE_TYPE == "UEFI_DRIVER"
                         || MODULE_TYPE == "PEI_CORE"
                         || MODULE_TYPE == "DXE_CORE"
                         || MODULE_TYPE == "SMM_CORE"
+                        || MODULE_TYPE == "MM_CORE_STANDALONE"
                         || MODULE_TYPE == "SEC"):
                         No DEPEX section is permitted
-<Depex>             ::= if (MODULE_TYPE == PEIM): <PeiDepexExp> elif
-                        (MODULE_TYPE == "DXE_SMM_DRIVER"): <SmmDepexExp>
-                        [<DxeDepexExp>] else:
+<Depex>             ::= if (MODULE_TYPE == PEIM): 
+                        <PeiDepexExp> 
+                        else if (MODULE_TYPE == "DXE_SMM_DRIVER"):
+                        <SmmDepexExp> [<DxeDepexExp>]
+                        else if (MODULE_TYPE == "MM_STANDALONE"):
+                        <SmmDepexExp>
+                        else:
                         <DxeDepexExp>
 <PeiDepexExp>       ::= "SECTION" <MTS> [<FfsAlignment>]
                         "PEI_DEPEX_EXP"

@@ -207,6 +207,7 @@ The following are common definitions used by multiple section types.
 <NumValUint64>         ::= {<LongLongNum>} {<UINT64>}
 <ModuleType>           ::= {"BASE"} {"SEC"} {"PEI_CORE"} {"PEIM"}
                            {"DXE_CORE"} {"DXE_DRIVER"} {"SMM_CORE"}
+                           {"MM_CORE_STANDALONE"} {"MM_STANDALONE"}
                            {"DXE_RUNTIME_DRIVER"} {"DXE_SAL_DRIVER"}
                            {"DXE_SMM_DRIVER"} {"UEFI_DRIVER"}
                            {"UEFI_APPLICATION"} {"USER_DEFINED"}

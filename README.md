@@ -216,3 +216,4 @@ Copyright (c) 2006-2017, Intel Corporation. All rights reserved.
 |            | document WEAK_ALIGNMENT attribute                                                                                                                                          |               |
 |            | support varstore template generation with a [FV] section                                                                                                                   |               |
 |            | [#1110](https://bugzilla.tianocore.org/show_bug.cgi?id=1110) Extend exclamation statement's keyword to case-insensitive                                                    |               |
+|            | [#551] (https://bugzilla.tianocore.org/show_bug.cgi?id=551) Add PI1.5 standalone SMM support in FDF file                                                                   |               |

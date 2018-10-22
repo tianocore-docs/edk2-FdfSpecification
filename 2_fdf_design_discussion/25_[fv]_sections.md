@@ -1,7 +1,7 @@
 <!--- @file
   2.5 [FV] Sections
 
-  Copyright (c) 2006-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2006-2018, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -316,7 +316,11 @@ EFI FV File Types - one and only one of the following:
 
 * `SMM_CORE` - Sectioned data containing one or more other sections.
 
+* `MM_CORE_STANDALONE` - Sectioned data containing one or more other sections.
+
 * `DXE_SMM_DRIVER` - Dispatched by the SMM Core
+
+* `MM_STANDALONE` - Dispatched by the standalone SMM Core
 
 * `APPLICATION` - Application, so will not be dispatched
 
