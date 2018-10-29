@@ -58,7 +58,7 @@ Conditional statements may be used anywhere within this section.
 <Overrides>    ::= <MTS> "{" <EOL>
                    [<TS> "PCI_VENDOR_ID" <Eq> <UINT16> <EOL>]
                    [<TS> "PCI_CLASS_CODE" <Eq> <UINT8> <EOL>]
-                   [<TS> "PCI_DEVICE_ID" <Eq> <UINT16> <EOL>]
+                   [<TS> "PCI_DEVICE_ID" <Eq> <UINT16> [<MTS> <UINT16>]* <EOL>]
                    [<TS> "PCI_REVISION" <Eq> <UINT8> <EOL>]
                    [<TS> "PCI_COMPRESS" <Eq> <TrueFalse> <EOL>]
                    <TS> "}" <EOL>
@@ -108,6 +108,7 @@ for the .efi extension in the ENBF above.
 [OptionRom.AtapiPassThru]
   INF USE = IA32 OptionRomPkg/AtapiPassThruDxe/AtapiPassThruDxe.inf {
     PCI_REVISION = 0x0020
+    PCI_DEVICE_ID = 0x0A03 0x0B03
   }
   INF USE = EBC OptionRomPkg/AtapiPassThruDxe/AtapiPassThruDxe.inf
 ```
