@@ -1,7 +1,7 @@
 <!--- @file
   3.5 [FD] Sections
 
-  Copyright (c) 2006-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2006-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -68,7 +68,7 @@ Conditional statements may be used anywhere within this section.
                        [<TS> "NumBlocks" <Eq> <UINT32> <EOL>]
 <SetStatements>    ::= <TS> "SET" {<PcdName>} {<PcdFieldName>} <Eq> <VALUE> <EOL>
 <VALUE>            ::= {<Number>} {<Boolean>} {<GUID>} {<CArray>}
-                       {<CString>} {<UnicodeString>} {<Expression>}
+                       {<CString>} {<UnicodeString>} {<Expression>}{<Array>}{<OffsetOf>}
 <RegionLayout>     ::= <TS> <Offset> <FS> <Size> <EOL>
                        [<TS> <PcdOffset> [<FS> <PcdSize>] <EOL>]
                        [<RegionType>]

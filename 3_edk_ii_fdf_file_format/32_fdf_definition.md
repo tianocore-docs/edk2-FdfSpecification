@@ -1,7 +1,7 @@
 <!--- @file
   3.2 FDF Definition
 
-  Copyright (c) 2006-2018, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2006-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -124,11 +124,13 @@ The following are common definitions used by multiple section types.
 <CFlags>               ::= <AsciiString>
 <PrintChars>           ::= {<TS>} {<CChars>}
 <QuotedString>         ::= <DblQuote> <PrintChars>* <DblQuote>
-<CString>              ::= ["L"] <QuotedString>
+<CString>              ::= ["L"] {<QuotedString>} {<SglQuotedString>}
+<SglQuotedString>      ::= <SglQuote> <PrintChars>* <SglQuote>
+<SglQuote>             ::= 0x27
 <NormalizedString>     ::= <DblQuote> [{<Word>} {<Space>}]+ <DblQuote>
 <GlobalComment>        ::= <WS> "#" [<AsciiString>] <EOL>+
 <Comment>              ::= "#" <AsciiString> <EOL>+
-<UnicodeString>        ::= "L" <QuotedString>
+<UnicodeString>        ::= "L" {<QuotedString>} {<SglQuotedString>}
 <HexDigit>             ::= (a-fA-F0-9)
 <HexByte>              ::= {"0x"} {"0X"} [<HexDigit>] <HexDigit>
 <HexNumber>            ::= {"0x"} {"0X"} <HexDigit>+
@@ -183,7 +185,7 @@ The following are common definitions used by multiple section types.
 <Field>                ::= <CName>
 <PCDVAL>               ::= "PCD(" <PcdName> ")"
 <UINT8>                ::= {"0x"} {"0X"} (\x0 - \xFF)
-<UINT16>               ::= "0x"} {"0X"} (\x0 - \xFFFF)
+<UINT16>               ::= {"0x"} {"0X"} (\x0 - \xFFFF)
 <UINT32>               ::= {"0x"} {"0X"} (\x0 - \xFFFFFFFF)
 <UINT64>               ::= {"0x"} {"0X"} (\x0 - \xFFFFFFFFFFFFFFFF)
 <UINT8z>               ::= {"0x"} {"0X"} <HexDigit> <HexDigit>
@@ -235,6 +237,21 @@ The following are common definitions used by multiple section types.
                            {"512"} {"1K"} {"4K"} {"32K"} {"64K"} {"128K"}
                            {"256K"} {"512K"} {"1M"} {"2M"} {"4M"} {"8M"}
                            {"16M"}
+<Array>                ::= "{" {<Array>} {[<Lable>] <ArrayVal>[<CommaSpace> [<Lable>] <ArrayVal>]* } "}"
+<Lable>                ::= "LABEL(" <CName> ")"
+<OffsetOf>             ::= "OFFSET_OF(" <CName> ")"
+<ArrayVal>             ::= {<Num8Array>} {<GuidStr>} {<DevicePath>}    1
+<Num8Array>            ::= {<NonNumType>} {<ShortNum>} {<UINT8>}
+<NonNumType>           ::= {<BoolVal>} {<UnicodeString>} {<CString>}{<Offset>} {<UintMac>}
+<ShortNum>             ::= (0-255)
+<UintMac>              ::= {<Uint8Mac>} {<Uint16Mac>} {<Uint32Mac>} {<Uint64Mac>}
+<Uint8Mac>             ::= "UINT8(" <Num8Array> ")"
+<Uint16Mac>            ::= "UINT16(" <Num16Array> ")"
+<Uint32Mac>            ::= "UINT32(" <Num32Array> ")"
+<Uint64Mac>            ::= "UINT64(" <Num64Array> ")"
+<Num16Array>           ::= {<NonNumType>} {<IntNum>} {<UINT16>}
+<Num32Array>           ::= {<NonNumType>} {<LongNum>} {<UINT32>}
+<Num64Array>           ::= {<NonNumType>} {<LongLongNum>} {<UINT64>}
 ```
 
 **********

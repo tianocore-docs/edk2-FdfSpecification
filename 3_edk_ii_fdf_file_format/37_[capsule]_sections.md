@@ -1,7 +1,7 @@
 <!--- @file
   3.7 [Capsule] Sections
 
-  Copyright (c) 2006-2018, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2006-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -51,7 +51,7 @@ Conditional statements may be used anywhere within this section.
 <UiCapsuleName>     ::= "." <Word>
 <SetStatements>     ::= <TS> "SET" <MTS> {<PcdName>} {<PcdFieldName>} <Eq> <VALUE> <EOL>
 <VALUE>             ::= {<Number>} {<Boolean>} {<GUID>} {<CArray>}
-                        {<CString>} {<UnicodeString>} {<Expression>}
+                        {<CString>} {<UnicodeString>} {<Expression>}{<Array>}{<OffsetOf>}
 <UefiTokens>        ::= <TS> "CAPSULE_GUID" <Eq> <NamedGuidOrPcd> <EOL>
                         [<TS> "CAPSULE_HEADER_SIZE" <Eq> <Bytes> <EOL>] [<TS>
                         "CAPSULE_FLAGS" <Eq> <Flags> <EOL>]

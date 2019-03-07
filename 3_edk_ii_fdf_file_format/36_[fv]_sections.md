@@ -1,7 +1,7 @@
 <!--- @file
   3.6 [FV] Sections
 
-  Copyright (c) 2006-2018, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2006-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -92,7 +92,7 @@ Conditional statements may be used anywhere within this section.
                         [<TS> "NumBlocks" <Eq> <UINT32> <EOL>]
 <SetStatements>     ::= <TS> "SET" <MTS> {<PcdName>} {<PcdFieldName>} <Eq> <VALUE> <EOL>
 <VALUE>             ::= {<Number>} {<Boolean>} {<GUID>} {<CArray>}
-                        {<CString>} {<UnicodeString>} {<Expression>}
+                        {<CString>} {<UnicodeString>} {<Expression>}{<Array>}{<OffsetOf>}
 <FvAlignment>       ::= [<TS> "FvBaseAddress" <Eq> <UINT64> <EOL>]
                         [<TS> "FvForceRebase" <Eq> <TrueFalse> <EOL>]
                         <TS> "FvAlignment" <Eq>
