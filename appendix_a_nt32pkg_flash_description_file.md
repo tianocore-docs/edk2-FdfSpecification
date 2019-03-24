@@ -1,7 +1,7 @@
 <!--- @file
   Appendix A Nt32Pkg Flash Description File
 
-  Copyright (c) 2006-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2006-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -190,7 +190,7 @@ FvNameGuid         = 6D99E806-3D38-42c2-A095-5F4300BFD7DC
 
 ########################################################################
 #
-# The INF statements point to EDK component and EDK II module INF files,
+# The INF statements point to EDK II module INF files,
 # which will be placed into this FV image.
 # Parsing tools will scan the INF file to determine the type of component
 # or module.

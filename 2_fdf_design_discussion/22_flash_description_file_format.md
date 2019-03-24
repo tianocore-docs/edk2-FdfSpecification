@@ -1,7 +1,7 @@
 <!--- @file
   2.2 Flash Description File Format
 
-  Copyright (c) 2006-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2006-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -39,10 +39,8 @@ binary files.
 
 ### 2.2.1 Section Entries
 
-To simplify parsing, the EDK II meta-data files continue using the INI format.
-This style was introduced for EDK meta-data files, when only the Windows tool
-chains were supported. It was decided that for compatibility purposes, that INI
-format would continue to be used. EDK II formats differ from the defacto format
+To simplify parsing, the EDK II meta-data files use the INI format.
+EDK II formats differ from the defacto format
 in that the semicolon ";" character cannot be used to indicate a comment.
 
 Leading and trailing space/tab characters must be ignored.
@@ -80,7 +78,7 @@ tools, with the second section appended to the first.
 The EDK II Reference build system will ignore [UserExtensions] sections in the
 FDF file.
 
-The `[Rules]` and `[VTF]` sections allow the use of architectural modifiers,
+The `[Rules]` section allows the use of architectural modifiers,
 however the content must specific to an individual architecture or common to
 all architectures.
 
@@ -159,8 +157,8 @@ all directory and file names are case sensitive.
   characters and it is recommended that they start with an alpha character.
 
 * Additionally, all EDK II directories that are architecturally dependent must
-  use a name with only the first character capitalized. Ia32, Ipf, X64 and Ebc
-  are valid architectural directory names. IA32, IPF and EBC are not acceptable
+  use a name with only the first character capitalized. Ia32, X64 and Ebc
+  are valid architectural directory names. IA32 and EBC are not acceptable
   directory names, and may cause build breaks. From a build tools perspective,
   an IA32 directory name is not equivalent to Ia32 or ia32 An architecture used
   in a directory name must be listed in a section that uses the architecture
@@ -179,10 +177,10 @@ C Code files, and as well as specifying the rules for directory and file names.
 This section is meant to highlight those rules as they apply to the content of
 the FDF files.
 
-Architecture keywords (`IA32`, `IPF`, `X64` and `EBC`) are used by build tools
+Architecture keywords (`IA32`, `X64` and `EBC`) are used by build tools
 and in metadata files for describing alternate threads for processing of files.
 These keywords must not be used for describing directory paths. Additionally,
-directory names with architectural names (Ia32, Ipf, X64 and Ebc) do not
+directory names with architectural names (Ia32, X64 and Ebc) do not
 automatically cause the build tools or meta-data files to follow these
 alternate paths. Directories and Architectural Keywords are similar in name
 only.
@@ -217,16 +215,14 @@ is case-insensitive.
 The argument of this statement is a filename. The file is relative to the
 directory that contains this DSC file, and if not found the tool must attempt
 to find the file relative to paths listed in the system environment variables,
-`$(WORKSPACE)`, `$(PACKAGES_PATH)`, `$(EFI_SOURCE)`, `$(EDK_SOURCE)`, and
-`$(ECP_SOURCE)`.  If the file is not found after testing for the possible
-combinations, the parsing tools must terminate with an error.
+`$(WORKSPACE)`, and `$(PACKAGES_PATH)`. If the file is not found after testing 
+for the possible combinations, the parsing tools must terminate with an error.
 
 Macros, defined in this FDF file or in the DSC file, are permitted in the
 path or file name of the !include statement, as these files are included prior
 to processing the file for macros. The system environment variables,
-`$(WORKSPACE)`, `$(EDK_SOURCE)`, `$(EFI_SOURCE)`, and `$(ECP_SOURCE)` may also
-be used; only these system environment variables are permitted to start the
-path of the included file.
+`$(WORKSPACE)` may also be used; only that system environment variables are 
+permitted to start the path of the included file.
 
 Statements in !include files must not break the integrity of the FDF file, the
 included file is read in by tools in the exact position of the file, and is
@@ -381,11 +377,8 @@ that may be used in EDK II DSC and FDF files are in the next table.
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `$(WORKSPACE)`        | System Environment Variable.                                                                                                                                                                                                         |
 | `PACKAGES_PATH`       | System Environment Variable that cannot be used in EDK II meta-data Files. The build system will automatically detect if this variable is present and use directories listed in this variable as if they were listed in $(WORKSPACE) |
-| `$(EDK_SOURCE)`       | System Environment Variable.                                                                                                                                                                                                         |
-| `$(EFI_SOURCE)`       | System Environment Variable.                                                                                                                                                                                                         |
 | `$(EDK_TOOLS_PATH)`   | System Environment Variable                                                                                                                                                                                                          |
 | `EDK_TOOLS_BIN`       | System Environment Variable that cannot be used in EDK II meta-data Files.                                                                                                                                                           |
-| `$(ECP_SOURCE)`       | System Environment Variable                                                                                                                                                                                                          |
 | `$(OUTPUT_DIRECTORY)` | Tool parsing from either the DSC file or via a command line option. This is typically the Build/Platform name directory created by the build system in the EDK II WORKSPACE                                                          |
 | `$(BUILD_NUMBER)`     | Tool parsing from either an EDK INF file or the EDK II DSC file's `BUILD_NUMBER` statement. The EDK II DSC file's `BUILD_NUMBER` takes precedence over an EDK INF file's                                                             |
 |                       | `BUILD_NUMBER` if and only if the EDK II DSC specifies a                                                                                                                                                                             |
@@ -410,10 +403,7 @@ must not be altered.
 | Macro Style Used in Meta-Data files | Windows Environment Variable | Linux & OS/X Environment Variable |
 | ------------------- | ------------------ | ----------------- |
 | `$(WORKSPACE)`      | `%WORKSPACE%`      | `$WORKSPACE`      |
-| `$(EFI_SOURCE)`     | `%EFI_SOURCE%`     | `$EFI_SOURCE`     |
-| `$(EDK_SOURCE)`     | `%EDK_SOURCE%`     | `$EDK_SOURCE`     |
 | `$(EDK_TOOLS_PATH)` | `%EDK_TOOLS_PATH%` | `$EDK_TOOLS_PATH` |
-| `$(ECP_SOURCE)`     | `%ECP_SOURCE%`     | `$ECP_SOURCE`     |
 
 The system environment variables, `PACKAGES_PATH` and `EDK_TOOLS_BIN`, are not
 permitted in EDK II meta-data files.

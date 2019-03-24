@@ -1,7 +1,7 @@
 <!--- @file
   1 Introduction
 
-  Copyright (c) 2006-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2006-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -41,8 +41,3 @@ Inc. (UEFI 2.5 and PI 1.4) compliant binary images.
 The FDF file is used to describe the content and layout of binary images.
 Binary images described in this file may be any combination of boot images,
 capsule images or PCI Options ROMs.
-
-**********
-**Note:** EDK II FDF file formats have no similarity to EDK FDF file formats.
-New utilities and functionality have been provided to process these files.
-**********

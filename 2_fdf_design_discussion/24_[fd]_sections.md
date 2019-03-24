@@ -1,7 +1,7 @@
 <!--- @file
   2.4 [FD] Sections
 
-  Copyright (c) 2006-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2006-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -229,11 +229,6 @@ event logs that are persistent between system resets, and modified via some
 other mechanism (and Each FD region has a `UiName` modifier, then the output
 image files uses the `UiName` modifier for the file name.
 
-**********
-**Note:** Although sub-regions existed in EDK FDF files, EDK II FDF does not
-use the concept of subregions.
-**********
-
 #### 2.4.4.1 FV RegionType
 
 The `FV RegionType` is a pointer to either one of the unique FV names that are
@@ -331,7 +326,7 @@ CAPSULE = MyCapsule
 
 #### 2.4.4.5 INF Region Type
 
-The INF statements point to EDK component and EDK II module INF files. Parsing
+The INF statements point to EDK II module INF files. Parsing
 tools will scan the INF file to determine the type of component or module. The
 component or module type is used to reference the standard rules defined
 elsewhere in the FDF file.

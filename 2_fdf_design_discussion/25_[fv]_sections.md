@@ -1,7 +1,7 @@
 <!--- @file
   2.5 [FV] Sections
 
-  Copyright (c) 2006-2018, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2006-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -95,7 +95,6 @@ used for identifying other items or values that will be used in later statements
 The following are examples of the `DEFINE` statement.
 
 ```
-DEFINE EDKMOD           = $(WORKSPACE)/EdkModulePkg/
 DEFINE MDE_MOD_TSPG     = gEfiMdeModulePkgTokenSpaceGuid
 DEFINE NV_STOR_VAR_SIZE = PcdFlashNvStorageVariableSize
 DEFINE FV_HDR_SIZE      = 0x48
@@ -196,7 +195,7 @@ dispatched in this order. Once complete, the `d.inf` module will be dispatched.
 
 ### 2.5.5 INF Statements
 
-The INF statements point to EDK component and EDK II module INF files. Parsing
+The INF statements point to EDK II module INF files. Parsing
 tools will scan the INF file to determine the type of component or module. The
 component or module type is used to reference the standard rules defined
 elsewhere in the FDF file.
@@ -470,9 +469,7 @@ The following keywords are used for valid `LEAF_SECTION` types.
 
 The argument, `build #`, is only valid for `VERSION` leaf section. The number
 may be specified in the platform description (DSC) file's `[Defines]` section,
-`BUILD_NUMBER` element. EDK INF files may specify a `BUILD_NUMBER` in the
-defines section. However, this value is only used if the EDK II DSC file does
-not contain a `BUILD_NUMBER` statement.
+`BUILD_NUMBER` element. 
 
 The **_Filename_** is only optional for `VERSION` and `UI`.
 

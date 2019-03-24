@@ -1,7 +1,7 @@
 <!--- @file
   1.2 Terms
 
-  Copyright (c) 2006-2018, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2006-2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -109,12 +109,6 @@ the Intel(R) Platform Innovation Framework for EFI Specifications developed in
 
 EFI Development Kit, version II that provides updated firmware module layouts
 and custom tools, superseding the original EDK.
-
-**EDK Compatibility Package (ECP)**
-
-The EDK Compatibility Package (ECP) provides libraries that will permit using
-most existing EDK drivers with the EDK II build environment and EDK II
-platforms.
 
 **EFI**
 

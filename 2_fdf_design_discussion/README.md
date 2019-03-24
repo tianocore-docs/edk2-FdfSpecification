@@ -47,8 +47,6 @@ description (DSC) file.
 The remainder of this document uses "FDF" instead of "Flash Description File."
 
 The EDK II Build generates UEFI and PI specification compliant binary images.
-The tools provided in the EDK and the EdkCompatibilityPkg module support
-earlier versions of the specifications.
 
 This revision of the specification adds support for multiple binary files in
 an FV FILE RAW statement. FDF files that use this feature must use the new

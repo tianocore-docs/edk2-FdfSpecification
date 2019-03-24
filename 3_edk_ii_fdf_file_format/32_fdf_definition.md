@@ -50,7 +50,6 @@ EBNF).
                  <FV>*
                  <Capsule>*
                  <FmpPayload>*
-                 <VTF>*
                  <Rules>*
                  <OptionRom>*
                  <UserExtensions>*
@@ -220,12 +219,12 @@ The following are common definitions used by multiple section types.
 <InOp>                 ::= <MTS> [<NotOp>] {"IN"} {"in"} <MTS>
 <TargetExress>         ::= (A-Z) (A-Z0-9)* <InOp> "$(TARGET)"
 <ArchExpress>          ::= <DblQuote> <Arch> <DblQuote> <InOp> "$(ARCH)"
-<Arch>                 ::= {"IA32"} {"X64"} {"IPF"} {"EBC"} {<OA>}
+<Arch>                 ::= {"IA32"} {"X64"} {"EBC"} {<OA>}
 <ToolExpress>          ::= (A-Z) (a-zA-Z0-9)* <InOp> "$(TOOL_CHAIN_TAG)"
 <Boolean>              ::= {<BoolType>} {<Expression>}
 <EOL>                  ::= <TS> 0x0D 0x0A
 <OA>                   ::= (a-zA-Z)(a-zA-Z0-9)*
-<arch>                 ::= {"IA32"} {"X64"} {"IPF"} {"EBC"} {<OA>}
+<arch>                 ::= {"IA32"} {"X64"} {"EBC"} {<OA>}
                            {"common"}
 <FvAlignmentValues>    ::= {"1"} {"2"} {"4"} {"8"} {"16"} {"32"}
                            {"64"} {"128"}{"256"} {"512"} {"1K"} {"2K"}
@@ -300,7 +299,7 @@ must not be expanded by parsing tools.
 
 Other Architecture - One or more user defined target architectures, such as ARM
 or PPC. The architectures listed here must have a corresponding entry in the
-EDK II meta-data file, _Conf/tools_def.txt_. Only `IA32`, `X64`, `IPF` and
+EDK II meta-data file, _Conf/tools_def.txt_. Only `IA32`, `X64` and
 `EBC` are routinely validated.
 
 **_FileSep_**
@@ -594,61 +593,6 @@ For both macro names and PCDs, the element must be previously defined before it
 can be used. A new operator, "in" is also permitted for testing membership of
 an item in a list of one or more items.
 
-#### Example
-
-```ini
-!if $(MyPlatformTspGuid.IPF_VERSION_1) && NOT $(MyPlatformTspGuid.IPF_VERSION_2)
-  [VTF.IPF.MyBsf]
-    !ifdef IA32RESET
-      # IPF_VERSION is 1 and IA32RESET defined
-      IA32_RST_BIN           = IA32_RST.BIN
-    !endif
-    COMP_NAME = PAL_A
-    COMP_LOC  = MyVtfVF | F
-    COMP_TYPE = 0xF
-    COMP_VER  = 7.01
-    COMP_CS   = 1
-    !if ($(PROCESSOR_NAME) == "M1")
-      COMP_BIN = M1PalCode/PAL_A_M1.BIN
-      COMP_SYM = M1PalCode/PAL_A_M1.SYM
-    !elseif ($(PROCESSOR_NAME) == "M2")
-      COMP_BIN = M2PalCode/PAL_A_M2.BIN
-      COMP_SYM = M2PalCode/PAL_A_M2.SYM
-    !else
-      COMP_BIN = GenPal/PAL_A_GEN.bin
-      COMP_SYM = GenPal/PAL_A_GEN.sym
-    !endif
-    COMP_SIZE = -
-!elseif $(MyPlatformTspGuid.IPF_VERSION_2)
-  [VTF.IPF.MyBsf]
-    !ifdef IA32RESET
-      IA32_RST_BIN = IA32_RST.BIN
-    !endif
-    COMP_NAME = PAL_A
-    COMP_LOC  = MyVtfFv | F
-    COMP_TYPE = 0xF
-    COMP_VER  = 7.01
-    COMP_CS   = 1
-    COMP_BIN  = GenPal/PAL_A_GEN.bin
-    COMP_SYM  = GenPal/PAL_A_GEN.sym
-    COMP_SIZE = -
-    COMP_NAME = PAL_B
-    COMP_LOC  = MyVtfFv | S
-    COMP_TYPE = 0x01
-    COMP_VER  = -
-    COMP_CS   = 1
-    COMP_BIN  = GenPal/PAL_B_GEN.bin
-    COMP_SYM  = GenPal/PAL_B_GEN.sym
-    COMP_SIZE = -
-!else
-  [VTF.X64.MyVtf]
-      IA32_RST_BIN = IA32_RST.BIN
-!endif
-!ifndef MY_MACRO
-DEFINE MY_MACRO
-!endif
-```
-
 ### 3.2.4 !include Statements
 
 Use of this statement is optional.
@@ -666,8 +610,7 @@ new sections, then the section being processed in the Platform FDF file is
 considered to have been terminated.
 
 If the `<Filename>` contains "$" characters, then macros defined in the DSC
-file, FDF file, and the system environment variables, `$(WORKSPACE)`,
-`$(EDK_SOURCE)`, `$(EFI_SOURCE)`, and `$(ECP_SOURCE)` are substituted into
+file, FDF file, and the system environment variables, `$(WORKSPACE)`, is substituted into
 `<Filename>`.
 
 The tools look for `<Filename>` relative to the directory the FDF file resides.
