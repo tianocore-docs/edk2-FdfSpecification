@@ -125,7 +125,8 @@ Conditional statements may be used anywhere within this section.
 <FileOpts>          ::= ["Fixed" <MTS>] ["Checksum" <MTS>]
                         [<FfsAlignment>]
 <FfsAlignment>      ::= "Align" <Eq> <FfsAlignmentValues> <MTS>
-<FileSpec>          ::= {<SimpleFile>} {<ComplexFile>} {<SbtGuid>}
+<FileSpec>          ::= {<SimpleFile>} {<ComplexFile>} {<SbtGuid>} {<DataFile>}
+<DataFile>          ::= "{" <VarFile> "}"
 <SimpleFile>        ::= <LeafSecType> [<FileOpts>] <VarFile> <EOL>
 <LeafSecType>       ::= {"COMPAT16"} {"PE32"} {"PIC"} {"TE"}
                         {"FV_IMAGE"} {"RAW"} {"DXE_DEPEX"} {"UI"}
