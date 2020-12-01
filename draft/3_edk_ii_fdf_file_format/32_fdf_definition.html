@@ -1,0 +1,1420 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3.2 FDF Definition · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="33_header_section.html" />
+    
+    
+    <link rel="prev" href="31_general_rules.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../#edk-ii-flash-description-fdf-file-specification">
+            
+                    
+                    EDK II Flash Description (FDF) File Specification
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1_introduction/">
+            
+                <a href="../1_introduction/#1-introduction">
+            
+                    
+                    1 Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../1_introduction/11_overview.html">
+            
+                <a href="../1_introduction/11_overview.html#11-overview">
+            
+                    
+                    1.1 Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../1_introduction/12_terms.html">
+            
+                <a href="../1_introduction/12_terms.html#12-terms">
+            
+                    
+                    1.2 Terms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../1_introduction/13_related_information.html">
+            
+                <a href="../1_introduction/13_related_information.html#13-related-information">
+            
+                    
+                    1.3 Related Information
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../1_introduction/14_target_audience.html">
+            
+                <a href="../1_introduction/14_target_audience.html#14-target-audience">
+            
+                    
+                    1.4 Target Audience
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../1_introduction/15_conventions_used_in_this_document.html">
+            
+                <a href="../1_introduction/15_conventions_used_in_this_document.html#15-conventions-used-in-this-document">
+            
+                    
+                    1.5 Conventions Used in this Document
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2_fdf_design_discussion/">
+            
+                <a href="../2_fdf_design_discussion/#2-fdf-design-discussion">
+            
+                    
+                    2 FDF Design Discussion
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../2_fdf_design_discussion/21_processing_overview.html">
+            
+                <a href="../2_fdf_design_discussion/21_processing_overview.html#21-processing-overview">
+            
+                    
+                    2.1 Processing Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../2_fdf_design_discussion/22_flash_description_file_format.html">
+            
+                <a href="../2_fdf_design_discussion/22_flash_description_file_format.html#22-flash-description-file-format">
+            
+                    
+                    2.2 Flash Description File Format
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../2_fdf_design_discussion/23_[defines]_section.html">
+            
+                <a href="../2_fdf_design_discussion/23_[defines]_section.html#23-defines-section">
+            
+                    
+                    2.3 [Defines] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../2_fdf_design_discussion/24_[fd]_sections.html">
+            
+                <a href="../2_fdf_design_discussion/24_[fd]_sections.html#24-fd-sections">
+            
+                    
+                    2.4 [FD] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../2_fdf_design_discussion/25_[fv]_sections.html">
+            
+                <a href="../2_fdf_design_discussion/25_[fv]_sections.html#25-fv-sections">
+            
+                    
+                    2.5 [FV] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../2_fdf_design_discussion/26_[capsule]_sections.html">
+            
+                <a href="../2_fdf_design_discussion/26_[capsule]_sections.html#26-capsule-sections">
+            
+                    
+                    2.6 [Capsule] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../2_fdf_design_discussion/27_[rule]_sections.html">
+            
+                <a href="../2_fdf_design_discussion/27_[rule]_sections.html#27-rule-sections">
+            
+                    
+                    2.7 [Rule] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../2_fdf_design_discussion/28_[optionrom]_sections.html">
+            
+                <a href="../2_fdf_design_discussion/28_[optionrom]_sections.html#28-optionrom-sections">
+            
+                    
+                    2.8 [OptionRom] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./#3-edk-ii-fdf-file-format">
+            
+                    
+                    3 EDK II FDF File Format
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="31_general_rules.html">
+            
+                <a href="31_general_rules.html#31-general-rules">
+            
+                    
+                    3.1 General Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="32_fdf_definition.html">
+            
+                <a href="32_fdf_definition.html#32-fdf-definition">
+            
+                    
+                    3.2 FDF Definition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="33_header_section.html">
+            
+                <a href="33_header_section.html#33-header-section">
+            
+                    
+                    3.3 Header Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="34_[defines]_section.html">
+            
+                <a href="34_[defines]_section.html#34-defines-section">
+            
+                    
+                    3.4 [Defines] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="35_[fd]_sections.html">
+            
+                <a href="35_[fd]_sections.html#35-fd-sections">
+            
+                    
+                    3.5 [FD] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="36_[fv]_sections.html">
+            
+                <a href="36_[fv]_sections.html#36-fv-sections">
+            
+                    
+                    3.6 [FV] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="37_[capsule]_sections.html">
+            
+                <a href="37_[capsule]_sections.html#37-capsule-sections">
+            
+                    
+                    3.7 [Capsule] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="38_[fmppayload]_sections.html">
+            
+                <a href="38_[fmppayload]_sections.html#38-fmppayload-sections">
+            
+                    
+                    3.8 [FmpPayload] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="39_[rule]_sections.html">
+            
+                <a href="39_[rule]_sections.html#39-rule-sections">
+            
+                    
+                    3.9 [Rule] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="310_pci_optionrom_section.html">
+            
+                <a href="310_pci_optionrom_section.html#310-pci-optionrom-section">
+            
+                    
+                    3.10 PCI OptionRom Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../appendix_a_nt32pkg_flash_description_file.html">
+            
+                <a href="../appendix_a_nt32pkg_flash_description_file.html#appendix-a-nt32pkg-flash-description-file">
+            
+                    
+                    Appendix A Nt32Pkg Flash Description File
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../appendix_b_common_error_messages.html">
+            
+                <a href="../appendix_b_common_error_messages.html#appendix-b-common-error-messages">
+            
+                    
+                    Appendix B Common Error Messages
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../appendix_b_common_error_messages.html">
+            
+                <a href="../appendix_b_common_error_messages.html#b1-fd-syntax-errors">
+            
+                    
+                    B.1 [FD] Syntax Errors:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../appendix_b_common_error_messages.html">
+            
+                <a href="../appendix_b_common_error_messages.html#b2-fv-syntax-errors">
+            
+                    
+                    B.2 [FV] Syntax Errors:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../appendix_b_common_error_messages.html">
+            
+                <a href="../appendix_b_common_error_messages.html#b3-capsule-syntax-errors">
+            
+                    
+                    B.3 [CAPSULE] Syntax Errors:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../appendix_b_common_error_messages.html">
+            
+                <a href="../appendix_b_common_error_messages.html#b4-rule-syntax-errors">
+            
+                    
+                    B.4 [Rule] Syntax Errors:
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../appendix_c_reports.html">
+            
+                <a href="../appendix_c_reports.html#appendix-c-reports">
+            
+                    
+                    Appendix C Reports
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    Tables
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../1_introduction/11_overview.html">
+            
+                <a href="../1_introduction/11_overview.html#table-1-edk-build-infrastructure-support-matrix">
+            
+                    
+                    Table 1 EDK Build Infrastructure Support Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../2_fdf_design_discussion/22_flash_description_file_format.html">
+            
+                <a href="../2_fdf_design_discussion/22_flash_description_file_format.html#table-2-well-known-macro-statements">
+            
+                    
+                    Table 2 Well-known Macro Statements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../2_fdf_design_discussion/22_flash_description_file_format.html">
+            
+                <a href="../2_fdf_design_discussion/22_flash_description_file_format.html#table-3-using-system-environment-variable">
+            
+                    
+                    Table 3 Using System Environment Variable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../2_fdf_design_discussion/22_flash_description_file_format.html">
+            
+                <a href="../2_fdf_design_discussion/22_flash_description_file_format.html#table-4-reserved-rule-section-macro-strings">
+            
+                    
+                    Table 4 Reserved [Rule] Section Macro Strings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../2_fdf_design_discussion/22_flash_description_file_format.html">
+            
+                <a href="../2_fdf_design_discussion/22_flash_description_file_format.html#table-5-operator-precedence-and-supported-operands">
+            
+                    
+                    Table 5 Operator Precedence and Supported Operands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    Figures
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../2_fdf_design_discussion/21_processing_overview.html">
+            
+                <a href="../2_fdf_design_discussion/21_processing_overview.html#figure-1-edk-ii-build-data-flow">
+            
+                    
+                    Figure 1 EDK II Build Data Flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../2_fdf_design_discussion/21_processing_overview.html">
+            
+                <a href="../2_fdf_design_discussion/21_processing_overview.html#figure-2-edk-ii-create-image-flow">
+            
+                    
+                    Figure 2 EDK II Create Image Flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                    Examples
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="32_fdf_definition.html">
+            
+                <a href="32_fdf_definition.html#example-edk-ii-fdf">
+            
+                    
+                    Example (EDK II FDF)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3.2 FDF Definition</a>
+    </h1>
+</div>
+<div>
+    <!-- 
+    <img style="float:left; align:middle; height:2em" src="media/TianocoreTitlePageLogo.jpg"/>
+     -->
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II Flash Description (FDF) File Specification</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [12/01/2020 05:10:56]</div>
+        <div style="text-align:right">Revision 1.28</div>
+      </h2>  
+    
+    <hr>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <!--- @file
+  3.2 FDF Definition
+
+  Copyright (c) 2006-2019, Intel Corporation. All rights reserved.<BR>
+
+  Redistribution and use in source (original document form) and 'compiled'
+  forms (converted to PDF, epub, HTML and other formats) with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1) Redistributions of source code (original document form) must retain the
+     above copyright notice, this list of conditions and the following
+     disclaimer as the first lines of this file unmodified.
+
+  2) Redistributions in compiled form (transformed to other DTDs, converted to
+     PDF, epub, HTML and other formats) must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+  THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT "AS IS" AND ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+  EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<h2 id="32-fdf-definition">3.2 FDF Definition</h2>
+<p>The FDF definitions define the final properties for a flash image - PCD
+settings in this file override any other PCD settings that may have been set in
+the platform description (DSC) file. The <code>[Defines]</code> section, when specified,
+must appear before any other section except the header. (The header, when
+specified, is always the first section of an FDF file.) The remaining sections
+may be specified in any order within the FDF file.</p>
+<h4 id="summary">Summary</h4>
+<p>The EDK II Flash Description (FDF) file has the following format (using the
+EBNF).</p>
+<pre><code class="lang-c">&lt;EDK_II_FDF&gt; ::= [&lt;Header&gt;]
+                 [&lt;Defines&gt;]
+                 &lt;FD&gt;*
+                 &lt;FV&gt;*
+                 &lt;Capsule&gt;*
+                 &lt;FmpPayload&gt;*
+                 &lt;Rules&gt;*
+                 &lt;OptionRom&gt;*
+                 &lt;UserExtensions&gt;*
+</code></pre>
+<hr>
+<p><strong>Note:</strong> Assignments set as command-line arguments to the parsing tools take
+precedence over all assignments defined in the FDF file. If a variable/value
+assignment is specified on the build tool&apos;s command-line, that value will
+override any variable/value assignment defined in the FDF file.</p>
+<hr>
+<p><strong>Note:</strong> Conditional statements may be used anywhere within the FDF file, with
+the ability to group any item within a section as well as entire sections.</p>
+<hr>
+<h3 id="321-common-definitions">3.2.1 Common Definitions</h3>
+<h4 id="summary">Summary</h4>
+<p>The following are common definitions used by multiple section types.</p>
+<h4 id="prototype">Prototype</h4>
+<pre><code class="lang-c">&lt;Word&gt;                 ::= (a-zA-Z0-9_)(a-zA-Z0-9_-.)* Alphanumeric characters
+                           with optional period &quot;.&quot;, dash &quot;-&quot; and/or underscore
+                           &quot;_&quot; characters. A period character may not be
+                           followed by another period character.
+                           No white space characters are permitted.
+&lt;SimpleWord&gt;           ::= (a-zA-Z0-9)(a-zA-Z0-9_-)* A word that cannot contain
+                           a period character.
+&lt;ToolWord&gt;             ::= (A-Z)(a-zA-Z0-9)* Alphanumeric characters. white
+                           space characters are not permitted.
+&lt;FileSep&gt;              ::= &quot;/&quot;
+&lt;Extension&gt;            ::= (a-zA-Z0-9_-)+ One or more alphanumeric characters.
+&lt;File&gt;                 ::= &lt;Word&gt; [&quot;.&quot; &lt;Extension&gt;]
+&lt;PATH&gt;                 ::= [&lt;MACROVAL&gt; &lt;FileSep&gt;] &lt;RelativePath&gt;
+&lt;RelativePath&gt;         ::= &lt;DirName&gt; [&lt;FileSep&gt; &lt;DirName&gt;]*
+&lt;DirName&gt;              ::= {&lt;Word&gt;} {&lt;MACROVAL&gt;}
+&lt;FullFilename&gt;         ::= &lt;PATH&gt; &lt;FileSep&gt; &lt;File&gt;
+&lt;Filename&gt;             ::= [&lt;PATH&gt; &lt;FileSep&gt;] &lt;File&gt;
+&lt;Chars&gt;                ::= (a-zA-Z0-9_)
+&lt;Digit&gt;                ::= (0-9)
+&lt;NonDigit&gt;             ::= (a-zA-Z_)
+&lt;Identifier&gt;           ::= &lt;NonDigit&gt; &lt;Chars&gt;*
+&lt;CName&gt;                ::= &lt;Identifier&gt; # A valid C variable name.
+&lt;AsciiChars&gt;           ::= (0x21 - 0x7E)
+&lt;CChars&gt;               ::= [{0x21} {(0x23 - 0x5B)} {(0x5D - 0x7E)}
+                           {&lt;EscapeSequence&gt;}]*
+&lt;DblQuote&gt;             ::= 0x22
+&lt;EscapeSequence&gt;       ::= &quot;\&quot; {&quot;n&quot;} {&quot;t&quot;} {&quot;f&quot;} {&quot;r&quot;} {&quot;b&quot;} {&quot;0&quot;}
+                           {&quot;\&quot;} {&lt;DblQuote&gt;}
+&lt;TabSpace&gt;             ::= {&lt;Tab&gt;} {&lt;Space&gt;}
+&lt;TS&gt;                   ::= &lt;TabSpace&gt;*
+&lt;MTS&gt;                  ::= &lt;TabSpace&gt;+
+&lt;Tab&gt;                  ::= 0x09
+&lt;Space&gt;                ::= 0x20
+&lt;CR&gt;                   ::= 0x0D
+&lt;LF&gt;                   ::= 0x0A
+&lt;CRLF&gt;                 ::= &lt;CR&gt; &lt;LF&gt;
+&lt;WhiteSpace&gt;           ::= {&lt;TS&gt;} {&lt;CR&gt;} {&lt;LF&gt;} {&lt;CRLF&gt;}
+&lt;WS&gt;                   ::= &lt;WhiteSpace&gt;*
+&lt;Eq&gt;                   ::= &lt;TS&gt; &quot;=&quot; &lt;TS&gt;
+&lt;FieldSeparator&gt;       ::= &quot;|&quot;
+&lt;FS&gt;                   ::= {&lt;TS&gt;} &lt;FieldSeparator&gt; &lt;TS&gt;
+&lt;Wildcard&gt;             ::= &quot;*&quot;
+&lt;CommaSpace&gt;           ::= &quot;,&quot; &lt;Space&gt;*
+&lt;Cs&gt;                   ::= &quot;,&quot; &lt;Space&gt;*
+&lt;AsciiString&gt;          ::= [ &lt;TS&gt;* &lt;AsciiChars&gt;* ]*
+&lt;EmptyString&gt;          ::= &lt;DblQuote&gt; &lt;DblQuote&gt;
+&lt;CFlags&gt;               ::= &lt;AsciiString&gt;
+&lt;PrintChars&gt;           ::= {&lt;TS&gt;} {&lt;CChars&gt;}
+&lt;QuotedString&gt;         ::= &lt;DblQuote&gt; &lt;PrintChars&gt;* &lt;DblQuote&gt;
+&lt;CString&gt;              ::= [&quot;L&quot;] {&lt;QuotedString&gt;} {&lt;SglQuotedString&gt;}
+&lt;SglQuotedString&gt;      ::= &lt;SglQuote&gt; &lt;PrintChars&gt;* &lt;SglQuote&gt;
+&lt;SglQuote&gt;             ::= 0x27
+&lt;NormalizedString&gt;     ::= &lt;DblQuote&gt; [{&lt;Word&gt;} {&lt;Space&gt;}]+ &lt;DblQuote&gt;
+&lt;GlobalComment&gt;        ::= &lt;WS&gt; &quot;#&quot; [&lt;AsciiString&gt;] &lt;EOL&gt;+
+&lt;Comment&gt;              ::= &quot;#&quot; &lt;AsciiString&gt; &lt;EOL&gt;+
+&lt;UnicodeString&gt;        ::= &quot;L&quot; {&lt;QuotedString&gt;} {&lt;SglQuotedString&gt;}
+&lt;HexDigit&gt;             ::= (a-fA-F0-9)
+&lt;HexByte&gt;              ::= {&quot;0x&quot;} {&quot;0X&quot;} [&lt;HexDigit&gt;] &lt;HexDigit&gt;
+&lt;HexNumber&gt;            ::= {&quot;0x&quot;} {&quot;0X&quot;} &lt;HexDigit&gt;+
+&lt;HexVersion&gt;           ::= &quot;0x&quot; [0]* &lt;Major&gt; &lt;Minor&gt;
+&lt;Major&gt;                ::= &lt;HexDigit&gt;? &lt;HexDigit&gt;? &lt;HexDigit&gt;?
+                           &lt;HexDigit&gt;
+&lt;Minor&gt;                ::= &lt;HexDigit&gt; &lt;HexDigit&gt; &lt;HexDigit&gt; &lt;HexDigit&gt;
+&lt;DecimalVersion&gt;       ::= {&quot;0&quot;} {(1-9) [(0-9)]*} [&quot;.&quot; (0-9)+]
+&lt;VersionVal&gt;           ::= {&lt;HexVersion&gt;} {(0-9)+ &quot;.&quot; (0-99)}
+&lt;NamedGuidOrPcd&gt;       ::= {&quot;PCD(&quot; &lt;PcdName&gt; &quot;)&quot;} {&lt;RegistryFormatGUID&gt;} {&lt;GuidCName&gt;}
+&lt;GUID&gt;                 ::= {&lt;RegistryFormatGUID&gt;} {&lt;CFormatGUID&gt;}
+&lt;RegistryFormatGUID&gt;   ::= &lt;RHex8&gt; &quot;-&quot; &lt;RHex4&gt; &quot;-&quot; &lt;RHex4&gt; &quot;-&quot; &lt;RHex4&gt; &quot;-&quot;
+                           &lt;RHex12&gt;
+&lt;RHex4&gt;                ::= &lt;HexDigit&gt; &lt;HexDigit&gt; &lt;HexDigit&gt; &lt;HexDigit&gt;
+&lt;RHex8&gt;                ::= &lt;RHex4&gt; &lt;RHex4&gt;
+&lt;RHex12&gt;               ::= &lt;RHex4&gt; &lt;RHex4&gt; &lt;RHex4&gt;
+&lt;RawH2&gt;                ::= &lt;HexDigit&gt;? &lt;HexDigit&gt;
+&lt;RawH4&gt;                ::= &lt;HexDigit&gt;? &lt;HexDigit&gt;? &lt;HexDigit&gt;? &lt;HexDigit&gt;
+&lt;OptRawH4&gt;             ::= &lt;HexDigit&gt;? &lt;HexDigit&gt;? &lt;HexDigit&gt;? &lt;HexDigit&gt;?
+&lt;Hex2&gt;                 ::= {&quot;0x&quot;} {&quot;0X&quot;} &lt;RawH2&gt;
+&lt;Hex4&gt;                 ::= {&quot;0x&quot;} {&quot;0X&quot;} &lt;RawH4&gt;
+&lt;Hex8&gt;                 ::= {&quot;0x&quot;} {&quot;0X&quot;} &lt;OptRawH4&gt; &lt;RawH4&gt;
+&lt;Hex12&gt;                ::= {&quot;0x&quot;} {&quot;0X&quot;} &lt;OptRawH4&gt; &lt;OptRawH4&gt; &lt;RawH4&gt;
+&lt;Hex16&gt;                ::= {&quot;0x&quot;} {&quot;0X&quot;} &lt;OptRawH4&gt; &lt;OptRawH4&gt;
+                           &lt;OptRawH4&gt; &lt;RawH4&gt;
+&lt;CFormatGUID&gt;          ::= &quot;{&quot; &lt;Hex8&gt; &lt;CommaSpace&gt; &lt;Hex4&gt; &lt;CommaSpace&gt; &lt;Hex4&gt;
+                           &lt;CommaSpace&gt; &quot;{&quot;
+                           &lt;Hex2&gt; &lt;CommaSpace&gt; &lt;Hex2&gt; &lt;CommaSpace&gt;
+                           &lt;Hex2&gt; &lt;CommaSpace&gt; &lt;Hex2&gt; &lt;CommaSpace&gt;
+                           &lt;Hex2&gt; &lt;CommaSpace&gt; &lt;Hex2&gt; &lt;CommaSpace&gt;
+                           &lt;Hex2&gt; &lt;CommaSpace&gt; &lt;Hex2&gt; &quot;}&quot; &quot;}&quot;
+&lt;CArray&gt;               ::= &quot;{&quot; {&lt;NList&gt;} {&lt;CArray&gt;} &quot;}&quot;
+&lt;NList&gt;                ::= &lt;HexByte&gt; [&lt;CommaSpace&gt; &lt;HexByte&gt;]*
+&lt;RawData&gt;              ::= &lt;TS&gt; &lt;HexByte&gt;
+                           [ &lt;Cs&gt; &lt;HexByte&gt; [&lt;EOL&gt; &lt;TS&gt;] ]*
+&lt;Integer&gt;              ::= {(0-9)} {(1-9)(0-9)+}
+&lt;Number&gt;               ::= {&lt;Integer&gt;} {&lt;HexNumber&gt;}
+&lt;HexNz&gt;                ::= (\x1 - \xFFFFFFFFFFFFFFFF)
+&lt;NumNz&gt;                ::= (1-18446744073709551615)
+&lt;GZ&gt;                   ::= {&lt;NumNz&gt;} {&lt;HexNz&gt;}
+&lt;TRUE&gt;                 ::= {&quot;TRUE&quot;} {&quot;true&quot;} {&quot;True&quot;} {&quot;0x1&quot;}
+                           {&quot;0x01&quot;} {&quot;1&quot;}
+&lt;FALSE&gt;                ::= {&quot;FALSE&quot;} {&quot;false&quot;} {&quot;False&quot;} {&quot;0x0&quot;} {&quot;0x00&quot;} {&quot;0&quot;}
+&lt;BoolType&gt;             ::= {&lt;TRUE&gt;} {&lt;FALSE&gt;}
+&lt;MACRO&gt;                ::= (A-Z)(A-Z0-9_)*
+&lt;MACROVAL&gt;             ::= &quot;$(&quot; &lt;MACRO&gt; &quot;)&quot;
+&lt;GuidCName&gt;            ::= &lt;CName&gt;
+&lt;PcdFieldName&gt;         ::= &lt;TokenSpaceGuidCName&gt; &quot;.&quot; &lt;PcdCName&gt; &quot;.&quot; &lt;Field&gt;
+&lt;PcdName&gt;              ::= &lt;TokenSpaceGuidCName&gt; &quot;.&quot; &lt;PcdCName&gt;
+&lt;PcdCName&gt;             ::= &lt;CName&gt;
+&lt;TokenSpaceGuidCName&gt;  ::= &lt;CName&gt;
+&lt;Field&gt;                ::= &lt;CName&gt;
+&lt;PCDVAL&gt;               ::= &quot;PCD(&quot; &lt;PcdName&gt; &quot;)&quot;
+&lt;UINT8&gt;                ::= {&quot;0x&quot;} {&quot;0X&quot;} (\x0 - \xFF)
+&lt;UINT16&gt;               ::= {&quot;0x&quot;} {&quot;0X&quot;} (\x0 - \xFFFF)
+&lt;UINT32&gt;               ::= {&quot;0x&quot;} {&quot;0X&quot;} (\x0 - \xFFFFFFFF)
+&lt;UINT64&gt;               ::= {&quot;0x&quot;} {&quot;0X&quot;} (\x0 - \xFFFFFFFFFFFFFFFF)
+&lt;UINT8z&gt;               ::= {&quot;0x&quot;} {&quot;0X&quot;} &lt;HexDigit&gt; &lt;HexDigit&gt;
+&lt;UINT16z&gt;              ::= {&quot;0x&quot;} {&quot;0X&quot;} &lt;HexDigit&gt; &lt;HexDigit&gt; &lt;HexDigit&gt;
+                           &lt;HexDigit&gt;
+&lt;UINT32z&gt;              ::= {&quot;0x&quot;} {&quot;0X&quot;} &lt;HexDigit&gt; &lt;HexDigit&gt;
+                           &lt;HexDigit&gt; &lt;HexDigit&gt; &lt;HexDigit&gt; &lt;HexDigit&gt;
+                           &lt;HexDigit&gt; &lt;HexDigit&gt;
+&lt;UINT64z&gt;              ::= {&quot;0x&quot;} {&quot;0X&quot;} &lt;HexDigit&gt; &lt;HexDigit&gt;
+                           &lt;HexDigit&gt; &lt;HexDigit&gt; &lt;HexDigit&gt; &lt;HexDigit&gt;
+                           &lt;HexDigit&gt; &lt;HexDigit&gt; &lt;HexDigit&gt; &lt;HexDigit&gt;
+                           &lt;HexDigit&gt; &lt;HexDigit&gt; &lt;HexDigit&gt; &lt;HexDigit&gt;
+                           &lt;HexDigit&gt; &lt;HexDigit&gt;
+&lt;ShortNum&gt;             ::= (0-255)
+&lt;IntNum&gt;               ::= (0-65535)
+&lt;LongNum&gt;              ::= (0-4294967295)
+&lt;LongLongNum&gt;          ::= (0-18446744073709551615)
+&lt;NumValUint8&gt;          ::= {&lt;ShortNum&gt;} {&lt;UINT8&gt;}
+&lt;NumValUint16&gt;         ::= {&lt;IntNum&gt;} {&lt;UINT16&gt;}
+&lt;NumValUint32&gt;         ::= {&lt;LongNum&gt;} {&lt;UINT32&gt;}
+&lt;NumValUint64&gt;         ::= {&lt;LongLongNum&gt;} {&lt;UINT64&gt;}
+&lt;ModuleType&gt;           ::= {&quot;BASE&quot;} {&quot;SEC&quot;} {&quot;PEI_CORE&quot;} {&quot;PEIM&quot;}
+                           {&quot;DXE_CORE&quot;} {&quot;DXE_DRIVER&quot;} {&quot;SMM_CORE&quot;}
+                           {&quot;MM_CORE_STANDALONE&quot;} {&quot;MM_STANDALONE&quot;}
+                           {&quot;DXE_RUNTIME_DRIVER&quot;} {&quot;DXE_SAL_DRIVER&quot;}
+                           {&quot;DXE_SMM_DRIVER&quot;} {&quot;UEFI_DRIVER&quot;}
+                           {&quot;UEFI_APPLICATION&quot;} {&quot;USER_DEFINED&quot;}
+&lt;ModuleTypeList&gt;       ::= &lt;ModuleType&gt; [&quot; &quot; &lt;ModuleType&gt;]*
+&lt;IdentifierName&gt;       ::= &lt;TS&gt; {&lt;MACROVAL&gt;} {&lt;PcdName&gt;} &lt;TS&gt;
+&lt;MembershipExpression&gt; ::= {&lt;TargetExpress&gt;} {&lt;ArchExpress&gt;} {&lt;ToolExpress&gt;}
+&lt;NotOp&gt;                ::= &lt;UnaryOperator&gt; &lt;MTS&gt;
+&lt;InOp&gt;                 ::= &lt;MTS&gt; [&lt;NotOp&gt;] {&quot;IN&quot;} {&quot;in&quot;} &lt;MTS&gt;
+&lt;TargetExress&gt;         ::= (A-Z) (A-Z0-9)* &lt;InOp&gt; &quot;$(TARGET)&quot;
+&lt;ArchExpress&gt;          ::= &lt;DblQuote&gt; &lt;Arch&gt; &lt;DblQuote&gt; &lt;InOp&gt; &quot;$(ARCH)&quot;
+&lt;Arch&gt;                 ::= {&quot;IA32&quot;} {&quot;X64&quot;} {&quot;EBC&quot;} {&lt;OA&gt;}
+&lt;ToolExpress&gt;          ::= (A-Z) (a-zA-Z0-9)* &lt;InOp&gt; &quot;$(TOOL_CHAIN_TAG)&quot;
+&lt;Boolean&gt;              ::= {&lt;BoolType&gt;} {&lt;Expression&gt;}
+&lt;EOL&gt;                  ::= &lt;TS&gt; 0x0D 0x0A
+&lt;OA&gt;                   ::= (a-zA-Z)(a-zA-Z0-9)*
+&lt;arch&gt;                 ::= {&quot;IA32&quot;} {&quot;X64&quot;} {&quot;EBC&quot;} {&lt;OA&gt;}
+                           {&quot;common&quot;}
+&lt;FvAlignmentValues&gt;    ::= {&quot;1&quot;} {&quot;2&quot;} {&quot;4&quot;} {&quot;8&quot;} {&quot;16&quot;} {&quot;32&quot;}
+                           {&quot;64&quot;} {&quot;128&quot;}{&quot;256&quot;} {&quot;512&quot;} {&quot;1K&quot;} {&quot;2K&quot;}
+                           {&quot;4K&quot;} {&quot;8K&quot;} {&quot;16K&quot;} {&quot;32K&quot;} {&quot;64K&quot;}
+                           {&quot;128K&quot;} {&quot;256K&quot;} {&quot;512K&quot;} {&quot;1M&quot;} {&quot;2M&quot;} {&quot;4M&quot;}
+                           {&quot;8M&quot;} {&quot;16M&quot;} {&quot;32M&quot;} {&quot;64M&quot;}
+                           {&quot;128M&quot;} {&quot;256M&quot;} {&quot;512M&quot;} {&quot;1G&quot;} {&quot;2G&quot;}
+&lt;FfsAlignmentValues&gt;   ::= {&quot;Auto&quot;} {&quot;8&quot;} {&quot;16&quot;} {&quot;32&quot;} {&quot;64&quot;} {&quot;128&quot;}
+                           {&quot;512&quot;} {&quot;1K&quot;} {&quot;4K&quot;} {&quot;32K&quot;} {&quot;64K&quot;} {&quot;128K&quot;}
+                           {&quot;256K&quot;} {&quot;512K&quot;} {&quot;1M&quot;} {&quot;2M&quot;} {&quot;4M&quot;} {&quot;8M&quot;}
+                           {&quot;16M&quot;}
+&lt;Array&gt;                ::= &quot;{&quot; {&lt;Array&gt;} {[&lt;Lable&gt;] &lt;ArrayVal&gt;[&lt;CommaSpace&gt; [&lt;Lable&gt;] &lt;ArrayVal&gt;]* } &quot;}&quot;
+&lt;Lable&gt;                ::= &quot;LABEL(&quot; &lt;CName&gt; &quot;)&quot;
+&lt;OffsetOf&gt;             ::= &quot;OFFSET_OF(&quot; &lt;CName&gt; &quot;)&quot;
+&lt;ArrayVal&gt;             ::= {&lt;Num8Array&gt;} {&lt;GuidStr&gt;} {&lt;DevicePath&gt;}    1
+&lt;Num8Array&gt;            ::= {&lt;NonNumType&gt;} {&lt;ShortNum&gt;} {&lt;UINT8&gt;}
+&lt;NonNumType&gt;           ::= {&lt;BoolVal&gt;} {&lt;UnicodeString&gt;} {&lt;CString&gt;}{&lt;Offset&gt;} {&lt;UintMac&gt;}
+&lt;ShortNum&gt;             ::= (0-255)
+&lt;UintMac&gt;              ::= {&lt;Uint8Mac&gt;} {&lt;Uint16Mac&gt;} {&lt;Uint32Mac&gt;} {&lt;Uint64Mac&gt;}
+&lt;Uint8Mac&gt;             ::= &quot;UINT8(&quot; &lt;Num8Array&gt; &quot;)&quot;
+&lt;Uint16Mac&gt;            ::= &quot;UINT16(&quot; &lt;Num16Array&gt; &quot;)&quot;
+&lt;Uint32Mac&gt;            ::= &quot;UINT32(&quot; &lt;Num32Array&gt; &quot;)&quot;
+&lt;Uint64Mac&gt;            ::= &quot;UINT64(&quot; &lt;Num64Array&gt; &quot;)&quot;
+&lt;Num16Array&gt;           ::= {&lt;NonNumType&gt;} {&lt;IntNum&gt;} {&lt;UINT16&gt;}
+&lt;Num32Array&gt;           ::= {&lt;NonNumType&gt;} {&lt;LongNum&gt;} {&lt;UINT32&gt;}
+&lt;Num64Array&gt;           ::= {&lt;NonNumType&gt;} {&lt;LongLongNum&gt;} {&lt;UINT64&gt;}
+</code></pre>
+<hr>
+<p><strong>Note:</strong> When using the characters &quot;|&quot; or &quot;||&quot; in an expression, the
+expression must be encapsulated in open &quot;(&quot; and close &quot;)&quot; parenthesis.</p>
+<hr>
+<p><strong>Note:</strong> Comments may appear anywhere within a FDF file, provided they follow
+the rules that a comment may not be enclosed within Section headers, and that
+in line comments must appear at the end of a statement.</p>
+<hr>
+<p><strong>Note:</strong> The PCD item used in <code>&lt;NamedGuidOrPcd&gt;</code> must be defined as FixedAtBuild
+type and VOID* datum type, and the size of the PCD must be 16 bytes.</p>
+<hr>
+<h3 id="parameter-definitions">Parameter Definitions</h3>
+<p><strong><em>Expression</em></strong></p>
+<p>Refer to the EDK II Expression Syntax Specification for more information.</p>
+<p><strong>&quot;&quot;UnicodeString</strong></p>
+<p>When the <code>&lt;UnicodeString&gt;</code> element (these characters are string literals as
+defined by the C99 specification: L&quot;string&quot;, not actual Unicode characters) is
+included in a value, the build tools may be required to expand the ASCII string
+between the quotation marks into a valid UCS-2LE encoded string. The build
+tools parser must treat all content between the field separators (excluding
+white space characters around the field separators) as ASCII literal content
+when generating the AutoGen.c and AutoGen.h files.</p>
+<p><strong><em>Comments</em></strong></p>
+<p>Strings that appear in comments may be ignored by the build tools. An ASCII
+string matching the format of the ASCII string defined by <code>&lt;UnicodeString&gt;</code>
+(L&quot;Foo&quot; for example,) that appears in a comment must never be expanded by any
+tool.</p>
+<p><strong><em>CFlags</em></strong></p>
+<p>CFlags refers to a string of valid arguments appended to the command line of
+any third party or provided tool. It is not limited to just a compiler
+executable tool. MACRO values that appear in quoted strings in CFlags content
+must not be expanded by parsing tools.</p>
+<p><strong><em>OA</em></strong></p>
+<p>Other Architecture - One or more user defined target architectures, such as ARM
+or PPC. The architectures listed here must have a corresponding entry in the
+EDK II meta-data file, <em>Conf/tools_def.txt</em>. Only <code>IA32</code>, <code>X64</code> and
+<code>EBC</code> are routinely validated.</p>
+<p><strong><em>FileSep</em></strong></p>
+<p>FileSep refers to either the back slash &quot;\&quot; or forward slash &quot;/&quot; characters
+that are used to separate directory names. All EDK II FDF files must use the
+&quot;/&quot; forward slash character when specifying the directory portion of a
+filename. Microsoft operating systems, that normally use a back slash character
+for separating directory names, will interpret the forward slash character
+correctly.</p>
+<p><strong><em>TokenSpaceGuidCName</em></strong></p>
+<p>A word that is a valid C variable that specifies the name space for a
+particular PCD.</p>
+<p><strong><em>PcdCName</em></strong></p>
+<p>A word that is a valid C variable that specifies the name of the token number
+which a member of the name space specified by the TokenSpaceGuidCName.</p>
+<p><strong><em>CArray</em></strong></p>
+<p>All C data arrays used in PCD value fields must be byte arrays. The C format
+GUID style is a special case that is permitted in some fields that use the
+<code>&lt;CArray&gt;</code> nomenclature.</p>
+<p><strong><em>EOL</em></strong></p>
+<p>The DOS End Of Line: &quot;0x0D 0x0A&quot; character sequence must be used for all EDK
+II meta-data files. All <em>Nix based tools can properly process the DOS EOL
+characters. Microsoft based tools cannot process the </em>Nix style EOL characters.</p>
+<h3 id="322-macro-statements">3.2.2 MACRO Statements</h3>
+<p>Use of MACRO statements is optional.</p>
+<h4 id="summary">Summary</h4>
+<p>Macro statements are characterize by a <code>DEFINE</code> line or may be defined on a
+command line of a parsing tool.</p>
+<p>Define statements are processed according to the following precedence.</p>
+<p>Highest Priority</p>
+<ol>
+<li>Command-line option -D MACRO=Value</li>
+<li>Most Recent in file</li>
+<li>Macros defined in the FDF file&apos;s <code>[Defines]</code> section</li>
+<li>Macros defined in the DSC file&apos;s <code>[Defines]</code> section Lowest Priority</li>
+</ol>
+<p>If the Macro statement is within the <code>[Defines]</code> section, then the Macro is
+common to the entire file, with local definitions taking precedence (if the
+same MACRO name is used in subsequent sections, then the MACRO value is local
+to only that section.) Macro statements may not be referenced before they are
+defined.</p>
+<p>Macros may be inherited from the DSC file specifying this FDF file.</p>
+<p>All content for a macro statement must appear on a single line.</p>
+<p>If the tools encounter a <code>MacroVal</code>, as in $(MACRO), that is not defined, the
+build tools must break.</p>
+<h4 id="prototype">Prototype</h4>
+<pre><code class="lang-c">&lt;MacroDefinition&gt; ::= &lt;TS&gt; <span class="hljs-string">&quot;DEFINE&quot;</span> &lt;MTS&gt; &lt;MACRO&gt; [&lt;Eq&gt; [&lt;VALUE&gt;]] &lt;EOL&gt;
+&lt;VALUE&gt;           ::= {&lt;Number&gt;} {&lt;BoolType&gt;} {&lt;CFormatGUID&gt;} {&lt;PATH&gt;}
+                      {&lt;CString&gt;} {&lt;UnicodeString&gt;} {&lt;CArray&gt;}
+                      {&lt;Expression&gt;} {&lt;CFlags&gt;} {&lt;Filename&gt;}
+</code></pre>
+<h4 id="restrictions">Restrictions</h4>
+<p><strong><em>System Environment Variables</em></strong></p>
+<p>System environment variable may not be re-defined in this file. System
+environment variables cannot be overridden by the build system tools.</p>
+<h4 id="parameters">Parameters</h4>
+<p><strong><em>Expression</em></strong></p>
+<p>C-style expression using C relational, equality and logical numeric and bitwise
+operators and/or arithmetic and bitwise operators that evaluate to a value (for
+PCDs, the value must match the Datum Type of the PCD). Precedence and
+associativity follow C standards. Along with absolute values, macro names and
+PCDs may be used within an expression. For both macro names and PCDs, the
+element must be previously defined before it can be used.</p>
+<p><strong><em>VALUE</em></strong></p>
+<p>The <code>&lt;EQ&gt; &lt;VALUE&gt;</code> is optional, and if not included, uses a default of TRUE.</p>
+<hr>
+<p><strong>Note:</strong> Some MACRO and PCD values may be defined in the Platform DSC file.</p>
+<hr>
+<h4 id="examples">Examples:</h4>
+<pre><code>DEFINE SECCORE    = MyPlatform/SecCore
+DEFINE GEN_SKU    = MyPlatform/GenPei
+DEFINE SKU1       = MyPlatform/Sku1/Pei
+DEFINE FLASH_SIZE = 0x00280000
+DEFINE MY_MACRO
+</code></pre><h4 id="edkglobal">EDK_GLOBAL</h4>
+<p>The macro names defined using the <code>EDK_GLOBAL</code> statement in the DSC file may be
+used in paths, value fields and conditional statements in this file. The
+<code>EDK_GLOBAL</code> statement itself, cannot be specified in this file.</p>
+<h3 id="323-conditional-directive-blocks">3.2.3 Conditional Directive Blocks</h3>
+<p>Use of conditional directive blocks is optional.</p>
+<h4 id="summary">Summary</h4>
+<p>Conditional statements may appear anywhere within the file. Conditional
+directive blocks can be nested. Conditional directive processing must emulate a
+C pre-processor.</p>
+<ul>
+<li><p>All conditional directives can use MACRO, FixedAtBuild or FeatureFlag PCD
+values, which must evaluate to either &apos;<code>True</code>&apos; or &apos;<code>False</code>.&apos;</p>
+</li>
+<li><p>Directives must be the only statement on a line.</p>
+</li>
+<li><p>String evaluations are permitted, and are case sensitive; the two string
+values must be an exact match to evaluate to &apos;<code>True</code>&apos;.</p>
+</li>
+<li><p>The expression immediately following the &apos;<code>!if</code>&apos; statement controls whether
+the content after the line is processed or not. <code>TRUE</code> is any non-zero and/or
+non-NULL value other than zero.</p>
+</li>
+<li><p>Each &apos;<code>!if</code>&apos; within the source code must be matched with a closing &apos;<code>!endif</code>&apos;.</p>
+</li>
+<li><p>Zero or more <code>!elseif</code> statements are permitted; only one <code>!else</code> statement
+is permitted.</p>
+</li>
+<li><p>Conditional directive blocks may be nested.</p>
+</li>
+<li><p>Keyword <code>!ifdef, !ifndef, !if, !elseif, !else, !endif</code> are case-insensitive.</p>
+</li>
+<li><p>Directives can be used to encapsulate entire sections or elements within a
+single section, such that they do not break the integrity of the section
+definitions.</p>
+</li>
+<li><p>Directives are in-fix expressions that are evaluated left to right; content
+within parenthesis is evaluated before the outer statements are evaluated.
+Use of parenthesis is recommended to remove ambiguity.</p>
+</li>
+<li><p>The values of the FixedAtBuild and FeatureFlag PCDs used in the conditional
+statements must be set in the <code>[PcdsFixedAtBuild]</code> or <code>[PcdsFeatureFlag]</code>
+section(s) of the DSC file or included in <code>SET</code> statements.</p>
+</li>
+<li><p>Default values from the DEC file are not permitted. Values used in directive
+statement in the FDF files must be define in either the DSC file or the FDF
+file.</p>
+</li>
+</ul>
+<p>Conditional directives may appear before a Macro, FixedAtBuild or FeatureFlag
+PCD has been defined. Therefore, the reference build tools may be required to
+perform two passes on this file to resolve all directive statements:</p>
+<ol>
+<li><p>Obtain the values of the Macros, FixedAtBuild or FeatureFlag PCDs used for
+theconditional directives</p>
+</li>
+<li><p>Evaluate the conditional statements for inclusion in the build.</p>
+</li>
+</ol>
+<p>If the value of a FixedAtBuild or FeatureFlag PCD cannot be determined, the
+build will break.</p>
+<p>If the value of a FixedAtBuild or FeatureFlag PCD used in a conditional
+directive cannot be determined during the first pass, the build should break.
+Macros, FixedAtBuild and FeatureFlag PCDs used in conditional statements in the
+first pass must not be located within conditional directives. It is permissible
+to have a Macro that is undefined after the first pass. It is permissible to
+have macros that are undefined used in !ifdef and <code>!ifndef</code> statements.
+FixedAtBuild or FeatureFlag PCDs in the first pass must not be located within a
+conditional directive.</p>
+<p>Macro and PCD values may be inherited from the DSC file.</p>
+<hr>
+<p><strong>Note:</strong> PCDs, used in conditional directives, must be defined and the value
+set in either the FDF or DSC file in order to be used in a conditional
+statement; values from INF or DEC files are not permitted.</p>
+<hr>
+<h4 id="prototype">Prototype</h4>
+<pre><code class="lang-c">&lt;Conditional&gt;         ::= &lt;IfStatement&gt;
+                          &lt;ElseIfConditional&gt;*
+                          [&lt;ElseConditional&gt;]
+                          &lt;TS&gt; <span class="hljs-string">&quot;!endif&quot;</span> &lt;EOL&gt;
+&lt;IfStatement&gt;         ::= {&lt;TS&gt; <span class="hljs-string">&quot;!if&quot;</span> &lt;MTS&gt; &lt;ExpressionStatement&gt;}
+                          {&lt;TS&gt; <span class="hljs-string">&quot;!ifdef&quot;</span> &lt;MTS&gt; &lt;MACRO&gt; &lt;EOL&gt;}
+                          {&lt;TS&gt; <span class="hljs-string">&quot;!ifndef&quot;</span> &lt;MTS&gt; &lt;MACRO&gt; &lt;EOL&gt;}
+                          &lt;Statements&gt;*
+&lt;Statements&gt;          ::= {&lt;Statements&gt;} {&lt;Conditional&gt;}
+&lt;ElseIfConditional&gt;   ::= &lt;TS&gt; <span class="hljs-string">&quot;!elseif&quot;</span> &lt;MTS&gt; &lt;ExpressionStatement&gt;
+                          &lt;EOL&gt;
+                          &lt;Statements&gt;*
+&lt;ElseConditional&gt;     ::= &lt;TS&gt; <span class="hljs-string">&quot;!else&quot;</span> &lt;EOL&gt; &lt;Statements&gt;*
+&lt;ExpressionStatement&gt; ::= &lt;Expression&gt; &lt;EOL&gt;
+</code></pre>
+<h4 id="restrictions">Restrictions</h4>
+<p><strong><em>MACRO and PCD Values</em></strong></p>
+<p>When a MACRO is used in conditional directives <code>!if</code> or <code>!elseif</code>, the
+<code>&lt;MACROVAL&gt;</code> - $(MACRO) - format is used. When a PCD is used in a conditional
+directive (or in an expression) the <code>&lt;PCDVAL&gt;</code> - $(PcdName) - format is used.</p>
+<p><strong><em>Number values</em></strong></p>
+<p>For Numeric expressions, numbers must not be encapsulated by double quotation
+marks</p>
+<p><strong><em>Strings</em></strong></p>
+<p>Strings in <code>&lt;PCDVAL&gt;</code> elements must be <code>NULL</code> terminated. The <code>NULL</code> character
+is not part of the string that is tested. All other string comparisons do not
+include the double quotation marks encapsulating the string. If the string is
+&quot;myapple&quot;, the only characters that would be tested are myapple. When using
+strings in the expression statements, there must be a comparison operator.</p>
+<h4 id="parameters">Parameters</h4>
+<p><strong><em>Statements</em></strong></p>
+<p>Any valid section, section statement or set of statements defined in this
+specification may be within the scope of the conditional statements. The
+encapsulated statements must not break the integrity of the file. All
+statements within the encapsulation must end with <code>&lt;EOL&gt;</code>.</p>
+<p><strong><em>MACRO Usage in Expression Statements</em></strong></p>
+<p>If a MACRO is used in expression statements, the MACRO must be encapsulated
+between &quot;$(&quot; and &quot;)&quot; character sets (matching C format). String comparisons
+are case sensitive and must exactly equal, character for character - leading
+and trailing white space characters included.</p>
+<p><strong><em>PcdFeatureFlag</em></strong></p>
+<p>The FeatureFlag PCD is a boolean PCD that is set to either <code>True</code> (1) or
+<code>False</code> (0). The PCD datum type for a FeatureFlag PCD is always <code>BOOLEAN</code>. It
+may be used in a logical expression.</p>
+<p><strong><em>FixedPcdName</em></strong></p>
+<p>A FixedAtBuild PCD will have a set value at build time, and that cannot be
+modified in the binary image, nor modified at runtime. For directives, the PCD
+datum type is limited to <code>UINT8</code>, <code>UINT16</code>, <code>UINT32</code>, <code>UINT64</code>, <code>UINTN</code> and
+<code>BOOLEAN</code>. Using a FixedAtBuild PCD that has a datum type of <code>VOID</code>* is limited
+to text-based comparisons in directives. Using a PCD that has a value of a byte
+array is not permitted. FixedAtBuild PCDs may be used in a logical expression.</p>
+<p><strong><em>Numeric Expression</em></strong></p>
+<p>This is a test of numbers, using relational or equality operators, that
+evaluates to <code>TRUE</code> or <code>FALSE</code></p>
+<p><strong><em>Logical Expression</em></strong></p>
+<p>This is a test where the expression, MACRO value or PCD value (include
+<code>&lt;MACROVAL&gt;</code> or <code>&lt;PCDVAL&gt;</code> used in an expression) must evaluate to either
+<code>TRUE</code> (1) or <code>FALSE</code> (0), no operators are required, however logical
+operators, as well full expressions can be used. (expressions that do not
+evaluate to <code>TRUE</code> or <code>FALSE</code> must break the build).</p>
+<p><strong><em>String Expressions</em></strong></p>
+<p>The strings must be exactly identical in order to match. Literal strings must
+be encapsulated by double quotation marks. There must be a comparison operator
+between two strings (using a string without an operator is not permitted). Also
+permitted are the membership expressions, for architectures, targets and tool
+chain tag names.</p>
+<p><strong><em>All Expression</em></strong></p>
+<p>C-style expression using C relational, equality and logical numeric and bitwise
+operators that evaluate to either <code>TRUE</code> (1) or <code>FALSE</code> (0). Values other than
+zero or one are invalid. Precedence and associativity follow C standards. Along
+with absolute values, macro names and PCDs may be used within an expression.
+For both macro names and PCDs, the element must be previously defined before it
+can be used. A new operator, &quot;in&quot; is also permitted for testing membership of
+an item in a list of one or more items.</p>
+<h3 id="324-include-statements">3.2.4 !include Statements</h3>
+<p>Use of this statement is optional.</p>
+<h4 id="summary">Summary</h4>
+<p>Defines the <code>!include</code> statement in FDF files. This statement is used to
+include, at the statement&apos;s line, a file which is processed at that point, as
+though the text of the included file was actually in the FDF file. Statements
+in the <code>!include</code> file(s) are additions to the FDF file, and do not replace
+information in the FDF file. The included file&apos;s content must match the content
+of the section that the <code>!include</code> statement resides, or it may contain
+completely new sections of the same section type. If the included file contains
+new sections, then the section being processed in the Platform FDF file is
+considered to have been terminated.</p>
+<p>If the <code>&lt;Filename&gt;</code> contains &quot;$&quot; characters, then macros defined in the DSC
+file, FDF file, and the system environment variables, <code>$(WORKSPACE)</code>, is substituted into
+<code>&lt;Filename&gt;</code>.</p>
+<p>The tools look for <code>&lt;Filename&gt;</code> relative to the directory the FDF file resides.
+If the file is not found, and the directory containing this FDF file is not the
+same directory as the directory containing the DSC file, the tools must attempt
+to locate the file relaitive to the directory that contains the DSC file.</p>
+<p>If none of these methods find the file, and a directory separator is in
+<code>&lt;Filename&gt;</code>, the tools attempt to find the file in a WORKSPACE (or a directory
+listed in the PACKAGES_PATH) relative path. If the file cannot be found, the
+build system must exit with an appropriate error message.</p>
+<p>The keyword <code>!include</code> is case-insensitive.</p>
+<h4 id="prototype">Prototype</h4>
+<p><code>&lt;IncludeStatement&gt; ::= &lt;TS&gt; &quot;!include&quot; &lt;MTS&gt; &lt;Filename&gt; &lt;EOL&gt;</code></p>
+<h6 id="example-edk-ii-fdf">Example (EDK II FDF)</h6>
+<pre><code>!include myPlatform/NvRamDefs.txt
+!include myFeatures.mak
+!include $(WORKSPACE)/PackageDir/Features.dsc
+!include $(MACRO1)/AnotherDir/$(MACRO2)/Features.dsc
+</code></pre><h3 id="325-error-statements">3.2.5 !error Statements</h3>
+<p>Use of this statement is optional.</p>
+<h4 id="summary">Summary</h4>
+<p>This section defines the <code>!error</code> statement in EDK II FDF files.
+This statement is used to cause build tool to stop at the location where the
+statement is encountered and error message following the <code>!error</code> statement
+is output as a message.</p>
+<p>The keyword <code>!error</code> is case-insensitive.</p>
+<h4 id="prototype">Prototype</h4>
+<p><code>&lt;ErrorStatement&gt; ::= &lt;TS&gt; &quot;!error&quot; &lt;MTS&gt; &lt;ErrorMessage&gt; &lt;EOL&gt;</code>
+<code>&lt;ErrorMessage&gt;   ::= &lt;AsciiString&gt;</code></p>
+<h4 id="parameters">Parameters</h4>
+<p><strong><em>ErrorMessage</em></strong></p>
+<p>It should in the same line with <code>!error</code> statement, and it can consist of several
+words not necessarily in quotes.</p>
+<h4 id="example-edk-ii-fdf">Example (EDK II FDF)</h4>
+<pre><code>!error &quot;unsupported feature!&quot;
+</code></pre>
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                    
+                    
+
+<div>
+    <hr>
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II Flash Description (FDF) File Specification</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [12/01/2020 05:10:56]</div>
+        <div style="text-align:right">Revision 1.28</div>
+      </h2>  
+    
+</div>
+
+
+
+                
+            </div>
+
+            
+                
+                <a href="31_general_rules.html#31-general-rules" class="navigation navigation-prev " aria-label="Previous page: 3.1 General Rules">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="33_header_section.html#33-header-section" class="navigation navigation-next " aria-label="Next page: 3.3 Header Section">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3.2 FDF Definition","level":"1.4.2","depth":2,"next":{"title":"3.3 Header Section","level":"1.4.3","depth":2,"anchor":"#33-header-section","path":"3_edk_ii_fdf_file_format/33_header_section.md","ref":"3_edk_ii_fdf_file_format/33_header_section.md#33-header-section","articles":[]},"previous":{"title":"3.1 General Rules","level":"1.4.1","depth":2,"anchor":"#31-general-rules","path":"3_edk_ii_fdf_file_format/31_general_rules.md","ref":"3_edk_ii_fdf_file_format/31_general_rules.md#31-general-rules","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II Flash Description (FDF) File Specification","version":"Revision 1.28"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3_edk_ii_fdf_file_format/32_fdf_definition.md","mtime":"2020-12-01T05:10:27.546Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-01T05:10:56.270Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

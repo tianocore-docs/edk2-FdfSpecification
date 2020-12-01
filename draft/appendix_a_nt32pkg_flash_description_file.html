@@ -1,0 +1,1311 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Appendix A Nt32Pkg Flash Description File · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="appendix_b_common_error_messages.html" />
+    
+    
+    <link rel="prev" href="3_edk_ii_fdf_file_format/310_pci_optionrom_section.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./#edk-ii-flash-description-fdf-file-specification">
+            
+                    
+                    EDK II Flash Description (FDF) File Specification
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1_introduction/">
+            
+                <a href="1_introduction/#1-introduction">
+            
+                    
+                    1 Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="1_introduction/11_overview.html">
+            
+                <a href="1_introduction/11_overview.html#11-overview">
+            
+                    
+                    1.1 Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="1_introduction/12_terms.html">
+            
+                <a href="1_introduction/12_terms.html#12-terms">
+            
+                    
+                    1.2 Terms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="1_introduction/13_related_information.html">
+            
+                <a href="1_introduction/13_related_information.html#13-related-information">
+            
+                    
+                    1.3 Related Information
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="1_introduction/14_target_audience.html">
+            
+                <a href="1_introduction/14_target_audience.html#14-target-audience">
+            
+                    
+                    1.4 Target Audience
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="1_introduction/15_conventions_used_in_this_document.html">
+            
+                <a href="1_introduction/15_conventions_used_in_this_document.html#15-conventions-used-in-this-document">
+            
+                    
+                    1.5 Conventions Used in this Document
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="2_fdf_design_discussion/">
+            
+                <a href="2_fdf_design_discussion/#2-fdf-design-discussion">
+            
+                    
+                    2 FDF Design Discussion
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="2_fdf_design_discussion/21_processing_overview.html">
+            
+                <a href="2_fdf_design_discussion/21_processing_overview.html#21-processing-overview">
+            
+                    
+                    2.1 Processing Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="2_fdf_design_discussion/22_flash_description_file_format.html">
+            
+                <a href="2_fdf_design_discussion/22_flash_description_file_format.html#22-flash-description-file-format">
+            
+                    
+                    2.2 Flash Description File Format
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="2_fdf_design_discussion/23_[defines]_section.html">
+            
+                <a href="2_fdf_design_discussion/23_[defines]_section.html#23-defines-section">
+            
+                    
+                    2.3 [Defines] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="2_fdf_design_discussion/24_[fd]_sections.html">
+            
+                <a href="2_fdf_design_discussion/24_[fd]_sections.html#24-fd-sections">
+            
+                    
+                    2.4 [FD] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="2_fdf_design_discussion/25_[fv]_sections.html">
+            
+                <a href="2_fdf_design_discussion/25_[fv]_sections.html#25-fv-sections">
+            
+                    
+                    2.5 [FV] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="2_fdf_design_discussion/26_[capsule]_sections.html">
+            
+                <a href="2_fdf_design_discussion/26_[capsule]_sections.html#26-capsule-sections">
+            
+                    
+                    2.6 [Capsule] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="2_fdf_design_discussion/27_[rule]_sections.html">
+            
+                <a href="2_fdf_design_discussion/27_[rule]_sections.html#27-rule-sections">
+            
+                    
+                    2.7 [Rule] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="2_fdf_design_discussion/28_[optionrom]_sections.html">
+            
+                <a href="2_fdf_design_discussion/28_[optionrom]_sections.html#28-optionrom-sections">
+            
+                    
+                    2.8 [OptionRom] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="3_edk_ii_fdf_file_format/">
+            
+                <a href="3_edk_ii_fdf_file_format/#3-edk-ii-fdf-file-format">
+            
+                    
+                    3 EDK II FDF File Format
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="3_edk_ii_fdf_file_format/31_general_rules.html">
+            
+                <a href="3_edk_ii_fdf_file_format/31_general_rules.html#31-general-rules">
+            
+                    
+                    3.1 General Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="3_edk_ii_fdf_file_format/32_fdf_definition.html">
+            
+                <a href="3_edk_ii_fdf_file_format/32_fdf_definition.html#32-fdf-definition">
+            
+                    
+                    3.2 FDF Definition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="3_edk_ii_fdf_file_format/33_header_section.html">
+            
+                <a href="3_edk_ii_fdf_file_format/33_header_section.html#33-header-section">
+            
+                    
+                    3.3 Header Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="3_edk_ii_fdf_file_format/34_[defines]_section.html">
+            
+                <a href="3_edk_ii_fdf_file_format/34_[defines]_section.html#34-defines-section">
+            
+                    
+                    3.4 [Defines] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="3_edk_ii_fdf_file_format/35_[fd]_sections.html">
+            
+                <a href="3_edk_ii_fdf_file_format/35_[fd]_sections.html#35-fd-sections">
+            
+                    
+                    3.5 [FD] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="3_edk_ii_fdf_file_format/36_[fv]_sections.html">
+            
+                <a href="3_edk_ii_fdf_file_format/36_[fv]_sections.html#36-fv-sections">
+            
+                    
+                    3.6 [FV] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="3_edk_ii_fdf_file_format/37_[capsule]_sections.html">
+            
+                <a href="3_edk_ii_fdf_file_format/37_[capsule]_sections.html#37-capsule-sections">
+            
+                    
+                    3.7 [Capsule] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="3_edk_ii_fdf_file_format/38_[fmppayload]_sections.html">
+            
+                <a href="3_edk_ii_fdf_file_format/38_[fmppayload]_sections.html#38-fmppayload-sections">
+            
+                    
+                    3.8 [FmpPayload] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="3_edk_ii_fdf_file_format/39_[rule]_sections.html">
+            
+                <a href="3_edk_ii_fdf_file_format/39_[rule]_sections.html#39-rule-sections">
+            
+                    
+                    3.9 [Rule] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="3_edk_ii_fdf_file_format/310_pci_optionrom_section.html">
+            
+                <a href="3_edk_ii_fdf_file_format/310_pci_optionrom_section.html#310-pci-optionrom-section">
+            
+                    
+                    3.10 PCI OptionRom Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="appendix_a_nt32pkg_flash_description_file.html">
+            
+                <a href="appendix_a_nt32pkg_flash_description_file.html#appendix-a-nt32pkg-flash-description-file">
+            
+                    
+                    Appendix A Nt32Pkg Flash Description File
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="appendix_b_common_error_messages.html">
+            
+                <a href="appendix_b_common_error_messages.html#appendix-b-common-error-messages">
+            
+                    
+                    Appendix B Common Error Messages
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="appendix_b_common_error_messages.html">
+            
+                <a href="appendix_b_common_error_messages.html#b1-fd-syntax-errors">
+            
+                    
+                    B.1 [FD] Syntax Errors:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="appendix_b_common_error_messages.html">
+            
+                <a href="appendix_b_common_error_messages.html#b2-fv-syntax-errors">
+            
+                    
+                    B.2 [FV] Syntax Errors:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="appendix_b_common_error_messages.html">
+            
+                <a href="appendix_b_common_error_messages.html#b3-capsule-syntax-errors">
+            
+                    
+                    B.3 [CAPSULE] Syntax Errors:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="appendix_b_common_error_messages.html">
+            
+                <a href="appendix_b_common_error_messages.html#b4-rule-syntax-errors">
+            
+                    
+                    B.4 [Rule] Syntax Errors:
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="appendix_c_reports.html">
+            
+                <a href="appendix_c_reports.html#appendix-c-reports">
+            
+                    
+                    Appendix C Reports
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    Tables
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="1_introduction/11_overview.html">
+            
+                <a href="1_introduction/11_overview.html#table-1-edk-build-infrastructure-support-matrix">
+            
+                    
+                    Table 1 EDK Build Infrastructure Support Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="2_fdf_design_discussion/22_flash_description_file_format.html">
+            
+                <a href="2_fdf_design_discussion/22_flash_description_file_format.html#table-2-well-known-macro-statements">
+            
+                    
+                    Table 2 Well-known Macro Statements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="2_fdf_design_discussion/22_flash_description_file_format.html">
+            
+                <a href="2_fdf_design_discussion/22_flash_description_file_format.html#table-3-using-system-environment-variable">
+            
+                    
+                    Table 3 Using System Environment Variable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="2_fdf_design_discussion/22_flash_description_file_format.html">
+            
+                <a href="2_fdf_design_discussion/22_flash_description_file_format.html#table-4-reserved-rule-section-macro-strings">
+            
+                    
+                    Table 4 Reserved [Rule] Section Macro Strings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="2_fdf_design_discussion/22_flash_description_file_format.html">
+            
+                <a href="2_fdf_design_discussion/22_flash_description_file_format.html#table-5-operator-precedence-and-supported-operands">
+            
+                    
+                    Table 5 Operator Precedence and Supported Operands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    Figures
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="2_fdf_design_discussion/21_processing_overview.html">
+            
+                <a href="2_fdf_design_discussion/21_processing_overview.html#figure-1-edk-ii-build-data-flow">
+            
+                    
+                    Figure 1 EDK II Build Data Flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="2_fdf_design_discussion/21_processing_overview.html">
+            
+                <a href="2_fdf_design_discussion/21_processing_overview.html#figure-2-edk-ii-create-image-flow">
+            
+                    
+                    Figure 2 EDK II Create Image Flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                    Examples
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="3_edk_ii_fdf_file_format/32_fdf_definition.html">
+            
+                <a href="3_edk_ii_fdf_file_format/32_fdf_definition.html#example-edk-ii-fdf">
+            
+                    
+                    Example (EDK II FDF)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Appendix A Nt32Pkg Flash Description File</a>
+    </h1>
+</div>
+<div>
+    <!-- 
+    <img style="float:left; align:middle; height:2em" src="media/TianocoreTitlePageLogo.jpg"/>
+     -->
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II Flash Description (FDF) File Specification</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [12/01/2020 05:10:56]</div>
+        <div style="text-align:right">Revision 1.28</div>
+      </h2>  
+    
+    <hr>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <!--- @file
+  Appendix A Nt32Pkg Flash Description File
+
+  Copyright (c) 2006-2019, Intel Corporation. All rights reserved.<BR>
+
+  Redistribution and use in source (original document form) and 'compiled'
+  forms (converted to PDF, epub, HTML and other formats) with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1) Redistributions of source code (original document form) must retain the
+     above copyright notice, this list of conditions and the following
+     disclaimer as the first lines of this file unmodified.
+
+  2) Redistributions in compiled form (transformed to other DTDs, converted to
+     PDF, epub, HTML and other formats) must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+  THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT "AS IS" AND ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+  EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<h1 id="appendix-a-nt32pkg-flash-description-file">Appendix A Nt32Pkg Flash Description File</h1>
+<p>This section provides a sample FDF using the Nt32Pkg/Nt32Pkg.fdf file.</p>
+<hr>
+<p><strong>Note:</strong> This file must NOT be used as is, as data structures and definitions
+do not exist.</p>
+<hr>
+<pre><code class="lang-ini">## @file
+# This is NT32 FDF file with UEFI HII features enabled
+#
+# Copyright (c) 2007 - 2010, Intel Corporation. All rights reserved.&lt;BR&gt;
+#
+# This program and the accompanying materials are licensed and made
+# available under the terms and conditions of the BSD License which
+# accompanies this distribution. The full text of the license may be
+# found at:
+# http://opensource.org/licenses/bsd-license.php
+#
+# THE PROGRAM IS DISTRIBUTED UNDER THE BSD LICENSE ON AN &quot;AS IS&quot; BASIS,
+# WITHOUT WARRANTIES OR REPRESENTATIONS OF ANY KIND, EITHER EXPRESS OR
+# IMPLIED.
+#
+########################################################################
+
+########################################################################
+#
+# FD Section
+# The [FD] Section is made up of the definition statements and a
+# description of what goes into the Flash Device Image. Each FD section
+# defines one flash &quot;device&quot; image. A flash device image may be one of
+# the following: Removable media bootable image (like a boot floppy
+# image,) an Option ROM image (that would be &quot;flashed&quot; into an add-in
+# card,) a System &quot;Flash&quot; image (that would be burned into a system&apos;s
+# flash) or an Update (&quot;Capsule&quot;) image that will be used to update and
+# existing system flash.
+#
+########################################################################
+[FD.Nt32]
+  # The base address of the FLASH Device.
+  BaseAddress = 0x0|gEfiNt32PkgTokenSpaceGuid.PcdWinNtFdBaseAddress
+  # The size in bytes of the FLASH Device
+  Size      = 0x002a0000 ErasePolarity = 1
+  BlockSize = 0x10000
+  NumBlocks = 0x2a
+  #
+  #
+  # Following are lists of FD Region layout which correspond to the
+  # locations of different images within the flash device.
+  #
+  # Regions must be defined in ascending order and may not overlap.
+  #
+  # A Layout Region start with a eight digit hex offset (leading &quot;0x&quot;
+  # required) followed by the pipe &quot;|&quot; character, followed by the size of
+  # the region, also in hex with the leading &quot;0x&quot; characters. Like:
+  # Offset|Size
+  # PcdOffsetCName|PcdSizeCName
+  # RegionType &lt;FV, DATA, or FILE&gt;
+  #
+  ########################################################################
+  0x00000000|0x00280000
+  gEfiNt32PkgTokenSpaceGuid.PcdWinNtFlashFvRecoveryBase|gEfiNt32PkgTokenSpaceGuid.PcdWinNtFlashFvRecoverySize
+  FV = FvRecovery
+  0x00280000|0x0000c000
+  gEfiNt32PkgTokenSpaceGuid.PcdWinNtFlashNvStorageVariableBase|gEfiMdeModulePkgTokenSpaceGuid.PcdFlashNvStorageVariableSize
+  #NV_VARIABLE_STORE
+  DATA = {
+  ## This is the EFI_FIRMWARE_VOLUME_HEADER
+  # ZeroVector []
+  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+  # FileSystemGuid: gEfiSystemNvDataFvGuid =
+  # { 0xFFF12B8D, 0x7696, 0x4C8B,
+  # { 0xA9, 0x85, 0x27, 0x47, 0x07, 0x5B, 0x4F, 0x50 }}
+  0x8D, 0x2B, 0xF1, 0xFF, 0x96, 0x76, 0x8B, 0x4C,
+  0xA9, 0x85, 0x27, 0x47, 0x07, 0x5B, 0x4F, 0x50,
+  # FvLength: 0x20000
+  0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00,
+  #Signature &quot;_FVH&quot; #Attributes
+  0x5f, 0x46, 0x56, 0x48, 0xff, 0xfe, 0x04, 0x00,
+  #HeaderLength #CheckSum #ExtHeaderOffset #Reserved #Revision
+  0x48, 0x00, 0x36, 0x09, 0x00, 0x00, 0x00, 0x02,
+  #Blockmap[0]: 2 Blocks * 0x10000 Bytes / Block
+  0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00,
+  #Blockmap[1]: End
+  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+  ## This is the VARIABLE_STORE_HEADER`
+  #Signature: gEfiVariableGuid =
+  # { 0xddcf3616, 0x3275, 0x4164,
+  # { 0x98, 0xb6, 0xfe, 0x85, 0x70, 0x7f, 0xfe, 0x7d }}
+  0x16, 0x36, 0xcf, 0xdd, 0x75, 0x32, 0x64, 0x41,
+  0x98, 0xb6, 0xfe, 0x85, 0x70, 0x7f, 0xfe, 0x7d,
+  #Size: 0xc000
+  # (gEfiMdeModulePkgTokenSpaceGuid.PcdFlashNvStorageVariableSize) -
+  # 0x48 (size of EFI_FIRMWARE_VOLUME_HEADER) = 0xBFB8
+  # This can speed up the Variable Dispatch a bit.
+  0xB8, 0xBF, 0x00, 0x00,
+  #FORMATTED: 0x5A #HEALTHY: 0xFE #Reserved: UINT16 #Reserved1: UINT32
+  0x5A, 0xFE, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+}
+0x0028c000 | 0x00002000
+#NV_EVENT_LOG
+gEfiNt32PkgTokenSpaceGuid.PcdWinNtFlashNvStorageEventLogBase|gEfiNt32PkgTokenSpaceGuid.PcdWinNtFlashNvStorageEventLogSize
+
+0x0028e000 | 0x00002000
+gEfiNt32PkgTokenSpaceGuid.PcdWinNtFlashNvStorageFtwWorkingBase|gEfiMdeModulePkgTokenSpaceGuid.PcdFlashNvStorageFtwWorkingSize
+
+#NV_FTW_WORKING
+DATA = {
+  # EFI_FAULT_TOLERANT_WORKING_BLOCK_HEADER-&gt;Signature =
+  # gEfiSystemNvDataFvGuid = { 0xFFF12B8D, 0x7696, 0x4C8B,
+  # { 0xA9, 0x85, 0x27, 0x47, 0x07, 0x5B, 0x4F, 0x50 }}
+  0x8D, 0x2B, 0xF1, 0xFF, 0x96, 0x76, 0x8B, 0x4C,
+  0xA9, 0x85, 0x27, 0x47, 0x07, 0x5B, 0x4F, 0x50,
+  # Crc:UINT32
+  # WorkingBlockValid:1, WorkingBlockInvalid:1, Reserved
+  #
+  0x77, 0x13, 0x9B, 0xD7, 0xFE, 0xFF, 0xFF, 0xFF,
+  # WriteQueueSize: UINT64
+  0xE0, 0x1F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+}
+
+0x00290000 | 0x00010000
+#NV_FTW_SPARE
+gEfiNt32PkgTokenSpaceGuid.PcdWinNtFlashNvStorageFtwSpareBase|gEfiMdeModulePkgTokenSpaceGuid.PcdFlashNvStorageFtwSpareSize
+
+########################################################################
+#
+# FV Section
+#
+# [FV] section is used to define what components or modules are placed
+# within a flash device file. This section also defines order the
+# components and modules are positioned within the image. The [FV] # section consists of define statements, set statements and module # statements.
+#
+########################################################################
+[FV.FvRecovery]
+FvBaseAddress = 0x0 # FV Base Address for the Backup copy of FV
+FvAlignment   = 16  # FV alignment
+
+#FV attributes setting.
+ERASE_POLARITY     = 1
+MEMORY_MAPPED      = TRUE
+STICKY_WRITE       = TRUE
+LOCK_CAP           = TRUE
+LOCK_STATUS        = TRUE
+WRITE_DISABLED_CAP = TRUE
+WRITE_ENABLED_CAP  = TRUE
+WRITE_STATUS       = TRUE
+WRITE_LOCK_CAP     = TRUE
+WRITE_LOCK_STATUS  = TRUE
+READ_DISABLED_CAP  = TRUE
+READ_ENABLED_CAP   = TRUE
+READ_STATUS        = TRUE
+READ_LOCK_CAP      = TRUE
+READ_LOCK_STATUS   = TRUE
+FvNameGuid         = 6D99E806-3D38-42c2-A095-5F4300BFD7DC
+
+########################################################################
+#
+# The INF statements point to EDK II module INF files,
+# which will be placed into this FV image.
+# Parsing tools will scan the INF file to determine the type of component
+# or module.
+# The component or module type is used to reference the standard rules
+# defined elsewhere in the FDF file.
+#
+# The format for INF statements is:
+# INF $(PathAndInfFileName)
+#
+########################################################################
+  ##
+  # PEI Phase modules
+  ##
+  # PEI Apriori file example, more PEIM module added later.
+  ##
+
+DEFINE MdeModUni = MdeModulePkg/Universal
+DEFINE WNOEMHOOK = Nt32Pkg/WinNtOemHookStatusCodeHandlerPei
+
+DEFINE RSCR_P    = ReportStatusCodeRouter/Pei
+
+APRIORI PEI {
+  INF $(MdeModUni)/PCD/Pei/Pcd.inf
+  INF $(MdeModUni)/$(RSCR_P)/ReportStatusCodeRouterPei.inf
+  INF $(MdeModUni)/StatusCodeHandler/Pei/StatusCodeHandlerPei.inf
+  INF $(WNOEMHOOK)/WinNtOemHookStatusCodeHandlerPei.inf
+  }
+
+APRIORI DXE {
+  INF MdeModulePkg/Universal/PCD/Dxe/Pcd.inf
+  INF Nt32Pkg/MetronomeDxe/MetronomeDxe.inf
+  }
+
+INF MdeModulePkg/Core/Pei/PeiMain.inf
+INF MdeModulePkg/Universal/PCD/Pei/Pcd.inf
+INF $(MdeModUni)/$(RSCR_P)/ReportStatusCodeRouterPei.inf
+INF $(MdeModUni)/StatusCodeHandler/Pei/StatusCodeHandlerPei.inf
+INF $(WINOEMHOOK)/WinNtOemHookStatusCodeHandlerPei.inf
+INF Nt32Pkg/BootModePei/BootModePei.inf
+INF Nt32Pkg/StallPei/StallPei.inf
+INF Nt32Pkg/WinNtFlashMapPei/WinNtFlashMapPei.inf
+INF Nt32Pkg/WinNtAutoScanPei/WinNtAutoScanPei.inf
+INF Nt32Pkg/WinNtFirmwareVolumePei/WinNtFirmwareVolumePei.inf
+INF MdeModulePkg/Universal/Variable/Pei/VariablePei.inf
+INF Nt32Pkg/WinNtThunkPPIToProtocolPei/WinNtThunkPPIToProtocolPei.inf
+INF MdeModulePkg/Core/DxeIplPeim/DxeIpl.inf
+
+  ##
+  # DXE Phase modules
+  ##
+INF MdeModulePkg/Core/Dxe/DxeMain.inf
+INF MdeModulePkg/Universal/PCD/Dxe/Pcd.inf
+INF Nt32Pkg/MetronomeDxe/MetronomeDxe.inf
+INF Nt32Pkg/RealTimeClockRuntimeDxe/RealTimeClockRuntimeDxe.inf
+INF Nt32Pkg/ResetRuntimeDxe/ResetRuntimeDxe.inf
+INF MdeModulePkg/Core/RuntimeDxe/RuntimeDxe.inf
+INF Nt32Pkg/FvbServicesRuntimeDxe/FvbServicesRuntimeDxe.inf
+INF MdeModulePkg/Universal/SecurityStubDxe/SecurityStubDxe.inf
+INF MdeModulePkg/Universal/SmbiosDxe/SmbiosDxe.inf
+INF MdeModulePkg/Universal/EbcDxe/EbcDxe.inf
+INF $(MdeModUni)/MemoryTest/NullMemoryTestDxe/NullMemoryTestDxe.inf
+INF MdeModulePkg/Universal/HiiDatabaseDxe/HiiDatabaseDxe.inf
+INF Nt32Pkg/WinNtThunkDxe/WinNtThunkDxe.inf
+INF Nt32Pkg/CpuRuntimeDxe/CpuRuntimeDxe.inf
+INF IntelFrameworkModulePkg/Universal/BdsDxe/BdsDxe.inf
+INF $(MdeModUni)/FaultTolerantWriteDxe/FaultTolerantWriteDxe.inf
+INF Nt32Pkg/MiscSubClassPlatformDxe/MiscSubClassPlatformDxe.inf
+INF Nt32Pkg/TimerDxe/TimerDxe.inf
+
+DEFINE RSCR_RD = ReportStatusCodeRouter/RuntimeDxe
+INF $(MdeModUni)/$(RSCR_RD)/ReportStatusCodeRouterRuntimeDxe.inf
+
+DEFINE SCH_RD = StatusCodeHandler/RuntimeDxe
+INF $(MdeModUni)/$(SCH_RD)/StatusCodeHandlerRuntimeDxe.inf
+
+DEFINE NTWINNTOEMHOOK = Nt32Pkg/WinNtOemHookStatusCodeHandlerDxe
+INF $(NTWINNTOEMHOOK)/WinNtOemHookStatusCodeHandlerDxe.inf
+
+INF MdeModulePkg/Universal/Variable/RuntimeDxe/VariableRuntimeDxe.inf
+INF MdeModulePkg/Universal/WatchdogTimerDxe/WatchdogTimer.inf
+
+DEFINE MCRD = MonotonicCounterRuntimeDxe
+INF $(MdeModUni)/$(MCRD)/MonotonicCounterRuntimeDxe.inf
+
+INF MdeModulePkg/Universal/CapsuleRuntimeDxe/CapsuleRuntimeDxe.inf
+INF MdeModulePkg/Universal/Console/ConPlatformDxe/ConPlatformDxe.inf
+INF MdeModulePkg/Universal/Console/ConSplitterDxe/ConSplitterDxe.inf
+INF $(MdeModUni)/Console/GraphicsConsoleDxe/GraphicsConsoleDxe.inf
+INF MdeModulePkg/Universal/Console/TerminalDxe/TerminalDxe.inf
+INF MdeModulePkg/Universal/DevicePathDxe/DevicePathDxe.inf
+INF MdeModulePkg/Universal/Disk/DiskIoDxe/DiskIoDxe.inf
+INF MdeModulePkg/Universal/Disk/PartitionDxe/PartitionDxe.inf
+INF MdeModulePkg/Universal/SetupBrowserDxe/SetupBrowserDxe.inf
+INF MdeModulePkg/Universal/PrintDxe/PrintDxe.inf
+
+DEFINE DUC = Disk/UnicodeCollation
+INF RuleOverride = TIANOCOMPRESSED $(MdeModUni)/$(DUC)/EnglishDxe/EnglishDxe.inf
+
+INF MdeModulePkg/Bus/Pci/PciBusDxe/PciBusDxe.inf
+INF MdeModulePkg/Bus/Scsi/ScsiBusDxe/ScsiBusDxe.inf
+INF MdeModulePkg/Bus/Scsi/ScsiDiskDxe/ScsiDiskDxe.inf
+INF IntelFrameworkModulePkg/Bus/Pci/IdeBusDxe/IdeBusDxe.inf
+INF Nt32Pkg/WinNtBusDriverDxe/WinNtBusDriverDxe.inf
+INF Nt32Pkg/WinNtBlockIoDxe/WinNtBlockIoDxe.inf
+INF Nt32Pkg/WinNtSerialIoDxe/WinNtSerialIoDxe.inf
+INF Nt32Pkg/WinNtGopDxe/WinNtGopDxe.inf
+INF Nt32Pkg/WinNtSimpleFileSystemDxe/WinNtSimpleFileSystemDxe.inf
+INF $(MdeModUni)/PlatformDriOverrideDxe/PlatformDriOverrideDxe.inf
+INF MdeModulePkg/Universal/DriverSampleDxe/DriverSampleDxe.inf
+
+INF MdeModulePkg/Universal/Network/DpcDxe/DpcDxe.inf
+INF MdeModulePkg/Universal/Network/ArpDxe/ArpDxe.inf
+INF MdeModulePkg/Universal/Network/Dhcp4Dxe/Dhcp4Dxe.inf
+INF MdeModulePkg/Universal/Network/Ip4ConfigDxe/Ip4ConfigDxe.inf
+INF MdeModulePkg/Universal/Network/Ip4Dxe/Ip4Dxe.inf
+INF MdeModulePkg/Universal/Network/MnpDxe/MnpDxe.inf
+INF MdeModulePkg/Universal/Network/VlanConfigDxe/VlanConfigDxe.inf
+INF MdeModulePkg/Universal/Network/Mtftp4Dxe/Mtftp4Dxe.inf
+INF MdeModulePkg/Universal/Network/Tcp4Dxe/Tcp4Dxe.inf
+INF MdeModulePkg/Universal/Network/Udp4Dxe/Udp4Dxe.inf
+INF Nt32Pkg/SnpNt32Dxe/SnpNt32Dxe.inf
+INF MdeModulePkg/Universal/Network/UefiPxeBcDxe/UefiPxeBcDxe.inf
+INF MdeModulePkg/Universal/Network/IScsiDxe/IScsiDxe.inf
+
+########################################################################
+#
+# FILE statements are provided so that a platform integrator can include
+# complete EFI FFS files, as well as a method for constructing FFS files
+# using curly &quot;{}&quot; brace scoping. The following three FILEs are
+# for binary shell, binary fat and logo module.
+#
+########################################################################
+FILE APPLICATION = PCD(gEfiIntelFrameworkModulePkgTokenSpaceGuid.PcdShellFile) {
+  SECTION PE32 = EdkShellBinPkg/FullShell/Ia32/Shell_Full.efi
+  }
+FILE DRIVER = 961578FE-B6B7-44c3-AF35-6BC705CD2B1F {
+  SECTION PE32 = FatBinPkg/EnhancedFatDxe/Ia32/Fat.efi
+  }
+FILE FREEFORM = PCD(gEfiIntelFrameworkModulePkgTokenSpaceGuid.PcdLogoFile) {
+  SECTION RAW = MdeModulePkg/Logo/Logo.bmp
+  }
+
+########################################################################
+#
+# Rules are use with the [FV] section&apos;s module INF type to define
+# how an FFS file is created for a given INF file. The following Rule are
+# the default rules for the different module type. User can add the
+# customized rules to define the content of the FFS file.
+#
+########################################################################
+
+########################################################################
+# Example of a DXE_DRIVER FFS file with a Checksum encapsulation section
+#
+#
+#
+#[Rule.Common.DXE_DRIVER]
+#   FILE DRIVER = $(NAMED_GUID) {
+#     DXE_DEPEX DXE_DEPEX Optional $(INF_OUTPUT)/$(MODULE_NAME).depex
+#     COMPRESS PI_STD {
+#       GUIDED {
+#         PE32    PE32                    $(INF_OUTPUT)/$(MODULE_NAME).efi
+#         UI      STRING=&quot;$(MODULE_NAME)&quot; Optional
+#         VERSION STRING=&quot;$(INF_VERSION)&quot; Optional BUILD_NUM=$(BUILD_NUMBER)
+#       }
+#     }
+#   }
+#
+########################################################################
+
+[Rule.Common.PEI_CORE]
+  FILE PEI_CORE = $(NAMED_GUID) {
+    PE32    PE32 Align=4K             $(INF_OUTPUT)/$(MODULE_NAME).efi
+    UI      STRING = &quot;$(MODULE_NAME)&quot; Optional
+    VERSION STRING = &quot;$(INF_VERSION)&quot; Optional BUILD_NUM=$(BUILD_NUMBER)
+  }
+
+[Rule.Common.PEIM]
+  FILE PEIM = $(NAMED_GUID){
+    PEI_DEPEX PEI_DEPEX                 Optional $(INF_OUTPUT)/$(MODULE_NAME).depex
+    PE32      PE32 Align=4K             $(INF_OUTPUT)/$(MODULE_NAME).efi
+    UI        STRING = &quot;$(MODULE_NAME)&quot; Optional
+    VERSION   STRING = &quot;$(INF_VERSION)&quot; Optional BUILD_NUM=$(BUILD_NUMBER)
+  }
+
+[Rule.Common.DXE_CORE]
+  FILE DXE_CORE = $(NAMED_GUID) {
+    COMPRESS PI_STD {
+      PE32    PE32                      $(INF_OUTPUT)/$(MODULE_NAME).efi
+      UI      STRING = &quot;$(MODULE_NAME)&quot; Optional
+      VERSION STRING = &quot;$(INF_VERSION)&quot; Optional BUILD_NUM=$(BUILD_NUMBER)
+    }
+  }
+
+[Rule.Common.UEFI_DRIVER]
+  FILE DRIVER = $(NAMED_GUID) {
+    DXE_DEPEX DXE_DEPEX Optional $(INF_OUTPUT)/$(MODULE_NAME).depex
+    COMPRESS PI_STD {
+      GUIDED {
+        PE32    PE32                      $(INF_OUTPUT)/$(MODULE_NAME).efi
+        UI      STRING = &quot;$(MODULE_NAME)&quot; Optional
+        VERSION STRING = &quot;$(INF_VERSION)&quot; Optional BUILD_NUM=$(BUILD_NUMBER)
+      }
+    }
+  }
+
+[Rule.Common.UEFI_DRIVER.TIANOCOMPRESSED]
+  FILE DRIVER = $(NAMED_GUID) {
+    DXE_DEPEX DXE_DEPEX Optional $(INF_OUTPUT)/$(MODULE_NAME).depex
+    GUIDED A31280AD-481E-41B6-95E8-127F4C984779 PROCESSING_REQUIRED = TRUE {
+      PE32    PE32                      $(INF_OUTPUT)/$(MODULE_NAME).efi
+      UI      STRING = &quot;$(MODULE_NAME)&quot; Optional
+      VERSION STRING = &quot;$(INF_VERSION)&quot; Optional BUILD_NUM=$(BUILD_NUMBER)
+    }
+  }
+
+[Rule.Common.DXE_DRIVER]
+  FILE DRIVER = $(NAMED_GUID) {
+    DXE_DEPEX   DXE_DEPEX Optional        $(INF_OUTPUT)/$(MODULE_NAME).depex
+    COMPRESS PI_STD {
+      GUIDED {
+        PE32    PE32                      $(INF_OUTPUT)/$(MODULE_NAME).efi
+        UI      STRING = &quot;$(MODULE_NAME)&quot; Optional
+        VERSION STRING = &quot;$(INF_VERSION)&quot; Optional BUILD_NUM=$(BUILD_NUMBER)
+      }
+    }
+  }
+
+[Rule.Common.DXE_RUNTIME_DRIVER]
+  FILE DRIVER = $(NAMED_GUID) {
+    DXE_DEPEX   DXE_DEPEX Optional        $(INF_OUTPUT)/$(MODULE_NAME).depex
+    COMPRESS PI_STD {
+      GUIDED {
+        PE32    PE32                      $(INF_OUTPUT)/$(MODULE_NAME).efi
+        UI      STRING = &quot;$(MODULE_NAME)&quot; Optional
+        VERSION STRING = &quot;$(INF_VERSION)&quot; Optional BUILD_NUM=$(BUILD_NUMBER)
+      }
+    }
+  }
+
+[Rule.Common.UEFI_APPLICATION]
+  FILE APPLICATION = $(NAMED_GUID) {
+    COMPRESS PI_STD {
+      GUIDED {
+        PE32    PE32                      $(INF_OUTPUT)/$(MODULE_NAME).efi
+        UI      STRING = &quot;$(MODULE_NAME)&quot; Optional
+        VERSION STRING = &quot;$(INF_VERSION)&quot; Optional BUILD_NUM=$(BUILD_NUMBER)
+      }
+    }
+  }
+</code></pre>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                    
+                    
+
+<div>
+    <hr>
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II Flash Description (FDF) File Specification</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [12/01/2020 05:10:56]</div>
+        <div style="text-align:right">Revision 1.28</div>
+      </h2>  
+    
+</div>
+
+
+
+                
+            </div>
+
+            
+                
+                <a href="3_edk_ii_fdf_file_format/310_pci_optionrom_section.html#310-pci-optionrom-section" class="navigation navigation-prev " aria-label="Previous page: 3.10 PCI OptionRom Section">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="appendix_b_common_error_messages.html#appendix-b-common-error-messages" class="navigation navigation-next " aria-label="Next page: Appendix B Common Error Messages">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Appendix A Nt32Pkg Flash Description File","level":"1.5","depth":1,"next":{"title":"Appendix B Common Error Messages","level":"1.6","depth":1,"anchor":"#appendix-b-common-error-messages","path":"appendix_b_common_error_messages.md","ref":"appendix_b_common_error_messages.md#appendix-b-common-error-messages","articles":[{"title":"B.1 [FD] Syntax Errors:","level":"1.6.1","depth":2,"anchor":"#b1-fd-syntax-errors","path":"appendix_b_common_error_messages.md","ref":"appendix_b_common_error_messages.md#b1-fd-syntax-errors","articles":[]},{"title":"B.2 [FV] Syntax Errors:","level":"1.6.2","depth":2,"anchor":"#b2-fv-syntax-errors","path":"appendix_b_common_error_messages.md","ref":"appendix_b_common_error_messages.md#b2-fv-syntax-errors","articles":[]},{"title":"B.3 [CAPSULE] Syntax Errors:","level":"1.6.3","depth":2,"anchor":"#b3-capsule-syntax-errors","path":"appendix_b_common_error_messages.md","ref":"appendix_b_common_error_messages.md#b3-capsule-syntax-errors","articles":[]},{"title":"B.4 [Rule] Syntax Errors:","level":"1.6.4","depth":2,"anchor":"#b4-rule-syntax-errors","path":"appendix_b_common_error_messages.md","ref":"appendix_b_common_error_messages.md#b4-rule-syntax-errors","articles":[]}]},"previous":{"title":"3.10 PCI OptionRom Section","level":"1.4.10","depth":2,"anchor":"#310-pci-optionrom-section","path":"3_edk_ii_fdf_file_format/310_pci_optionrom_section.md","ref":"3_edk_ii_fdf_file_format/310_pci_optionrom_section.md#310-pci-optionrom-section","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II Flash Description (FDF) File Specification","version":"Revision 1.28"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"appendix_a_nt32pkg_flash_description_file.md","mtime":"2020-12-01T05:10:27.550Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-01T05:10:56.270Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
