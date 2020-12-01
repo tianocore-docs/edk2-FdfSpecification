@@ -1,0 +1,1190 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3.9 [Rule] Sections · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="310_[vtf]_section.html" />
+    
+    
+    <link rel="prev" href="38_[fmppayload]_sections.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../#edk-ii-flash-description-fdf-file-specification">
+            
+                    
+                    EDK II Flash Description (FDF) File Specification
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1_introduction/">
+            
+                <a href="../1_introduction/#1-introduction">
+            
+                    
+                    1 Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../1_introduction/11_overview.html">
+            
+                <a href="../1_introduction/11_overview.html#11-overview">
+            
+                    
+                    1.1 Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../1_introduction/12_terms.html">
+            
+                <a href="../1_introduction/12_terms.html#12-terms">
+            
+                    
+                    1.2 Terms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../1_introduction/13_related_information.html">
+            
+                <a href="../1_introduction/13_related_information.html#13-related-information">
+            
+                    
+                    1.3 Related Information
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../1_introduction/14_target_audience.html">
+            
+                <a href="../1_introduction/14_target_audience.html#14-target-audience">
+            
+                    
+                    1.4 Target Audience
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../1_introduction/15_conventions_used_in_this_document.html">
+            
+                <a href="../1_introduction/15_conventions_used_in_this_document.html#15-conventions-used-in-this-document">
+            
+                    
+                    1.5 Conventions Used in this Document
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2_fdf_design_discussion/">
+            
+                <a href="../2_fdf_design_discussion/#2-fdf-design-discussion">
+            
+                    
+                    2 FDF Design Discussion
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../2_fdf_design_discussion/21_processing_overview.html">
+            
+                <a href="../2_fdf_design_discussion/21_processing_overview.html#21-processing-overview">
+            
+                    
+                    2.1 Processing Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../2_fdf_design_discussion/22_flash_description_file_format.html">
+            
+                <a href="../2_fdf_design_discussion/22_flash_description_file_format.html#22-flash-description-file-format">
+            
+                    
+                    2.2 Flash Description File Format
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../2_fdf_design_discussion/23_[defines]_section.html">
+            
+                <a href="../2_fdf_design_discussion/23_[defines]_section.html#23-defines-section">
+            
+                    
+                    2.3 [Defines] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../2_fdf_design_discussion/24_[fd]_sections.html">
+            
+                <a href="../2_fdf_design_discussion/24_[fd]_sections.html#24-fd-sections">
+            
+                    
+                    2.4 [FD] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../2_fdf_design_discussion/25_[fv]_sections.html">
+            
+                <a href="../2_fdf_design_discussion/25_[fv]_sections.html#25-fv-sections">
+            
+                    
+                    2.5 [FV] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../2_fdf_design_discussion/26_[capsule]_sections.html">
+            
+                <a href="../2_fdf_design_discussion/26_[capsule]_sections.html#26-capsule-sections">
+            
+                    
+                    2.6 [Capsule] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../2_fdf_design_discussion/27_[vtf]_sections.html">
+            
+                <a href="../2_fdf_design_discussion/27_[vtf]_sections.html#27-vtf-sections">
+            
+                    
+                    2.7 [VTF] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../2_fdf_design_discussion/28_[rule]_sections.html">
+            
+                <a href="../2_fdf_design_discussion/28_[rule]_sections.html#28-rule-sections">
+            
+                    
+                    2.8 [Rule] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../2_fdf_design_discussion/29_[optionrom]_sections.html">
+            
+                <a href="../2_fdf_design_discussion/29_[optionrom]_sections.html#29-optionrom-sections">
+            
+                    
+                    2.9 [OptionRom] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./#3-edk-ii-fdf-file-format">
+            
+                    
+                    3 EDK II FDF File Format
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="31_general_rules.html">
+            
+                <a href="31_general_rules.html#31-general-rules">
+            
+                    
+                    3.1 General Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="32_fdf_definition.html">
+            
+                <a href="32_fdf_definition.html#32-fdf-definition">
+            
+                    
+                    3.2 FDF Definition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="33_header_section.html">
+            
+                <a href="33_header_section.html#33-header-section">
+            
+                    
+                    3.3 Header Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="34_[defines]_section.html">
+            
+                <a href="34_[defines]_section.html#34-defines-section">
+            
+                    
+                    3.4 [Defines] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="35_[fd]_sections.html">
+            
+                <a href="35_[fd]_sections.html#35-fd-sections">
+            
+                    
+                    3.5 [FD] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="36_[fv]_sections.html">
+            
+                <a href="36_[fv]_sections.html#36-fv-sections">
+            
+                    
+                    3.6 [FV] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="37_[capsule]_sections.html">
+            
+                <a href="37_[capsule]_sections.html#37-capsule-sections">
+            
+                    
+                    3.7 [Capsule] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="38_[fmppayload]_sections.html">
+            
+                <a href="38_[fmppayload]_sections.html#38-fmppayload-sections">
+            
+                    
+                    3.8 [FmpPayload] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="39_[rule]_sections.html">
+            
+                <a href="39_[rule]_sections.html#39-rule-sections">
+            
+                    
+                    3.9 [Rule] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="310_[vtf]_section.html">
+            
+                <a href="310_[vtf]_section.html#310-vtf-section">
+            
+                    
+                    3.10 [VTF] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="311_pci_optionrom_section.html">
+            
+                <a href="311_pci_optionrom_section.html#311-pci-optionrom-section">
+            
+                    
+                    3.11 PCI OptionRom Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../appendix_a_nt32pkg_flash_description_file.html">
+            
+                <a href="../appendix_a_nt32pkg_flash_description_file.html#appendix-a-nt32pkg-flash-description-file">
+            
+                    
+                    Appendix A Nt32Pkg Flash Description File
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../appendix_b_common_error_messages.html">
+            
+                <a href="../appendix_b_common_error_messages.html#appendix-b-common-error-messages">
+            
+                    
+                    Appendix B Common Error Messages
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../appendix_b_common_error_messages.html">
+            
+                <a href="../appendix_b_common_error_messages.html#b1-fd-syntax-errors">
+            
+                    
+                    B.1 [FD] Syntax Errors:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../appendix_b_common_error_messages.html">
+            
+                <a href="../appendix_b_common_error_messages.html#b2-fv-syntax-errors">
+            
+                    
+                    B.2 [FV] Syntax Errors:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../appendix_b_common_error_messages.html">
+            
+                <a href="../appendix_b_common_error_messages.html#b3-capsule-syntax-errors">
+            
+                    
+                    B.3 [CAPSULE] Syntax Errors:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../appendix_b_common_error_messages.html">
+            
+                <a href="../appendix_b_common_error_messages.html#b4-rule-syntax-errors">
+            
+                    
+                    B.4 [Rule] Syntax Errors:
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../appendix_c_reports.html">
+            
+                <a href="../appendix_c_reports.html#appendix-c-reports">
+            
+                    
+                    Appendix C Reports
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    Tables
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../1_introduction/11_overview.html">
+            
+                <a href="../1_introduction/11_overview.html#table-1-edk-build-infrastructure-support-matrix">
+            
+                    
+                    Table 1 EDK Build Infrastructure Support Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../2_fdf_design_discussion/22_flash_description_file_format.html">
+            
+                <a href="../2_fdf_design_discussion/22_flash_description_file_format.html#table-2-well-known-macro-statements">
+            
+                    
+                    Table 2 Well-known Macro Statements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../2_fdf_design_discussion/22_flash_description_file_format.html">
+            
+                <a href="../2_fdf_design_discussion/22_flash_description_file_format.html#table-3-using-system-environment-variable">
+            
+                    
+                    Table 3 Using System Environment Variable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../2_fdf_design_discussion/22_flash_description_file_format.html">
+            
+                <a href="../2_fdf_design_discussion/22_flash_description_file_format.html#table-4-reserved-rule-section-macro-strings">
+            
+                    
+                    Table 4 Reserved [Rule] Section Macro Strings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../2_fdf_design_discussion/22_flash_description_file_format.html">
+            
+                <a href="../2_fdf_design_discussion/22_flash_description_file_format.html#table-5-operator-precedence-and-supported-operands">
+            
+                    
+                    Table 5 Operator Precedence and Supported Operands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    Figures
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../2_fdf_design_discussion/21_processing_overview.html">
+            
+                <a href="../2_fdf_design_discussion/21_processing_overview.html#figure-1-edk-ii-build-data-flow">
+            
+                    
+                    Figure 1 EDK II Build Data Flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../2_fdf_design_discussion/21_processing_overview.html">
+            
+                <a href="../2_fdf_design_discussion/21_processing_overview.html#figure-2-edk-ii-create-image-flow">
+            
+                    
+                    Figure 2 EDK II Create Image Flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                    Examples
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="32_fdf_definition.html">
+            
+                <a href="32_fdf_definition.html#example-edk-ii-fdf">
+            
+                    
+                    Example (EDK II FDF)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3.9 [Rule] Sections</a>
+    </h1>
+</div>
+<div>
+    <!-- 
+    <img style="float:left; align:middle; height:2em" src="media/TianocoreTitlePageLogo.jpg"/>
+     -->
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II Flash Description (FDF) File Specification</div>
+        <div style="text-align:right">Revision 1.28.01</div>
+      </h2>  
+    
+    <hr>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <!--- @file
+  3.9 [Rule] Sections
+
+  Copyright (c) 2006-2017, Intel Corporation. All rights reserved.<BR>
+
+  Redistribution and use in source (original document form) and 'compiled'
+  forms (converted to PDF, epub, HTML and other formats) with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1) Redistributions of source code (original document form) must retain the
+     above copyright notice, this list of conditions and the following
+     disclaimer as the first lines of this file unmodified.
+
+  2) Redistributions in compiled form (transformed to other DTDs, converted to
+     PDF, epub, HTML and other formats) must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+  THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT "AS IS" AND ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+  EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<h2 id="39-rule-sections">3.9 [Rule] Sections</h2>
+<p>These are optional sections that describes the <code>[Rule]</code> content found in FDF
+files.</p>
+<h4 id="summary">Summary</h4>
+<p>This section is similar to the <code>[FV]</code> section, with the a few exceptions. The
+INF statements are not permitted within a rules section.</p>
+<p>Rules are used as templates, normally using variable names instead of fully
+qualified names, while INF statements are always are fully qualified file names.</p>
+<p>The following list specifies the allowed variables that may be used exactly as
+typed:</p>
+<p><code>$(WORKSPACE)</code>, <code>$(EDK_SOURCE)</code>, <code>$(EFI_SOURCE)</code>, <code>$(TARGET)</code>,
+<code>$(TOOL_CHAIN_TAG)</code>, <code>$(ARCH)</code>, <code>$(MODULE_NAME)</code>, <code>$(OUTPUT_DIRECTORY)</code>,
+<code>$(BUILD_NUMBER)</code>, <code>$(INF_VERSION)</code>, <code>$(NAMED_GUID)</code>, <code>$(INF_OUTPUT)</code></p>
+<p>Conditional statements may be used anywhere within this section.</p>
+<h4 id="prototype">Prototype</h4>
+<pre><code class="lang-c">&lt;Rules&gt;             ::= <span class="hljs-string">&quot;[Rule&quot;</span> &lt;RuleArgs&gt; <span class="hljs-string">&quot;]&quot;</span> &lt;EOL&gt; &lt;FileStatements&gt;
+&lt;RuleArgs&gt;          ::= <span class="hljs-string">&quot;.&quot;</span> &lt;arch&gt; <span class="hljs-string">&quot;.&quot;</span> &lt;ModuleType&gt;
+                        [&lt;TemplateName&gt;]
+&lt;ModuleType&gt;        ::= {&lt;EdkComponentType&gt;} {&lt;Edk2ModuleType&gt;}
+&lt;Edk2ModuleType&gt;    ::= {<span class="hljs-string">&quot;SEC&quot;</span>} {<span class="hljs-string">&quot;PEI_CORE&quot;</span>} {<span class="hljs-string">&quot;PEIM&quot;</span>} {<span class="hljs-string">&quot;SMM_CORE&quot;</span>}
+                        {<span class="hljs-string">&quot;DXE_CORE&quot;</span>} {<span class="hljs-string">&quot;DXE_DRIVER&quot;</span>}
+                        {<span class="hljs-string">&quot;DXE_SAL_DRIVER&quot;</span>} {<span class="hljs-string">&quot;DXE_SMM_DRIVER&quot;</span>}
+                        {<span class="hljs-string">&quot;DXE_RUNTIME_DRIVER&quot;</span>} {<span class="hljs-string">&quot;UEFI_DRIVER&quot;</span>}
+                        {<span class="hljs-string">&quot;UEFI_APPLICATION&quot;</span>} {<span class="hljs-string">&quot;USER_DEFINED&quot;</span>}
+&lt;EdkComponentType&gt;  ::= {<span class="hljs-string">&quot;LIBRARY&quot;</span>} {<span class="hljs-string">&quot;APPLICATION&quot;</span>} {<span class="hljs-string">&quot;AcpiTable&quot;</span>}
+                        {<span class="hljs-string">&quot;BINARY&quot;</span>} {<span class="hljs-string">&quot;BS_DRIVER&quot;</span>} {<span class="hljs-string">&quot;LOGO&quot;</span>}
+                        {<span class="hljs-string">&quot;Legacy16&quot;</span>} {<span class="hljs-string">&quot;Microcode&quot;</span>} {<span class="hljs-string">&quot;PE32_PEIM&quot;</span>}
+                        {<span class="hljs-string">&quot;RAWFILE&quot;</span>} {<span class="hljs-string">&quot;RT_DRIVER&quot;</span>} {<span class="hljs-string">&quot;SAL_RT_DRIVER&quot;</span>}
+                        {<span class="hljs-string">&quot;SECURITY_CORE&quot;</span>} {<span class="hljs-string">&quot;COMBINED_PEIM_DRIVER&quot;</span>}
+                        {<span class="hljs-string">&quot;PIC_PEIM&quot;</span>} {<span class="hljs-string">&quot;RELOCATABLE_PEIM&quot;</span>}
+                        {<span class="hljs-string">&quot;PEI_CORE&quot;</span>}
+&lt;TemplateName&gt;      ::= <span class="hljs-string">&quot;.&quot;</span> &lt;RuleUiName&gt;
+&lt;RuleUiName&gt;        ::= {&lt;Word&gt;} {<span class="hljs-string">&quot;BINARY&quot;</span>}
+&lt;FileStatements&gt;    ::= <span class="hljs-keyword">if</span> (MODULE_TYPE == <span class="hljs-string">&quot;SEC&quot;</span>
+                        || MODULE_TYPE == <span class="hljs-string">&quot;PEI_CORE&quot;</span>
+                        || MODULE_TYPE == <span class="hljs-string">&quot;PEIM&quot;</span>
+                        || COMPONENT_TYPE == <span class="hljs-string">&quot;PEI_CORE&quot;</span>
+                        || COMPONENT_TYPE == <span class="hljs-string">&quot;PIC_PEIM&quot;</span>
+                        || COMPONENT_TYPE == <span class="hljs-string">&quot;RELOCATABLE_PEIM&quot;</span> ||
+                        COMPONENT_TYPE == <span class="hljs-string">&quot;SECURITY_CORE&quot;</span>
+                        || COMPONENT_TYPE == <span class="hljs-string">&quot;PE32_PEIM&quot;</span> ):
+                        &lt;TS&gt; <span class="hljs-string">&quot;FILE&quot;</span> &lt;MTS&gt; &lt;FvType1&gt; &lt;Eq&gt;
+                        &lt;FileStatement1&gt;
+                        elif (MODULE_TYPE == <span class="hljs-string">&quot;DXE_CORE&quot;</span> || MODULE_TYPE ==
+                        <span class="hljs-string">&quot;DXE_DRIVER&quot;</span>
+                        || MODULE_TYPE == <span class="hljs-string">&quot;DXE_SAL_DRIVER&quot;</span> || MODULE_TYPE ==
+                        <span class="hljs-string">&quot;SMM_CORE&quot;</span>
+                        || MODULE_TYPE == <span class="hljs-string">&quot;DXE_SMM_DRIVER&quot;</span>
+                        || MODULE_TYPE == <span class="hljs-string">&quot;UEFI_DRIVER&quot;</span>
+                        || MODULE_TYPE == <span class="hljs-string">&quot;UEFI_APPLICATION&quot;</span>
+                        || MODULE_TYPE == <span class="hljs-string">&quot;USER_DEFINED&quot;</span>
+                        || COMPONENT_TYPE == <span class="hljs-string">&quot;BS_DRIVER&quot;</span>
+                        || COMPONENT_TYPE ==
+                        <span class="hljs-string">&quot;COMBINED_PEIM_DRIVER&quot;</span>
+                        || COMPONENT_TYPE == <span class="hljs-string">&quot;APPLICATION&quot;</span>):
+                        {&lt;FileStatement2&gt;} {&lt;FileStatement3&gt;}
+                        elif (MODULE_TYPE == <span class="hljs-string">&quot;FV_IMAGE&quot;</span>):
+                        &lt;FileStatement4&gt; <span class="hljs-keyword">else</span>:
+                        &lt;TS&gt; <span class="hljs-string">&quot;FILE&quot;</span> &lt;MTS&gt; <span class="hljs-string">&quot;NON_FFS_FILE&quot;</span> &lt;Eq&gt;
+                        [&lt;NamedGuid&gt;] [&lt;Options&gt;] &lt;EOL&gt;
+&lt;FileStatement1&gt;    ::= &lt;NamedGuid&gt; [&lt;RelocFlags&gt; &lt;MTS&gt;] [&lt;Options&gt;] &lt;EOL&gt;
+&lt;FileStatement2&gt;    ::= &lt;TS&gt; <span class="hljs-string">&quot;FILE&quot;</span> &lt;MTS&gt; &lt;FvType2&gt; &lt;Eq&gt; &lt;NamedGuid&gt;
+                        [&lt;Options&gt;] &lt;EOL&gt;
+&lt;FileStatement3&gt;    ::= &lt;TS&gt; <span class="hljs-string">&quot;FILE&quot;</span> &lt;MTS&gt; <span class="hljs-string">&quot;RAW&quot;</span> &lt;Eq&gt; &lt;NamedGuidOrPcd&gt;
+                        [&lt;Options&gt;] &lt;EOL&gt;
+&lt;FileStatement4&gt;    ::= &lt;TS&gt; <span class="hljs-string">&quot;FILE&quot;</span> &lt;MTS&gt; <span class="hljs-string">&quot;FV_IMAGE&quot;</span> &lt;Eq&gt;
+                        &lt;NamedGuidOrPcd&gt; [&lt;Options&gt;] &lt;EOL&gt;
+&lt;NamedGuid&gt;         ::= {<span class="hljs-string">&quot;$(NAMED_GUID)&quot;</span>} {&lt;RegistryFormatGUID&gt;}
+                        {&lt;Sym&gt;} &lt;MTS&gt;
+&lt;Sym&gt;               ::= <span class="hljs-string">&quot;$(&quot;</span> &lt;Word&gt; <span class="hljs-string">&quot;)&quot;</span>
+&lt;NamedGuidOrPcd&gt;    ::= &lt;NamedGuid&gt; &lt;MTS&gt;
+                        {<span class="hljs-string">&quot;PCD(&quot;</span> &lt;PcdName&gt; <span class="hljs-string">&quot;)&quot;</span>} {&lt;GuidValue&gt;} &lt;MTS&gt;
+&lt;GuidValue&gt;         ::= {&lt;GuidCName&gt;} {&lt;GuidStructure&gt;}
+&lt;GuidCName&gt;         ::= &lt;CName&gt;
+&lt;GuidStructure&gt;     ::= {&lt;RegistryFormatGUID&gt;} {&lt;CFormatGUID&gt;}
+&lt;FvType1&gt;           ::= {<span class="hljs-string">&quot;SEC&quot;</span>} {<span class="hljs-string">&quot;PEI_CORE&quot;</span>} {<span class="hljs-string">&quot;PEIM&quot;</span>} {<span class="hljs-string">&quot;PEI_DXE_COMBO&quot;</span>}
+&lt;FvType2&gt;           ::= {<span class="hljs-string">&quot;FREEFORM&quot;</span>} {<span class="hljs-string">&quot;DRIVER&quot;</span>} {<span class="hljs-string">&quot;DXE_CORE&quot;</span>}
+                        {<span class="hljs-string">&quot;APPLICATION&quot;</span>} {<span class="hljs-string">&quot;SMM_CORE&quot;</span>} {<span class="hljs-string">&quot;SMM&quot;</span>}
+&lt;RelocFlags&gt;        ::= {<span class="hljs-string">&quot;RELOCS_STRIPPED&quot;</span> &lt;MTS&gt;}
+                        {<span class="hljs-string">&quot;RELOCS_RETAINED&quot;</span> &lt;MTS&gt;}
+&lt;Options&gt;           ::= [&lt;UseLocal&gt;] [&lt;FileOpts&gt;] &lt;FileSpec&gt;
+&lt;UseLocal&gt;          ::= &lt;KeyString&gt; [<span class="hljs-string">&quot;,&quot;</span> &lt;KeyString&gt;]
+&lt;KeyString&gt;         ::= &lt;Target&gt; <span class="hljs-string">&quot;_&quot;</span> &lt;TagName&gt; <span class="hljs-string">&quot;_&quot;</span> &lt;ToolArch&gt;
+&lt;Target&gt;            ::= {&lt;Word&gt;} {<span class="hljs-string">&quot;$(TARGET)&quot;</span>}
+&lt;TagName&gt;           ::= {&lt;Word&gt;} {<span class="hljs-string">&quot;$(TOOL_CHAIN_TAG)&quot;</span>}
+&lt;ToolArch&gt;          ::= {&lt;Arch&gt;} {<span class="hljs-string">&quot;$(ARCH)&quot;</span>}
+&lt;FileOpts&gt;          ::= [<span class="hljs-string">&quot;Fixed&quot;</span> &lt;MTS&gt;] [<span class="hljs-string">&quot;Checksum&quot;</span> &lt;MTS&gt;]
+                        [&lt;FfsAlignment&gt;]
+&lt;FfsAlignment&gt;      ::= <span class="hljs-string">&quot;Align&quot;</span> &lt;Eq&gt; &lt;FfsAlignmentValues&gt; &lt;MTS&gt;
+&lt;FileSpec&gt;          ::= {&lt;SimpleFile&gt;} {&lt;ComplexFile&gt;} {&lt;SbtGuid&gt;}
+&lt;SimpleFile&gt;        ::= &lt;LeafSecType&gt; [&lt;FileOpts&gt;] &lt;VarFile&gt; &lt;EOL&gt;
+&lt;LeafSecType&gt;       ::= {<span class="hljs-string">&quot;COMPAT16&quot;</span>} {<span class="hljs-string">&quot;PE32&quot;</span>} {<span class="hljs-string">&quot;PIC&quot;</span>} {<span class="hljs-string">&quot;TE&quot;</span>}
+                        {<span class="hljs-string">&quot;FV_IMAGE&quot;</span>} {<span class="hljs-string">&quot;RAW&quot;</span>} {<span class="hljs-string">&quot;DXE_DEPEX&quot;</span>} {<span class="hljs-string">&quot;UI&quot;</span>}
+                        {<span class="hljs-string">&quot;PEI_DEPEX&quot;</span>} {<span class="hljs-string">&quot;SMM_DEPEX&quot;</span>} {<span class="hljs-string">&quot;VERSION&quot;</span>}
+&lt;SbtGuid&gt;           ::= <span class="hljs-string">&quot;SUBTYPE_GUID&quot;</span> &lt;MTS&gt; &lt;GuidValue&gt; &lt;MTS&gt; &lt;FName&gt; &lt;EOL&gt;
+&lt;VarFile&gt;           ::= {&lt;FilenameVariable&gt;} {&lt;FName&gt;} {&lt;Ext&gt;}
+&lt;FName&gt;             ::= [&lt;PATH&gt;] &lt;Word&gt; <span class="hljs-string">&quot;.&quot;</span> &lt;Word&gt;
+&lt;FilenameVariable&gt;  ::= <span class="hljs-string">&quot;$(INF_OUTPUT)/$(MODULE_NAME)&quot;</span> <span class="hljs-string">&quot;.&quot;</span> &lt;Word&gt;
+&lt;ComplexFile&gt;       ::= <span class="hljs-string">&quot;{&quot;</span> &lt;EOL&gt;
+                        &lt;EncapSection&gt;*
+                        &lt;LeafSections&gt;*
+                        &lt;TS&gt; <span class="hljs-string">&quot;}&quot;</span> &lt;EOL&gt;
+&lt;EncapSection&gt;      ::= &lt;TS&gt; {&lt;CompressSection&gt;} {&lt;GuidedSection&gt;}
+&lt;CompressSection&gt;   ::= <span class="hljs-string">&quot;COMPRESS&quot;</span> &lt;MTS&gt; [&lt;CompType&gt;]
+                        <span class="hljs-string">&quot;{&quot;</span> [&lt;EOL&gt;]
+                        &lt;EncapSec&gt;*
+                        &lt;LeafSections&gt; &lt;EOL&gt;*
+                        &lt;TS&gt; <span class="hljs-string">&quot;}&quot;</span> &lt;EOL&gt;
+&lt;CompType&gt;          ::= {<span class="hljs-string">&quot;PI_STD&quot;</span>} {<span class="hljs-string">&quot;PI_NONE&quot;</span>} &lt;MTS&gt;
+&lt;GuidedSection&gt;     ::= <span class="hljs-string">&quot;GUIDED&quot;</span> &lt;MTS&gt; <span class="hljs-string">&quot;$(NAMED_GUID)&quot;</span> &lt;MTS&gt; [&lt;GAttr&gt;]
+                        <span class="hljs-string">&quot;{&quot;</span> &lt;EOL&gt;
+                        &lt;EncapSec&gt;*
+                        &lt;LeafSections&gt;*
+                        &lt;TS&gt; <span class="hljs-string">&quot;}&quot;</span> &lt;EOL&gt;
+&lt;GAttr&gt;             ::= [&lt;GuidAttrPR&gt;] [&lt;GuidAttrASV&gt;] [&lt;GuidHeaderSize&gt;]
+&lt;GuidAttrPR&gt;        ::= <span class="hljs-string">&quot;PROCESSING_REQUIRED&quot;</span> &lt;Eq&gt; &lt;BoolType&gt; &lt;MTS&gt;
+&lt;GuidAttrASV&gt;       ::= <span class="hljs-string">&quot;AUTH_STATUS_VALID&quot;</span> &lt;Eq&gt; &lt;BoolType&gt; &lt;MTS&gt;
+&lt;GuidHeaderSize&gt;    ::= <span class="hljs-string">&quot;EXTRA_HEADER_SIZE&quot;</span> &lt;Eq&gt; &lt;Number&gt; &lt;MTS&gt;
+&lt;LeafSections&gt;      ::= &lt;TS&gt; {&lt;C16Sec&gt;} {&lt;PeSec&gt;} {&lt;PicSec&gt;} {&lt;TeSec&gt;}
+                        {&lt;FvSec&gt;} {&lt;RawSec&gt;} {&lt;DxeDepSec&gt;}
+                        {&lt;UiSec&gt;} {&lt;VerSec&gt;} {&lt;PeiDepSec&gt;}
+                        {&lt;SmmDepSec&gt;} {&lt;SubtypeGuidSec&gt;}
+&lt;C16Sec&gt;            ::= <span class="hljs-string">&quot;COMPAT16&quot;</span> &lt;MTS&gt; &lt;C16FileType&gt; [&lt;FileOrExt&gt;] &lt;EOL&gt;
+&lt;PeSec&gt;             ::= <span class="hljs-string">&quot;PE32&quot;</span> &lt;MTS&gt; &lt;Pe32FileType&gt; [&lt;FileOrExt&gt;] &lt;EOL&gt;
+&lt;PicSec&gt;            ::= <span class="hljs-string">&quot;PIC&quot;</span> &lt;MTS&gt; &lt;PicFileType&gt; [&lt;FileOrExt&gt;] &lt;EOL&gt;
+&lt;TeSec&gt;             ::= <span class="hljs-string">&quot;TE&quot;</span> &lt;MTS&gt; &lt;TeFileType&gt; [&lt;FileOrExt&gt;] &lt;EOL&gt;
+&lt;RawSec&gt;            ::= <span class="hljs-string">&quot;RAW&quot;</span> &lt;MTS&gt; &lt;RawFileType&gt; [&lt;FileOrExtOrPcd&gt;] &lt;EOL&gt;
+&lt;DxeDepSec&gt;         ::= <span class="hljs-string">&quot;DXE_DEPEX&quot;</span> &lt;MTS&gt; &lt;DdFileType&gt; [&lt;FileOrExt&gt;] &lt;EOL&gt;
+&lt;SmmDepSec&gt;         ::= <span class="hljs-string">&quot;SMM_DEPEX&quot;</span> &lt;MTS&gt; &lt;DdFileType&gt; [&lt;FileOrExt&gt;] &lt;EOL&gt;
+&lt;UiSec&gt;             ::= <span class="hljs-string">&quot;UI&quot;</span> &lt;MTS&gt; &lt;UiFileType&gt; [&lt;FileOrExt&gt;] &lt;EOL&gt;
+&lt;VerSec&gt;            ::= <span class="hljs-string">&quot;VERSION&quot;</span> &lt;MTS&gt; &lt;VerFileType&gt; [&lt;FileOrExt&gt;] &lt;EOL&gt;
+&lt;PeiDepSec&gt;         ::= <span class="hljs-string">&quot;PEI_DEPEX&quot;</span> &lt;MTS&gt; &lt;PdFileType&gt;
+                        [&lt;FileOrExt&gt;] &lt;EOL&gt;
+&lt;SubtypeGuidSec&gt;    ::= <span class="hljs-string">&quot;SUBTYPE_GUID&quot;</span> &lt;MTS&gt; &lt;GuidValue&gt; &lt;MTS&gt;
+                        &lt;File&gt; &lt;EOL&gt;
+&lt;FileOrExt&gt;         ::= {&lt;VarFile&gt;} {&lt;Ext&gt;} &lt;MTS&gt;
+&lt;FileOrExtOrPcd&gt;    ::= {&lt;VarFile&gt;} {&lt;Ext&gt;} {<span class="hljs-string">&quot;PCD(&quot;</span> &lt;PcdName&gt; <span class="hljs-string">&quot;)&quot;</span>}
+&lt;Ext&gt;               ::= &lt;FS&gt; <span class="hljs-string">&quot;.&quot;</span> [a-zA-Z][a-zA-Z0<span class="hljs-number">-9</span>]{<span class="hljs-number">0</span>,}
+&lt;C16FileType&gt;       ::= <span class="hljs-string">&quot;COMPAT16&quot;</span> [&lt;FfsAlignment&gt;]
+&lt;Pe32FileType&gt;      ::= <span class="hljs-string">&quot;PE32&quot;</span> &lt;MTS&gt; [&lt;FfsAlignment&gt;]
+                        [&lt;ChkReloc&gt;]
+&lt;ChkReloc&gt;          ::= <span class="hljs-keyword">if</span> (MODULE_TYPE == <span class="hljs-string">&quot;SEC&quot;</span>
+                        || MODULE_TYPE == <span class="hljs-string">&quot;PEI_CORE&quot;</span>
+                        || MODULE_TYPE == <span class="hljs-string">&quot;PEIM&quot;</span>): [&lt;RelocFlags&gt;]
+&lt;PicFileType&gt;       ::= <span class="hljs-string">&quot;PIC&quot;</span> &lt;MTS&gt; [&lt;FfsAlignment&gt;]
+&lt;TeFileType&gt;        ::= <span class="hljs-string">&quot;TE&quot;</span> &lt;MTS&gt; [&lt;FfsAlignment&gt;] [&lt;ChkReloc&gt;]
+&lt;RawFileType&gt;       ::= {&lt;BinTypes&gt;} {&lt;AcpiFileTypes&gt;} &lt;MTS&gt;
+                        [&lt;FfsAlignment&gt;]
+&lt;BinTypes&gt;          ::= {<span class="hljs-string">&quot;BIN&quot;</span>} {<span class="hljs-string">&quot;RAW&quot;</span>}
+&lt;AcpiFileTypes&gt;     ::= {<span class="hljs-string">&quot;ACPI&quot;</span>} {<span class="hljs-string">&quot;ASL&quot;</span>} &lt;MTS&gt; [<span class="hljs-string">&quot;Optional&quot;</span> &lt;MTS&gt;]
+&lt;DdFileType&gt;        ::= {<span class="hljs-string">&quot;DXE_DEPEX&quot;</span>} {<span class="hljs-string">&quot;SMM_DEPEX&quot;</span>} [&lt;DpxAlign&gt;]
+&lt;DpxAlign&gt;          ::= [<span class="hljs-string">&quot;Optional&quot;</span> &lt;MTS&gt;] [&lt;FfsAlignment&gt;]
+&lt;UiFileType&gt;        ::= {&lt;UiFile&gt;} {&lt;UiString&gt;}
+&lt;UiFile&gt;            ::= <span class="hljs-string">&quot;UI&quot;</span> &lt;MTS&gt; [&lt;UiOpts&gt;]
+&lt;UiString&gt;          ::= <span class="hljs-string">&quot;STRING&quot;</span> &lt;Eq&gt; &lt;StringVal&gt; [&lt;FfsAlignment&gt;]
+&lt;StringVal&gt;         ::= {&lt;UnicodeString&gt;} {&lt;QuotedString&gt;}
+                        {&lt;NamedMacros&gt;}
+&lt;NamedMacros&gt;       ::= {<span class="hljs-string">&quot;$(INF_VERSION)&quot;</span>} {<span class="hljs-string">&quot;$(MODULE_NAME))&quot;</span>
+&lt;UiOpts&gt;            ::= [<span class="hljs-string">&quot;Optional&quot;</span> &lt;MTS&gt;] [&lt;FfsAlignment&gt;]
+&lt;VerFileType&gt;       ::= {&lt;VerFile&gt;} {&lt;VerString&gt;}
+&lt;VerFile&gt;           ::= <span class="hljs-string">&quot;VERSION&quot;</span> &lt;MTS&gt; [&lt;VerOpts&gt;]
+&lt;VerOpts&gt;           ::= [<span class="hljs-string">&quot;Optional&quot;</span> &lt;MTS&gt;] [&lt;BuildAlign&gt;]
+&lt;VerString&gt;         ::= <span class="hljs-string">&quot;STRING&quot;</span> &lt;Eq&gt; &lt;VerStringVal&gt; &lt;MTS&gt; [&lt;BuildAlign&gt;]
+&lt;VerStringVal&gt;      ::= {&lt;UnicodeString&gt;} {&lt;QuotedString&gt;}
+                        {<span class="hljs-string">&quot;$(INF_VERSION)&quot;</span>}
+&lt;BuildAlign&gt;        ::= [<span class="hljs-string">&quot;Optional&quot;</span> &lt;MTS&gt;] [&lt;BuildArg&gt;]
+                        [&lt;FfsAlignment&gt;]
+&lt;BuildArg&gt;          ::= <span class="hljs-string">&quot;BUILD_NUM = $(BUILD_NUMBER)&quot;</span> &lt;MTS&gt;
+&lt;PdFileType&gt;        ::= <span class="hljs-string">&quot;PEI_DEPEX&quot;</span> &lt;MTS&gt; [&lt;DpxAlign&gt;]
+&lt;FvSec&gt;             ::= <span class="hljs-string">&quot;FV_IMAGE&quot;</span> &lt;MTS&gt; {&lt;FvBin&gt;} {&lt;FvImageSection&gt;}
+&lt;FvBin&gt;             ::= <span class="hljs-string">&quot;FV&quot;</span> &lt;MTS&gt; [&lt;FfsAlignment&gt;] [&lt;FileOrExt&gt;] &lt;EOL&gt;
+&lt;FvImgSection&gt;      ::= <span class="hljs-string">&quot;FV_IMAGE&quot;</span> &lt;MTS&gt; &lt;FvImgArgs&gt;
+&lt;FvImgArgs&gt;         ::= <span class="hljs-string">&quot;{&quot;</span> &lt;EOL&gt;
+                        &lt;MacroDefinition&gt;*
+                        [&lt;FvAlignment&gt;]
+                        &lt;FvAttributes&gt;*
+                        [&lt;AprioriSection&gt;]
+                        &lt;FileStatements&gt;*
+                        &lt;TS&gt; <span class="hljs-string">&quot;}&quot;</span> &lt;EOL&gt;
+&lt;FvAlignment&gt;       ::= [&lt;TS&gt; <span class="hljs-string">&quot;FvBaseAddress&quot;</span> &lt;Eq&gt; &lt;UINT64&gt; &lt;EOL&gt;]
+                        &lt;TS&gt; <span class="hljs-string">&quot;FvAlignment&quot;</span> &lt;Eq&gt; &lt;FvAlignmentValues&gt; &lt;EOL&gt;
+&lt;FvAttributes&gt;      ::= [&lt;TS&gt; <span class="hljs-string">&quot;MEMORY_MAPPED&quot;</span> &lt;Eq&gt; &lt;BoolType&gt; &lt;EOL&gt;]
+                        [&lt;TS&gt; <span class="hljs-string">&quot;LOCK_CAP&quot;</span> &lt;Eq&gt; &lt;BoolType&gt; &lt;EOL&gt;]
+                        [&lt;TS&gt; <span class="hljs-string">&quot;LOCK_STATUS&quot;</span> &lt;Eq&gt; &lt;BoolType&gt; &lt;EOL&gt;]
+                        [&lt;TS&gt; <span class="hljs-string">&quot;WRITE_LOCK_CAP&quot;</span> &lt;Eq&gt; &lt;BoolType&gt; &lt;EOL&gt;]
+                        [&lt;TS&gt; <span class="hljs-string">&quot;WRITE_LOCK_STATUS&quot;</span> &lt;Eq&gt; &lt;BoolType&gt; &lt;EOL&gt;]
+                        [&lt;TS&gt; <span class="hljs-string">&quot;WRITE_ENABLED_CAP&quot;</span> &lt;Eq&gt; &lt;BoolType&gt; &lt;EOL&gt;]
+                        [&lt;TS&gt; <span class="hljs-string">&quot;WRITE_DISABLED_CAP&quot;</span> &lt;Eq&gt; &lt;BoolType&gt; &lt;EOL&gt;]
+                        [&lt;TS&gt; <span class="hljs-string">&quot;WRITE_STATUS&quot;</span> &lt;Eq&gt; &lt;BoolType&gt; &lt;EOL&gt;]
+                        [&lt;TS&gt; <span class="hljs-string">&quot;STICKY_WRITE&quot;</span> &lt;Eq&gt; &lt;BoolType&gt; &lt;EOL&gt;]
+                        [&lt;TS&gt; <span class="hljs-string">&quot;WRITE_POLICY_RELIABLE&quot;</span> &lt;Eq&gt; &lt;BoolType&gt; &lt;EOL&gt;]
+                        [&lt;TS&gt; <span class="hljs-string">&quot;READ_LOCK_CAP&quot;</span> &lt;Eq&gt; &lt;BoolType&gt; &lt;EOL&gt;]
+                        [&lt;TS&gt; <span class="hljs-string">&quot;READ_LOCK_STATUS&quot;</span> &lt;Eq&gt; &lt;BoolType&gt; &lt;EOL&gt;]
+                        [&lt;TS&gt; <span class="hljs-string">&quot;READ_ENABLED_CAP&quot;</span> &lt;Eq&gt; &lt;BoolType&gt; &lt;EOL&gt;]
+                        [&lt;TS&gt; <span class="hljs-string">&quot;READ_DISABLED_CAP&quot;</span> &lt;Eq&gt; &lt;BoolType&gt; &lt;EOL&gt;]
+                        [&lt;TS&gt; <span class="hljs-string">&quot;READ_STATUS&quot;</span> &lt;Eq&gt; &lt;BoolType&gt; &lt;EOL&gt;]
+&lt;PeiAprioriSection&gt; ::= <span class="hljs-string">&quot;APRIORI PEI&quot;</span> &lt;MTS&gt;
+                        <span class="hljs-string">&quot;{&quot;</span> &lt;EOL&gt;
+                        &lt;MacroDefinition&gt;*
+                        &lt;FileStatements&gt;* &lt;TS&gt; <span class="hljs-string">&quot;}&quot;</span> &lt;EOL&gt;
+&lt;DxeAprioriSection&gt; ::= <span class="hljs-string">&quot;APRIORI DXE&quot;</span> &lt;MTS&gt;
+                        <span class="hljs-string">&quot;{&quot;</span> &lt;EOL&gt;
+                        &lt;MacroDefinition&gt;*
+                        &lt;FileStatements&gt;*
+                        &lt;TS&gt; <span class="hljs-string">&quot;}&quot;</span> &lt;EOL&gt;
+</code></pre>
+<h4 id="restrictions">Restrictions</h4>
+<p><strong><em>FName</em></strong></p>
+<p>For BINARY ONLY content (<code>UEFI_DRIVER</code> and <code>UEFI_APPLICATION</code> .efi files) the
+file names specified in the <code>SECTION</code> element of this section must be relative
+to the directory identified by the <code>WORKSPACE</code> system environment variable (or
+relative to a directory listed in the <code>PACKAGES_PATH</code>).</p>
+<h4 id="parameters">Parameters</h4>
+<p><strong><em>$(INF_VERSION)</em></strong></p>
+<p>This value refers to the <code>VERSION_STRING</code> element in the INF file&apos;s <code>[Defines]</code>
+section, not the <code>INF_VERSION</code> element, which is assigned based on the INF
+specification revision.</p>
+<p><strong><em>SUBTYPE_GUID</em></strong></p>
+<p>This is short hand notation refering to content that will be placed in a
+Section of type: <code>EFI_SECTION_FREEFORM_SUBTYPE_GUID</code>. A single</p>
+<p><code>EFI_SECTION_FREEFORM_SUBTYPE_GUID</code> section is permitted in an FFS File of type
+<code>EFI_FV_FILETYPE_FREEFORM</code></p>
+<p><strong><em>RuleUiName</em></strong></p>
+<p>A unique single word identifier. The word <code>&quot;BINARY&quot;</code> is reserved; it is
+recommended that it be used for the rules that process INF modules that only
+contain binary content.</p>
+<p><strong><em>COMPRESS</em></strong></p>
+<p>Compression sections that use <code>PI_STD</code> compression do not have
+<code>PROCESSING_REQUIRED = TRUE</code> flag, it is only required for GUIDED sections.</p>
+<p><strong><em>User Interface (UI) entries</em></strong></p>
+<p>There are three possible methods for specifying a User Interface string. 1)
+Specify the string value in the FDF file, 2) specify a plain ASCII text file
+that has an extension of &quot;.ui&quot; or 3) specify a Unicode file with an extension
+of &quot;.uni&quot; that contains a single Unicode string.</p>
+<h4 id="related-definitions">Related Definitions</h4>
+<p><strong><em>Target</em></strong></p>
+<p>Must match a target identifier in the EDK II <em>tools_def.txt</em> file - the first
+field, where fields are separated by the underscore character. Wildcard
+characters are not permitted.</p>
+<p><strong><em>TagName</em></strong></p>
+<p>Must match a tag name field in the EDK II <em>tools_def.txt</em> file - second field.
+Wildcard characters are not permitted</p>
+<h4 id="example">Example</h4>
+<pre><code class="lang-ini">[Rule.IA32.SEC]
+  FILE SEC = $(NAMED_GUID) Fixed Align=32 |.efi
+
+[Rule.Common.PEIM]
+  FILE PEIM = $(NAMED_GUID) {
+    TE TE |.te
+    PEI_DEPEX PEI_DEPEX Optional |.Depex
+    VERSION STRING    = &quot;$(INF_VERSION)&quot; Optional BUILD_NUM = $(BUILD_NUM)
+    UI UNI_UI Optional | .uni
+  }
+
+[Rule.Common.PEIM.PE32]
+  FILE PEIM = $(NAMED_GUID) {
+    PEI_DEPEX PEI_DEPEX Optional | .dxs
+    COMPRESS {
+      PE32 PE32 |.efi
+      VERSION UNI_VER Optional BUILD_NUM = $(BUILD_NUM) | .ver
+      UI UI Optional | .ui
+    }
+  }
+</code></pre>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                    
+                    
+
+<div>
+    <hr>
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II Flash Description (FDF) File Specification</div>
+        <div style="text-align:right">Revision 1.28.01</div>
+      </h2>  
+    
+</div>
+
+
+
+                
+            </div>
+
+            
+                
+                <a href="38_[fmppayload]_sections.html#38-fmppayload-sections" class="navigation navigation-prev " aria-label="Previous page: 3.8 [FmpPayload] Sections">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="310_[vtf]_section.html#310-vtf-section" class="navigation navigation-next " aria-label="Next page: 3.10 [VTF] Section">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3.9 [Rule] Sections","level":"1.4.9","depth":2,"next":{"title":"3.10 [VTF] Section","level":"1.4.10","depth":2,"anchor":"#310-vtf-section","path":"3_edk_ii_fdf_file_format/310_[vtf]_section.md","ref":"3_edk_ii_fdf_file_format/310_[vtf]_section.md#310-vtf-section","articles":[]},"previous":{"title":"3.8 [FmpPayload] Sections","level":"1.4.8","depth":2,"anchor":"#38-fmppayload-sections","path":"3_edk_ii_fdf_file_format/38_[fmppayload]_sections.md","ref":"3_edk_ii_fdf_file_format/38_[fmppayload]_sections.md#38-fmppayload-sections","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"title":"EDK II Flash Description (FDF) File Specification","version":"Revision 1.28.01"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3_edk_ii_fdf_file_format/39_[rule]_sections.md","mtime":"2020-12-01T05:18:21.738Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-01T05:18:55.732Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

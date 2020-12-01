@@ -1,0 +1,1040 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2.1 Processing Overview · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="22_flash_description_file_format.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../#edk-ii-flash-description-fdf-file-specification">
+            
+                    
+                    EDK II Flash Description (FDF) File Specification
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1_introduction/">
+            
+                <a href="../1_introduction/#1-introduction">
+            
+                    
+                    1 Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../1_introduction/11_overview.html">
+            
+                <a href="../1_introduction/11_overview.html#11-overview">
+            
+                    
+                    1.1 Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../1_introduction/12_terms.html">
+            
+                <a href="../1_introduction/12_terms.html#12-terms">
+            
+                    
+                    1.2 Terms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../1_introduction/13_related_information.html">
+            
+                <a href="../1_introduction/13_related_information.html#13-related-information">
+            
+                    
+                    1.3 Related Information
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../1_introduction/14_target_audience.html">
+            
+                <a href="../1_introduction/14_target_audience.html#14-target-audience">
+            
+                    
+                    1.4 Target Audience
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../1_introduction/15_conventions_used_in_this_document.html">
+            
+                <a href="../1_introduction/15_conventions_used_in_this_document.html#15-conventions-used-in-this-document">
+            
+                    
+                    1.5 Conventions Used in this Document
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./#2-fdf-design-discussion">
+            
+                    
+                    2 FDF Design Discussion
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="21_processing_overview.html">
+            
+                <a href="21_processing_overview.html#21-processing-overview">
+            
+                    
+                    2.1 Processing Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="22_flash_description_file_format.html">
+            
+                <a href="22_flash_description_file_format.html#22-flash-description-file-format">
+            
+                    
+                    2.2 Flash Description File Format
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="23_[defines]_section.html">
+            
+                <a href="23_[defines]_section.html#23-defines-section">
+            
+                    
+                    2.3 [Defines] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="24_[fd]_sections.html">
+            
+                <a href="24_[fd]_sections.html#24-fd-sections">
+            
+                    
+                    2.4 [FD] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="25_[fv]_sections.html">
+            
+                <a href="25_[fv]_sections.html#25-fv-sections">
+            
+                    
+                    2.5 [FV] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="26_[capsule]_sections.html">
+            
+                <a href="26_[capsule]_sections.html#26-capsule-sections">
+            
+                    
+                    2.6 [Capsule] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="27_[vtf]_sections.html">
+            
+                <a href="27_[vtf]_sections.html#27-vtf-sections">
+            
+                    
+                    2.7 [VTF] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="28_[rule]_sections.html">
+            
+                <a href="28_[rule]_sections.html#28-rule-sections">
+            
+                    
+                    2.8 [Rule] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="29_[optionrom]_sections.html">
+            
+                <a href="29_[optionrom]_sections.html#29-optionrom-sections">
+            
+                    
+                    2.9 [OptionRom] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../3_edk_ii_fdf_file_format/">
+            
+                <a href="../3_edk_ii_fdf_file_format/#3-edk-ii-fdf-file-format">
+            
+                    
+                    3 EDK II FDF File Format
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../3_edk_ii_fdf_file_format/31_general_rules.html">
+            
+                <a href="../3_edk_ii_fdf_file_format/31_general_rules.html#31-general-rules">
+            
+                    
+                    3.1 General Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../3_edk_ii_fdf_file_format/32_fdf_definition.html">
+            
+                <a href="../3_edk_ii_fdf_file_format/32_fdf_definition.html#32-fdf-definition">
+            
+                    
+                    3.2 FDF Definition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../3_edk_ii_fdf_file_format/33_header_section.html">
+            
+                <a href="../3_edk_ii_fdf_file_format/33_header_section.html#33-header-section">
+            
+                    
+                    3.3 Header Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../3_edk_ii_fdf_file_format/34_[defines]_section.html">
+            
+                <a href="../3_edk_ii_fdf_file_format/34_[defines]_section.html#34-defines-section">
+            
+                    
+                    3.4 [Defines] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../3_edk_ii_fdf_file_format/35_[fd]_sections.html">
+            
+                <a href="../3_edk_ii_fdf_file_format/35_[fd]_sections.html#35-fd-sections">
+            
+                    
+                    3.5 [FD] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../3_edk_ii_fdf_file_format/36_[fv]_sections.html">
+            
+                <a href="../3_edk_ii_fdf_file_format/36_[fv]_sections.html#36-fv-sections">
+            
+                    
+                    3.6 [FV] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../3_edk_ii_fdf_file_format/37_[capsule]_sections.html">
+            
+                <a href="../3_edk_ii_fdf_file_format/37_[capsule]_sections.html#37-capsule-sections">
+            
+                    
+                    3.7 [Capsule] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../3_edk_ii_fdf_file_format/38_[fmppayload]_sections.html">
+            
+                <a href="../3_edk_ii_fdf_file_format/38_[fmppayload]_sections.html#38-fmppayload-sections">
+            
+                    
+                    3.8 [FmpPayload] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../3_edk_ii_fdf_file_format/39_[rule]_sections.html">
+            
+                <a href="../3_edk_ii_fdf_file_format/39_[rule]_sections.html#39-rule-sections">
+            
+                    
+                    3.9 [Rule] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../3_edk_ii_fdf_file_format/310_[vtf]_section.html">
+            
+                <a href="../3_edk_ii_fdf_file_format/310_[vtf]_section.html#310-vtf-section">
+            
+                    
+                    3.10 [VTF] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../3_edk_ii_fdf_file_format/311_pci_optionrom_section.html">
+            
+                <a href="../3_edk_ii_fdf_file_format/311_pci_optionrom_section.html#311-pci-optionrom-section">
+            
+                    
+                    3.11 PCI OptionRom Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../appendix_a_nt32pkg_flash_description_file.html">
+            
+                <a href="../appendix_a_nt32pkg_flash_description_file.html#appendix-a-nt32pkg-flash-description-file">
+            
+                    
+                    Appendix A Nt32Pkg Flash Description File
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../appendix_b_common_error_messages.html">
+            
+                <a href="../appendix_b_common_error_messages.html#appendix-b-common-error-messages">
+            
+                    
+                    Appendix B Common Error Messages
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../appendix_b_common_error_messages.html">
+            
+                <a href="../appendix_b_common_error_messages.html#b1-fd-syntax-errors">
+            
+                    
+                    B.1 [FD] Syntax Errors:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../appendix_b_common_error_messages.html">
+            
+                <a href="../appendix_b_common_error_messages.html#b2-fv-syntax-errors">
+            
+                    
+                    B.2 [FV] Syntax Errors:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../appendix_b_common_error_messages.html">
+            
+                <a href="../appendix_b_common_error_messages.html#b3-capsule-syntax-errors">
+            
+                    
+                    B.3 [CAPSULE] Syntax Errors:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../appendix_b_common_error_messages.html">
+            
+                <a href="../appendix_b_common_error_messages.html#b4-rule-syntax-errors">
+            
+                    
+                    B.4 [Rule] Syntax Errors:
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../appendix_c_reports.html">
+            
+                <a href="../appendix_c_reports.html#appendix-c-reports">
+            
+                    
+                    Appendix C Reports
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    Tables
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../1_introduction/11_overview.html">
+            
+                <a href="../1_introduction/11_overview.html#table-1-edk-build-infrastructure-support-matrix">
+            
+                    
+                    Table 1 EDK Build Infrastructure Support Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="22_flash_description_file_format.html">
+            
+                <a href="22_flash_description_file_format.html#table-2-well-known-macro-statements">
+            
+                    
+                    Table 2 Well-known Macro Statements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="22_flash_description_file_format.html">
+            
+                <a href="22_flash_description_file_format.html#table-3-using-system-environment-variable">
+            
+                    
+                    Table 3 Using System Environment Variable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="22_flash_description_file_format.html">
+            
+                <a href="22_flash_description_file_format.html#table-4-reserved-rule-section-macro-strings">
+            
+                    
+                    Table 4 Reserved [Rule] Section Macro Strings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="22_flash_description_file_format.html">
+            
+                <a href="22_flash_description_file_format.html#table-5-operator-precedence-and-supported-operands">
+            
+                    
+                    Table 5 Operator Precedence and Supported Operands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    Figures
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="21_processing_overview.html">
+            
+                <a href="21_processing_overview.html#figure-1-edk-ii-build-data-flow">
+            
+                    
+                    Figure 1 EDK II Build Data Flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="21_processing_overview.html">
+            
+                <a href="21_processing_overview.html#figure-2-edk-ii-create-image-flow">
+            
+                    
+                    Figure 2 EDK II Create Image Flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                    Examples
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../3_edk_ii_fdf_file_format/32_fdf_definition.html">
+            
+                <a href="../3_edk_ii_fdf_file_format/32_fdf_definition.html#example-edk-ii-fdf">
+            
+                    
+                    Example (EDK II FDF)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >2.1 Processing Overview</a>
+    </h1>
+</div>
+<div>
+    <!-- 
+    <img style="float:left; align:middle; height:2em" src="media/TianocoreTitlePageLogo.jpg"/>
+     -->
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II Flash Description (FDF) File Specification</div>
+        <div style="text-align:right">Revision 1.28.01</div>
+      </h2>  
+    
+    <hr>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <!--- @file
+  2.1 Processing Overview
+
+  Copyright (c) 2006-2017, Intel Corporation. All rights reserved.<BR>
+
+  Redistribution and use in source (original document form) and 'compiled'
+  forms (converted to PDF, epub, HTML and other formats) with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1) Redistributions of source code (original document form) must retain the
+     above copyright notice, this list of conditions and the following
+     disclaimer as the first lines of this file unmodified.
+
+  2) Redistributions in compiled form (transformed to other DTDs, converted to
+     PDF, epub, HTML and other formats) must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+  THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT "AS IS" AND ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+  EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<h2 id="21-processing-overview">2.1 Processing Overview</h2>
+<p>The EDK II FDF file describes information about flash parts as well as rules
+for combining binaries (Firmware Image) built from a DSC file. Additionally, if
+a DSC file specifies a <code>FLASH_DEFINITION</code> file, then the EDK II tools will
+locate the FDF file (looking in the same directory as the DSC file, then the
+parsing utilities will scan the FDF file to gather PCD information that can be
+used by AutoGen utilities for building components or modules. The output of the
+first phase of an EDK II build (as defined in the EDK II Build Specification)
+generates valid PE32/PE32+/Coff image files. The second phase of the build
+process consumes the images generated during the first phase, using statements
+and rules defined in the FDF file to process the PE32/PE32+/Coff images files
+into one or more EFI sections. The EFI sections may get combined with other
+optional sections (version, depex, user interface) sections, into EFI Firmware
+File system (FFS) Sections. FFS images are put into Firmware Volumes (FVs,) and
+finally, the FV sections are combined into one or more Flash Device binary
+image (FD).</p>
+<p>The following diagrams illustrate the process flow for generating the
+PE/PE32+/Coff files that will be used for Flash Image files.</p>
+<h6 id="figure-1-edk-ii-build-data-flow">Figure 1 EDK II Build Data Flow</h6>
+<p><img src="../media/image1.png" alt=""></p>
+<p>The following diagram shows the overview of the process used to create final
+image files.</p>
+<h6 id="figure-2-edk-ii-create-image-flow">Figure 2 EDK II Create Image Flow</h6>
+<p><img src="../media/image2.png" alt=""></p>
+<p>It should be noted that some <code>SEC</code>, <code>PEI_CORE</code> and/or <code>PEIM</code> modules are coded
+XIP (eXecute In Place) running directly from ROM, rather than from memory. For
+modules that always execute from ROM, the relocation (<code>.reloc</code>) section of the
+PE32 image can be removed (after running a fix up tool) as a space saving
+technique. Some PEIM modules may run from either ROM or from memory. There are
+several methods that can be used to retain this information (as well as the
+.reloc sections of stripped images). Due to this possibility, the <code>SEC</code>,
+<code>PEI_CORE</code> and <code>PEIM</code> descriptions are different from the remaining module
+types. The default for all <code>SEC</code>, <code>PEI_CORE</code> and <code>PEIM</code> modules is to strip the
+<code>.reloc</code> section. The modules coded to use <code>REGISTER_FOR_SHADOW</code> must not have
+the <code>.reloc</code> section stripped.</p>
+<p>Also of note, not all of the INF files listed in the FDF file need to be listed
+in the DSC file. Since the DSC file is primarily used to generate Makefiles for
+a build, binary only modules do not need to be listed in a DSC file, and can be
+listed in the FDF file.</p>
+<h3 id="211-platform-configuration-database-pcd-settings">2.1.1 Platform Configuration Database (PCD) Settings</h3>
+<p>The FD, FV and Capsule sections (and nested sections) permit setting PCD
+default values. All PCDs must be declared in a DEC file in order to be used. It
+is recommended that the PCDs set in the FDF file be for Addresses, Sizes,
+and/or other &quot;fixed&quot; information needed to define or create the flash image.
+Use of PCDs is permitted in the FDF file. The <code>Dynamic</code> and <code>DynamicEx</code> PCDs
+can be accessed or modified during execution, as result, they cannot be set
+within the FDF file.</p>
+<hr>
+<p><strong>Note:</strong> The PCD values set in this file are assumed to be correct on all
+conditions that the reset vector in SEC is executed, such as power-on, reset
+and ACPI S3 resume. Use of the PatchableInModule PCD access method for base
+addresses is permitted, but when this PCD access method is used, module
+implementations must always access the values through the PcdGet() and PcdSet()
+operations to guarantee that stale base address values are never used.</p>
+<hr>
+<p>All FLASH related PCD settings MUST be set in the FDF file, not in the platform
+description (DSC) file. The FDF file has the final values for Flash Related
+PCDs. If a DSC file contains a duplicate PCD setting, the FDF file&apos;s PCD
+setting takes precedence and it is recommended that the build tools throw a
+warning message on the PCD defined in the DSC file. Default values from DEC
+files are not permitted in the EDK II build system for PCDs specified in the
+FDF file.</p>
+<p>The PCDs used in the FDF file must be specified as:</p>
+<p><code>PcdTokenSpaceGuidCName.PcdCName</code></p>
+<h3 id="212-precedence-of-pcd-values">2.1.2 Precedence of PCD Values</h3>
+<p>The values that are assigned to individual PCDs required by a build may come
+from different locations and different meta-data files. The following provides
+the precedence (high to low) to assign a value to a PCD.</p>
+<ul>
+<li>Command-line, <code>--pcd</code> flags (left most has higher priority)</li>
+<li>DSC file, Component INF <code>&lt;Pcd*&gt;</code> section statements</li>
+<li>FDF file, grammar describing automatic assignment of PCD values</li>
+<li>FDF file, SET statements within a section</li>
+<li>FDF file, SET statement in the [Defines] section</li>
+<li>DSC file, global [Pcd*] sections</li>
+<li>INF file, PCD sections, Default Values</li>
+<li>DEC file, PCD sections, Default Values</li>
+</ul>
+<p>In addition to the above precedence rules, PCDs set in sections with
+architectural modifiers take precedence over PCD sections that are common to
+all architectures.</p>
+<p>If a PCD is listed in the same section multiple times, the last one is used.</p>
+<h4 id="pcd-rules">PCD RULES</h4>
+<p>There are no PCD sections defined for the FDF file. PCD values are assigned in
+the FDF file using two methods. They may automatically be assigned based on a
+specific position (as defined in the FDF specification) or by using a SET
+statement.</p>
+<ul>
+<li><p>Within the <code>[FD]</code> sections, PCDs that appear immediately following the line
+containing address|size or offset|size values will have their values
+automatically assigned to the address|size or offset|size using the same
+ordering. Additionally, some tokens, such as <code>BaseAddress</code>, which use a
+format of token = value, can have a PCD&apos;s value set at the same time. The PCD
+must be on the same line, and be separated from the value by field separator
+character.If there are two values on the line, separated by a field separator
+character, the PCD names that will be assigned the values must appear on the
+next line, and must also be separated by the field separator character.</p>
+</li>
+<li><p>Specific tokens assigned to values within the FD sections can have a PCD
+automatically assign the same value by placing a field separator character
+between the value and PCD name. The PCD name must always follow the value
+field separator character sequence.</p>
+</li>
+<li><p>Other PCDs may be assigned using the <code>SET</code> statement in the FDF file.</p>
+</li>
+<li><p>PCD Values assigned in this file (using <code>SET PcdName = value</code>) override
+values assigned in the DSC file, or, if a value is not specified in the DSC,
+then they will override values assigned in an INF file, or if a value is not
+specified in the DSC or the INF, then they will override values assigned in
+the DEC file.</p>
+</li>
+<li><p>Dynamic and DynamicEx PCDs cannot be set in the FDF file.</p>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                    
+                    
+
+<div>
+    <hr>
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II Flash Description (FDF) File Specification</div>
+        <div style="text-align:right">Revision 1.28.01</div>
+      </h2>  
+    
+</div>
+
+
+
+                
+            </div>
+
+            
+                
+                <a href="./#2-fdf-design-discussion" class="navigation navigation-prev " aria-label="Previous page: 2 FDF Design Discussion">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="22_flash_description_file_format.html#22-flash-description-file-format" class="navigation navigation-next " aria-label="Next page: 2.2 Flash Description File Format">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2.1 Processing Overview","level":"1.3.1","depth":2,"next":{"title":"2.2 Flash Description File Format","level":"1.3.2","depth":2,"anchor":"#22-flash-description-file-format","path":"2_fdf_design_discussion/22_flash_description_file_format.md","ref":"2_fdf_design_discussion/22_flash_description_file_format.md#22-flash-description-file-format","articles":[]},"previous":{"title":"2 FDF Design Discussion","level":"1.3","depth":1,"anchor":"#2-fdf-design-discussion","path":"2_fdf_design_discussion/README.md","ref":"2_fdf_design_discussion/README.md#2-fdf-design-discussion","articles":[{"title":"2.1 Processing Overview","level":"1.3.1","depth":2,"anchor":"#21-processing-overview","path":"2_fdf_design_discussion/21_processing_overview.md","ref":"2_fdf_design_discussion/21_processing_overview.md#21-processing-overview","articles":[]},{"title":"2.2 Flash Description File Format","level":"1.3.2","depth":2,"anchor":"#22-flash-description-file-format","path":"2_fdf_design_discussion/22_flash_description_file_format.md","ref":"2_fdf_design_discussion/22_flash_description_file_format.md#22-flash-description-file-format","articles":[]},{"title":"2.3 [Defines] Section","level":"1.3.3","depth":2,"anchor":"#23-defines-section","path":"2_fdf_design_discussion/23_[defines]_section.md","ref":"2_fdf_design_discussion/23_[defines]_section.md#23-defines-section","articles":[]},{"title":"2.4 [FD] Sections","level":"1.3.4","depth":2,"anchor":"#24-fd-sections","path":"2_fdf_design_discussion/24_[fd]_sections.md","ref":"2_fdf_design_discussion/24_[fd]_sections.md#24-fd-sections","articles":[]},{"title":"2.5 [FV] Sections","level":"1.3.5","depth":2,"anchor":"#25-fv-sections","path":"2_fdf_design_discussion/25_[fv]_sections.md","ref":"2_fdf_design_discussion/25_[fv]_sections.md#25-fv-sections","articles":[]},{"title":"2.6 [Capsule] Sections","level":"1.3.6","depth":2,"anchor":"#26-capsule-sections","path":"2_fdf_design_discussion/26_[capsule]_sections.md","ref":"2_fdf_design_discussion/26_[capsule]_sections.md#26-capsule-sections","articles":[]},{"title":"2.7 [VTF] Sections","level":"1.3.7","depth":2,"anchor":"#27-vtf-sections","path":"2_fdf_design_discussion/27_[vtf]_sections.md","ref":"2_fdf_design_discussion/27_[vtf]_sections.md#27-vtf-sections","articles":[]},{"title":"2.8 [Rule] Sections","level":"1.3.8","depth":2,"anchor":"#28-rule-sections","path":"2_fdf_design_discussion/28_[rule]_sections.md","ref":"2_fdf_design_discussion/28_[rule]_sections.md#28-rule-sections","articles":[]},{"title":"2.9 [OptionRom] Sections","level":"1.3.9","depth":2,"anchor":"#29-optionrom-sections","path":"2_fdf_design_discussion/29_[optionrom]_sections.md","ref":"2_fdf_design_discussion/29_[optionrom]_sections.md#29-optionrom-sections","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"title":"EDK II Flash Description (FDF) File Specification","version":"Revision 1.28.01"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"2_fdf_design_discussion/21_processing_overview.md","mtime":"2020-12-01T05:18:21.738Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-01T05:18:55.732Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
