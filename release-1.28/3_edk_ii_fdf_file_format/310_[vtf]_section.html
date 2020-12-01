@@ -1,0 +1,1044 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3.10 [VTF] Section · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="311_pci_optionrom_section.html" />
+    
+    
+    <link rel="prev" href="39_[rule]_sections.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../#edk-ii-flash-description-fdf-file-specification">
+            
+                    
+                    EDK II Flash Description (FDF) File Specification
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1_introduction/">
+            
+                <a href="../1_introduction/#1-introduction">
+            
+                    
+                    1 Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../1_introduction/11_overview.html">
+            
+                <a href="../1_introduction/11_overview.html#11-overview">
+            
+                    
+                    1.1 Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../1_introduction/12_terms.html">
+            
+                <a href="../1_introduction/12_terms.html#12-terms">
+            
+                    
+                    1.2 Terms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../1_introduction/13_related_information.html">
+            
+                <a href="../1_introduction/13_related_information.html#13-related-information">
+            
+                    
+                    1.3 Related Information
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../1_introduction/14_target_audience.html">
+            
+                <a href="../1_introduction/14_target_audience.html#14-target-audience">
+            
+                    
+                    1.4 Target Audience
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../1_introduction/15_conventions_used_in_this_document.html">
+            
+                <a href="../1_introduction/15_conventions_used_in_this_document.html#15-conventions-used-in-this-document">
+            
+                    
+                    1.5 Conventions Used in this Document
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2_fdf_design_discussion/">
+            
+                <a href="../2_fdf_design_discussion/#2-fdf-design-discussion">
+            
+                    
+                    2 FDF Design Discussion
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../2_fdf_design_discussion/21_processing_overview.html">
+            
+                <a href="../2_fdf_design_discussion/21_processing_overview.html#21-processing-overview">
+            
+                    
+                    2.1 Processing Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../2_fdf_design_discussion/22_flash_description_file_format.html">
+            
+                <a href="../2_fdf_design_discussion/22_flash_description_file_format.html#22-flash-description-file-format">
+            
+                    
+                    2.2 Flash Description File Format
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../2_fdf_design_discussion/23_[defines]_section.html">
+            
+                <a href="../2_fdf_design_discussion/23_[defines]_section.html#23-defines-section">
+            
+                    
+                    2.3 [Defines] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../2_fdf_design_discussion/24_[fd]_sections.html">
+            
+                <a href="../2_fdf_design_discussion/24_[fd]_sections.html#24-fd-sections">
+            
+                    
+                    2.4 [FD] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../2_fdf_design_discussion/25_[fv]_sections.html">
+            
+                <a href="../2_fdf_design_discussion/25_[fv]_sections.html#25-fv-sections">
+            
+                    
+                    2.5 [FV] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../2_fdf_design_discussion/26_[capsule]_sections.html">
+            
+                <a href="../2_fdf_design_discussion/26_[capsule]_sections.html#26-capsule-sections">
+            
+                    
+                    2.6 [Capsule] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../2_fdf_design_discussion/27_[vtf]_sections.html">
+            
+                <a href="../2_fdf_design_discussion/27_[vtf]_sections.html#27-vtf-sections">
+            
+                    
+                    2.7 [VTF] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../2_fdf_design_discussion/28_[rule]_sections.html">
+            
+                <a href="../2_fdf_design_discussion/28_[rule]_sections.html#28-rule-sections">
+            
+                    
+                    2.8 [Rule] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../2_fdf_design_discussion/29_[optionrom]_sections.html">
+            
+                <a href="../2_fdf_design_discussion/29_[optionrom]_sections.html#29-optionrom-sections">
+            
+                    
+                    2.9 [OptionRom] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./#3-edk-ii-fdf-file-format">
+            
+                    
+                    3 EDK II FDF File Format
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="31_general_rules.html">
+            
+                <a href="31_general_rules.html#31-general-rules">
+            
+                    
+                    3.1 General Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="32_fdf_definition.html">
+            
+                <a href="32_fdf_definition.html#32-fdf-definition">
+            
+                    
+                    3.2 FDF Definition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="33_header_section.html">
+            
+                <a href="33_header_section.html#33-header-section">
+            
+                    
+                    3.3 Header Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="34_[defines]_section.html">
+            
+                <a href="34_[defines]_section.html#34-defines-section">
+            
+                    
+                    3.4 [Defines] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="35_[fd]_sections.html">
+            
+                <a href="35_[fd]_sections.html#35-fd-sections">
+            
+                    
+                    3.5 [FD] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="36_[fv]_sections.html">
+            
+                <a href="36_[fv]_sections.html#36-fv-sections">
+            
+                    
+                    3.6 [FV] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="37_[capsule]_sections.html">
+            
+                <a href="37_[capsule]_sections.html#37-capsule-sections">
+            
+                    
+                    3.7 [Capsule] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="38_[fmppayload]_sections.html">
+            
+                <a href="38_[fmppayload]_sections.html#38-fmppayload-sections">
+            
+                    
+                    3.8 [FmpPayload] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="39_[rule]_sections.html">
+            
+                <a href="39_[rule]_sections.html#39-rule-sections">
+            
+                    
+                    3.9 [Rule] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="310_[vtf]_section.html">
+            
+                <a href="310_[vtf]_section.html#310-vtf-section">
+            
+                    
+                    3.10 [VTF] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="311_pci_optionrom_section.html">
+            
+                <a href="311_pci_optionrom_section.html#311-pci-optionrom-section">
+            
+                    
+                    3.11 PCI OptionRom Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../appendix_a_nt32pkg_flash_description_file.html">
+            
+                <a href="../appendix_a_nt32pkg_flash_description_file.html#appendix-a-nt32pkg-flash-description-file">
+            
+                    
+                    Appendix A Nt32Pkg Flash Description File
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../appendix_b_common_error_messages.html">
+            
+                <a href="../appendix_b_common_error_messages.html#appendix-b-common-error-messages">
+            
+                    
+                    Appendix B Common Error Messages
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../appendix_b_common_error_messages.html">
+            
+                <a href="../appendix_b_common_error_messages.html#b1-fd-syntax-errors">
+            
+                    
+                    B.1 [FD] Syntax Errors:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../appendix_b_common_error_messages.html">
+            
+                <a href="../appendix_b_common_error_messages.html#b2-fv-syntax-errors">
+            
+                    
+                    B.2 [FV] Syntax Errors:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../appendix_b_common_error_messages.html">
+            
+                <a href="../appendix_b_common_error_messages.html#b3-capsule-syntax-errors">
+            
+                    
+                    B.3 [CAPSULE] Syntax Errors:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../appendix_b_common_error_messages.html">
+            
+                <a href="../appendix_b_common_error_messages.html#b4-rule-syntax-errors">
+            
+                    
+                    B.4 [Rule] Syntax Errors:
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../appendix_c_reports.html">
+            
+                <a href="../appendix_c_reports.html#appendix-c-reports">
+            
+                    
+                    Appendix C Reports
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    Tables
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../1_introduction/11_overview.html">
+            
+                <a href="../1_introduction/11_overview.html#table-1-edk-build-infrastructure-support-matrix">
+            
+                    
+                    Table 1 EDK Build Infrastructure Support Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../2_fdf_design_discussion/22_flash_description_file_format.html">
+            
+                <a href="../2_fdf_design_discussion/22_flash_description_file_format.html#table-2-well-known-macro-statements">
+            
+                    
+                    Table 2 Well-known Macro Statements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../2_fdf_design_discussion/22_flash_description_file_format.html">
+            
+                <a href="../2_fdf_design_discussion/22_flash_description_file_format.html#table-3-using-system-environment-variable">
+            
+                    
+                    Table 3 Using System Environment Variable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../2_fdf_design_discussion/22_flash_description_file_format.html">
+            
+                <a href="../2_fdf_design_discussion/22_flash_description_file_format.html#table-4-reserved-rule-section-macro-strings">
+            
+                    
+                    Table 4 Reserved [Rule] Section Macro Strings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../2_fdf_design_discussion/22_flash_description_file_format.html">
+            
+                <a href="../2_fdf_design_discussion/22_flash_description_file_format.html#table-5-operator-precedence-and-supported-operands">
+            
+                    
+                    Table 5 Operator Precedence and Supported Operands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    Figures
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../2_fdf_design_discussion/21_processing_overview.html">
+            
+                <a href="../2_fdf_design_discussion/21_processing_overview.html#figure-1-edk-ii-build-data-flow">
+            
+                    
+                    Figure 1 EDK II Build Data Flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../2_fdf_design_discussion/21_processing_overview.html">
+            
+                <a href="../2_fdf_design_discussion/21_processing_overview.html#figure-2-edk-ii-create-image-flow">
+            
+                    
+                    Figure 2 EDK II Create Image Flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                    Examples
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="32_fdf_definition.html">
+            
+                <a href="32_fdf_definition.html#example-edk-ii-fdf">
+            
+                    
+                    Example (EDK II FDF)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3.10 [VTF] Section</a>
+    </h1>
+</div>
+<div>
+    <!-- 
+    <img style="float:left; align:middle; height:2em" src="media/TianocoreTitlePageLogo.jpg"/>
+     -->
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II Flash Description (FDF) File Specification</div>
+        <div style="text-align:right">Revision 1.28</div>
+      </h2>  
+    
+    <hr>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <!--- @file
+  3.10 [VTF] Section
+
+  Copyright (c) 2006-2017, Intel Corporation. All rights reserved.<BR>
+
+  Redistribution and use in source (original document form) and 'compiled'
+  forms (converted to PDF, epub, HTML and other formats) with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1) Redistributions of source code (original document form) must retain the
+     above copyright notice, this list of conditions and the following
+     disclaimer as the first lines of this file unmodified.
+
+  2) Redistributions in compiled form (transformed to other DTDs, converted to
+     PDF, epub, HTML and other formats) must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+  THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT "AS IS" AND ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+  EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<h2 id="310-vtf-section">3.10 [VTF] Section</h2>
+<p>This describes the optional <code>[VTF]</code> section tag found in FDF files.</p>
+<h4 id="summary">Summary</h4>
+<p>If VTF files will be created, they will be created in the
+<code>$(OUTPUT_DIRECTORY)/$(TARGET)_$(TAGNAME)/FV</code> directory using the values from
+the individual instance of the build tools. (Build tools get these values after
+parsing DSC, INF, <code>target.txt</code>, <code>tools_def.txt</code> files and command line options.)</p>
+<p>The following sequence describes each component:</p>
+<pre><code>Name = Region,
+       Type,
+       Version,
+       CheckSum_Flag,
+       Path_of_Binary_File,
+       Path_of_SYM_File,
+       Preferred_Size;
+</code></pre><p>Where,</p>
+<p><strong><em>Name:</em></strong></p>
+<p>Name of the component</p>
+<p><strong><em>Region:</em></strong></p>
+<p>Location in the firmware. Valid locations are:</p>
+<pre><code>PH - Protected Block region, merged towards the higher address
+PL - Protected Block region, merged towards the lower address
+H - Flashable region, merged towards the higher address
+L - Flashable region, merged towards the lower address
+F - First VTF File
+N - Not in VTF File
+S - Second VTF File
+</code></pre><p><strong><em>Type:</em></strong></p>
+<p>Component Type. Predefined values are:</p>
+<pre><code>0x00 : FIT Header entry
+0x01 : PAL_B
+0x02 - 0x0E : Reserved
+0x0F : PAL_A
+0x10 - 0x7E : OEM-defined
+0x7F : Unused
+</code></pre><p><strong><em>Version:</em></strong></p>
+<p>Component Version number (XX.YY)</p>
+<pre><code>- major version number (decimal number, range of 0 to 99)
+- minor version number (decimal number, range of 0 to 99)
+</code></pre><p><strong><em>Checksum_Flag:</em></strong></p>
+<p>Checksum Flag (equivalent to CV bit)</p>
+<pre><code>0 - Checksum Byte always equals 0, CV=0
+1 - calculate Checksum Byte, CV=1
+</code></pre><p><strong><em>Checksum:</em></strong></p>
+<p>Byte sum of component + Checksum Byte = modulus 0x100</p>
+<p><strong><em>Path_of_Binary_File:</em></strong></p>
+<p>Path of the Binary file of the component</p>
+<p><strong><em>Path_of_SYM_File:</em></strong></p>
+<p>Path of the .SYM symbol file of the component</p>
+<p><strong><em>Preferred_Size:</em></strong></p>
+<p>User preferred component size, overrides actual component file size. Valid is
+equal or greater than the actual file size.</p>
+<h4 id="prototype">Prototype</h4>
+<pre><code class="lang-c">&lt;VTF&gt;                 ::= <span class="hljs-string">&quot;[VTF&quot;</span> &lt;Modifiers&gt; <span class="hljs-string">&quot;]&quot;</span> &lt;EOL&gt;
+                          [&lt;OptionStatement&gt;]
+                          &lt;ComponentStatements&gt;*
+&lt;Modifiers&gt;           ::= <span class="hljs-string">&quot;.&quot;</span> &lt;arch&gt; <span class="hljs-string">&quot;.&quot;</span> &lt;UiName&gt; [&lt;ArchList&gt;]
+&lt;ArchList&gt;            ::= <span class="hljs-string">&quot;,&quot;</span> &lt;Arch&gt;
+&lt;Arch&gt;                ::= {<span class="hljs-string">&quot;IA32&quot;</span>} {<span class="hljs-string">&quot;X64&quot;</span>} {<span class="hljs-string">&quot;IPF&quot;</span>}
+&lt;UiName&gt;              ::= &lt;Word&gt;
+&lt;OptionStatement&gt;     ::= &lt;TS&gt; <span class="hljs-string">&quot;IA32_RST_BIN&quot;</span> &lt;Eq&gt; &lt;Filename&gt; &lt;EOL&gt;
+&lt;ComponentStatements&gt; ::= &lt;TS&gt; <span class="hljs-string">&quot;COMP_NAME&quot;</span> &lt;Eq&gt; &lt;WORD&gt; &lt;EOL&gt;
+                          &lt;TS&gt; <span class="hljs-string">&quot;COMP_LOC&quot;</span> &lt;Eq&gt; &lt;Location&gt; &lt;EOL&gt;
+                          &lt;TS&gt; <span class="hljs-string">&quot;COMP_TYPE&quot;</span> &lt;Eq&gt; &lt;CompType&gt; &lt;EOL&gt;
+                          &lt;TS&gt; <span class="hljs-string">&quot;COMP_VER&quot;</span> &lt;Eq&gt; &lt;Version&gt; &lt;EOL&gt;
+                          &lt;TS&gt; <span class="hljs-string">&quot;COMP_CS&quot;</span> &lt;Eq&gt; {<span class="hljs-string">&quot;1&quot;</span>} {<span class="hljs-string">&quot;0&quot;</span>} &lt;EOL&gt;
+                          &lt;TS&gt; <span class="hljs-string">&quot;COMP_BIN&quot;</span> &lt;Eq&gt; &lt;BinFile&gt; &lt;EOL&gt;
+                          &lt;TS&gt; <span class="hljs-string">&quot;COMP_SYM&quot;</span> &lt;Eq&gt; &lt;SymFile&gt; &lt;EOL&gt; &lt;TS&gt; <span class="hljs-string">&quot;COMP_SIZE&quot;</span>
+                          &lt;Eq&gt; &lt;Size&gt; &lt;EOL&gt;
+&lt;Location&gt;            ::= {&lt;FvUiName&gt;} {<span class="hljs-string">&quot;NONE&quot;</span>} {<span class="hljs-string">&quot;None&quot;</span>} {<span class="hljs-string">&quot;none&quot;</span>} [&lt;FS&gt;
+                          &lt;Region&gt;]
+&lt;Region&gt;              ::= {<span class="hljs-string">&quot;F&quot;</span>} {<span class="hljs-string">&quot;N&quot;</span>} {<span class="hljs-string">&quot;S&quot;</span>} {<span class="hljs-string">&quot;H&quot;</span>} {<span class="hljs-string">&quot;L&quot;</span>} {<span class="hljs-string">&quot;PH&quot;</span>} {<span class="hljs-string">&quot;PL&quot;</span>}
+&lt;CompType&gt;            ::= {<span class="hljs-string">&quot;FIT&quot;</span>} {<span class="hljs-string">&quot;PAL_B&quot;</span>} {<span class="hljs-string">&quot;PAL_A&quot;</span>} {<span class="hljs-string">&quot;OEM&quot;</span>} {&lt;Byte&gt;}
+&lt;Byte&gt;                ::= <span class="hljs-string">&quot;0x&quot;</span> &lt;HexDigit&gt;? &lt;HexDigit&gt;
+&lt;Version&gt;             ::= {<span class="hljs-string">&quot;-&quot;</span>} {&lt;Major&gt; <span class="hljs-string">&quot;.&quot;</span> &lt;Minor&gt;} {&lt;BcdHex&gt;}
+&lt;Major&gt;               ::= [(<span class="hljs-number">0</span><span class="hljs-number">-9</span>)](<span class="hljs-number">0</span><span class="hljs-number">-9</span>)
+&lt;Minor&gt;               ::= [(<span class="hljs-number">0</span><span class="hljs-number">-9</span>)](<span class="hljs-number">0</span><span class="hljs-number">-9</span>)
+&lt;BcdHex&gt;              ::= <span class="hljs-string">&quot;0x&quot;</span> &lt;Major&gt; (<span class="hljs-number">0</span><span class="hljs-number">-9</span>) (<span class="hljs-number">0</span><span class="hljs-number">-9</span>)
+&lt;BinFile&gt;             ::= {<span class="hljs-string">&quot;-&quot;</span>} {[&lt;PATH&gt;] &lt;Filename&gt;}
+&lt;SymFile&gt;             ::= {<span class="hljs-string">&quot;-&quot;</span>} {[&lt;PATH&gt;] &lt;Filename&gt;}
+&lt;Size&gt;                ::= {<span class="hljs-string">&quot;-&quot;</span>} {&lt;Integer&gt;} {&lt;HexNumber&gt;}
+</code></pre>
+<h4 id="restrictions">Restrictions</h4>
+<p><strong><em>FName</em></strong></p>
+<p>All file specified paths are relative to the WORKSPACE directory (or a directory</p>
+<p>listed in the PACKAGES<em>PATH). In some cases, the tools will search well known
+paths for some files, for example, for FD filenames, the output will typically
+be located in the $(OUTPUT_DIRECTORY)/$(TARGET)</em>$(TAGNAME)/FV directory.</p>
+<h4 id="parameters">Parameters</h4>
+<p><strong><em><binfile> - Filename</binfile></em></strong></p>
+<p>If a filename is given, the file must have an extension for a binary type file,
+such as &quot;.bin&quot; or &quot;.BIN&quot;. Filenames are case sensitive, so the correct case
+must be used for all filenames.</p>
+<p><strong><em><symfile> - Filename</symfile></em></strong></p>
+<p>If a filename is given, the file must have an extension for a symbol type file,
+such as &quot;.sym&quot; or &quot;.SYM&quot;. Filenames are case sensitive, so the correct case
+must be used for all filenames.</p>
+<h4 id="example">Example</h4>
+<pre><code>[VTF.IPF.MyBsf]
+IA32_RST_BIN = IA32_RST.BIN
+
+COMP_NAME = PAL_A          # Component Name
+COMP_LOC  = FvRecovery | F # In the first VTF file
+COMP_TYPE = 0xF            # Component Type (PAL_A=0x0F, defined in SAL Spec.)
+COMP_VER  = 7.01           # Version will come from header of PAL_A binary
+COMP_CS   = 1              # Checksum_Validity (CV bit)
+COMP_BIN  = PAL_A_GEN.BIN  # Path of binary
+COMP_SYM  = PAL_A_GEN.SYM  # Path of SYM symbol
+COMP_SIZE = -              # Preferred component size in bytes
+
+COMP_NAME = PAL_B     # Component Name
+COMP_LOC  = F         # In the first VTF file
+COMP_TYPE = 0x01      # Component Type (PAL_A=0x0F, defined in SAL Spec.)
+COMP_VER  = -         # Version will come from header of PAL_A binary
+COMP_CS   = 1         # Checksum_Validity (CV bit)
+COMP_BIN  = PAL_B.BIN # Path of binary
+COMP_SYM  = PAL_B.Sym # Path of SYM symbol
+COMP_SIZE = -         # Preferred component size in bytes
+</code></pre>
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                    
+                    
+
+<div>
+    <hr>
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II Flash Description (FDF) File Specification</div>
+        <div style="text-align:right">Revision 1.28</div>
+      </h2>  
+    
+</div>
+
+
+
+                
+            </div>
+
+            
+                
+                <a href="39_[rule]_sections.html#39-rule-sections" class="navigation navigation-prev " aria-label="Previous page: 3.9 [Rule] Sections">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="311_pci_optionrom_section.html#311-pci-optionrom-section" class="navigation navigation-next " aria-label="Next page: 3.11 PCI OptionRom Section">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3.10 [VTF] Section","level":"1.4.10","depth":2,"next":{"title":"3.11 PCI OptionRom Section","level":"1.4.11","depth":2,"anchor":"#311-pci-optionrom-section","path":"3_edk_ii_fdf_file_format/311_pci_optionrom_section.md","ref":"3_edk_ii_fdf_file_format/311_pci_optionrom_section.md#311-pci-optionrom-section","articles":[]},"previous":{"title":"3.9 [Rule] Sections","level":"1.4.9","depth":2,"anchor":"#39-rule-sections","path":"3_edk_ii_fdf_file_format/39_[rule]_sections.md","ref":"3_edk_ii_fdf_file_format/39_[rule]_sections.md#39-rule-sections","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"title":"EDK II Flash Description (FDF) File Specification","version":"Revision 1.28"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3_edk_ii_fdf_file_format/310_[vtf]_section.md","mtime":"2020-12-01T05:15:21.008Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-01T05:15:51.239Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

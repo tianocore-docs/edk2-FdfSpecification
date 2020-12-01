@@ -1,0 +1,1606 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>EDK II Flash Description (FDF) File Specification · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="1_introduction/" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./#edk-ii-flash-description-fdf-file-specification">
+            
+                    
+                    EDK II Flash Description (FDF) File Specification
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1_introduction/">
+            
+                <a href="1_introduction/#1-introduction">
+            
+                    
+                    1 Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="1_introduction/11_overview.html">
+            
+                <a href="1_introduction/11_overview.html#11-overview">
+            
+                    
+                    1.1 Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="1_introduction/12_terms.html">
+            
+                <a href="1_introduction/12_terms.html#12-terms">
+            
+                    
+                    1.2 Terms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="1_introduction/13_related_information.html">
+            
+                <a href="1_introduction/13_related_information.html#13-related-information">
+            
+                    
+                    1.3 Related Information
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="1_introduction/14_target_audience.html">
+            
+                <a href="1_introduction/14_target_audience.html#14-target-audience">
+            
+                    
+                    1.4 Target Audience
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="1_introduction/15_conventions_used_in_this_document.html">
+            
+                <a href="1_introduction/15_conventions_used_in_this_document.html#15-conventions-used-in-this-document">
+            
+                    
+                    1.5 Conventions Used in this Document
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="2_fdf_design_discussion/">
+            
+                <a href="2_fdf_design_discussion/#2-fdf-design-discussion">
+            
+                    
+                    2 FDF Design Discussion
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="2_fdf_design_discussion/21_processing_overview.html">
+            
+                <a href="2_fdf_design_discussion/21_processing_overview.html#21-processing-overview">
+            
+                    
+                    2.1 Processing Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="2_fdf_design_discussion/22_flash_description_file_format.html">
+            
+                <a href="2_fdf_design_discussion/22_flash_description_file_format.html#22-flash-description-file-format">
+            
+                    
+                    2.2 Flash Description File Format
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="2_fdf_design_discussion/23_[defines]_section.html">
+            
+                <a href="2_fdf_design_discussion/23_[defines]_section.html#23-defines-section">
+            
+                    
+                    2.3 [Defines] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="2_fdf_design_discussion/24_[fd]_sections.html">
+            
+                <a href="2_fdf_design_discussion/24_[fd]_sections.html#24-fd-sections">
+            
+                    
+                    2.4 [FD] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="2_fdf_design_discussion/25_[fv]_sections.html">
+            
+                <a href="2_fdf_design_discussion/25_[fv]_sections.html#25-fv-sections">
+            
+                    
+                    2.5 [FV] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="2_fdf_design_discussion/26_[capsule]_sections.html">
+            
+                <a href="2_fdf_design_discussion/26_[capsule]_sections.html#26-capsule-sections">
+            
+                    
+                    2.6 [Capsule] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="2_fdf_design_discussion/27_[vtf]_sections.html">
+            
+                <a href="2_fdf_design_discussion/27_[vtf]_sections.html#27-vtf-sections">
+            
+                    
+                    2.7 [VTF] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="2_fdf_design_discussion/28_[rule]_sections.html">
+            
+                <a href="2_fdf_design_discussion/28_[rule]_sections.html#28-rule-sections">
+            
+                    
+                    2.8 [Rule] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="2_fdf_design_discussion/29_[optionrom]_sections.html">
+            
+                <a href="2_fdf_design_discussion/29_[optionrom]_sections.html#29-optionrom-sections">
+            
+                    
+                    2.9 [OptionRom] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="3_edk_ii_fdf_file_format/">
+            
+                <a href="3_edk_ii_fdf_file_format/#3-edk-ii-fdf-file-format">
+            
+                    
+                    3 EDK II FDF File Format
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="3_edk_ii_fdf_file_format/31_general_rules.html">
+            
+                <a href="3_edk_ii_fdf_file_format/31_general_rules.html#31-general-rules">
+            
+                    
+                    3.1 General Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="3_edk_ii_fdf_file_format/32_fdf_definition.html">
+            
+                <a href="3_edk_ii_fdf_file_format/32_fdf_definition.html#32-fdf-definition">
+            
+                    
+                    3.2 FDF Definition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="3_edk_ii_fdf_file_format/33_header_section.html">
+            
+                <a href="3_edk_ii_fdf_file_format/33_header_section.html#33-header-section">
+            
+                    
+                    3.3 Header Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="3_edk_ii_fdf_file_format/34_[defines]_section.html">
+            
+                <a href="3_edk_ii_fdf_file_format/34_[defines]_section.html#34-defines-section">
+            
+                    
+                    3.4 [Defines] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="3_edk_ii_fdf_file_format/35_[fd]_sections.html">
+            
+                <a href="3_edk_ii_fdf_file_format/35_[fd]_sections.html#35-fd-sections">
+            
+                    
+                    3.5 [FD] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="3_edk_ii_fdf_file_format/36_[fv]_sections.html">
+            
+                <a href="3_edk_ii_fdf_file_format/36_[fv]_sections.html#36-fv-sections">
+            
+                    
+                    3.6 [FV] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="3_edk_ii_fdf_file_format/37_[capsule]_sections.html">
+            
+                <a href="3_edk_ii_fdf_file_format/37_[capsule]_sections.html#37-capsule-sections">
+            
+                    
+                    3.7 [Capsule] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="3_edk_ii_fdf_file_format/38_[fmppayload]_sections.html">
+            
+                <a href="3_edk_ii_fdf_file_format/38_[fmppayload]_sections.html#38-fmppayload-sections">
+            
+                    
+                    3.8 [FmpPayload] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="3_edk_ii_fdf_file_format/39_[rule]_sections.html">
+            
+                <a href="3_edk_ii_fdf_file_format/39_[rule]_sections.html#39-rule-sections">
+            
+                    
+                    3.9 [Rule] Sections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="3_edk_ii_fdf_file_format/310_[vtf]_section.html">
+            
+                <a href="3_edk_ii_fdf_file_format/310_[vtf]_section.html#310-vtf-section">
+            
+                    
+                    3.10 [VTF] Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="3_edk_ii_fdf_file_format/311_pci_optionrom_section.html">
+            
+                <a href="3_edk_ii_fdf_file_format/311_pci_optionrom_section.html#311-pci-optionrom-section">
+            
+                    
+                    3.11 PCI OptionRom Section
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="appendix_a_nt32pkg_flash_description_file.html">
+            
+                <a href="appendix_a_nt32pkg_flash_description_file.html#appendix-a-nt32pkg-flash-description-file">
+            
+                    
+                    Appendix A Nt32Pkg Flash Description File
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="appendix_b_common_error_messages.html">
+            
+                <a href="appendix_b_common_error_messages.html#appendix-b-common-error-messages">
+            
+                    
+                    Appendix B Common Error Messages
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="appendix_b_common_error_messages.html">
+            
+                <a href="appendix_b_common_error_messages.html#b1-fd-syntax-errors">
+            
+                    
+                    B.1 [FD] Syntax Errors:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="appendix_b_common_error_messages.html">
+            
+                <a href="appendix_b_common_error_messages.html#b2-fv-syntax-errors">
+            
+                    
+                    B.2 [FV] Syntax Errors:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="appendix_b_common_error_messages.html">
+            
+                <a href="appendix_b_common_error_messages.html#b3-capsule-syntax-errors">
+            
+                    
+                    B.3 [CAPSULE] Syntax Errors:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="appendix_b_common_error_messages.html">
+            
+                <a href="appendix_b_common_error_messages.html#b4-rule-syntax-errors">
+            
+                    
+                    B.4 [Rule] Syntax Errors:
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="appendix_c_reports.html">
+            
+                <a href="appendix_c_reports.html#appendix-c-reports">
+            
+                    
+                    Appendix C Reports
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    Tables
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="1_introduction/11_overview.html">
+            
+                <a href="1_introduction/11_overview.html#table-1-edk-build-infrastructure-support-matrix">
+            
+                    
+                    Table 1 EDK Build Infrastructure Support Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="2_fdf_design_discussion/22_flash_description_file_format.html">
+            
+                <a href="2_fdf_design_discussion/22_flash_description_file_format.html#table-2-well-known-macro-statements">
+            
+                    
+                    Table 2 Well-known Macro Statements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="2_fdf_design_discussion/22_flash_description_file_format.html">
+            
+                <a href="2_fdf_design_discussion/22_flash_description_file_format.html#table-3-using-system-environment-variable">
+            
+                    
+                    Table 3 Using System Environment Variable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="2_fdf_design_discussion/22_flash_description_file_format.html">
+            
+                <a href="2_fdf_design_discussion/22_flash_description_file_format.html#table-4-reserved-rule-section-macro-strings">
+            
+                    
+                    Table 4 Reserved [Rule] Section Macro Strings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="2_fdf_design_discussion/22_flash_description_file_format.html">
+            
+                <a href="2_fdf_design_discussion/22_flash_description_file_format.html#table-5-operator-precedence-and-supported-operands">
+            
+                    
+                    Table 5 Operator Precedence and Supported Operands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    Figures
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="2_fdf_design_discussion/21_processing_overview.html">
+            
+                <a href="2_fdf_design_discussion/21_processing_overview.html#figure-1-edk-ii-build-data-flow">
+            
+                    
+                    Figure 1 EDK II Build Data Flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="2_fdf_design_discussion/21_processing_overview.html">
+            
+                <a href="2_fdf_design_discussion/21_processing_overview.html#figure-2-edk-ii-create-image-flow">
+            
+                    
+                    Figure 2 EDK II Create Image Flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                    Examples
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="3_edk_ii_fdf_file_format/32_fdf_definition.html">
+            
+                <a href="3_edk_ii_fdf_file_format/32_fdf_definition.html#example-edk-ii-fdf">
+            
+                    
+                    Example (EDK II FDF)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >EDK II Flash Description (FDF) File Specification</a>
+    </h1>
+</div>
+<div>
+    <!-- 
+    <img style="float:left; align:middle; height:2em" src="media/TianocoreTitlePageLogo.jpg"/>
+     -->
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II Flash Description (FDF) File Specification</div>
+        <div style="text-align:right">Revision 1.28</div>
+      </h2>  
+    
+    <hr>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <!--- @file
+  README.md for EDK II Flash Description (FDF) File Specification
+
+  Copyright (c) 2006-2017, Intel Corporation. All rights reserved.<BR>
+
+  Redistribution and use in source (original document form) and 'compiled'
+  forms (converted to PDF, epub, HTML and other formats) with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1) Redistributions of source code (original document form) must retain the
+     above copyright notice, this list of conditions and the following
+     disclaimer as the first lines of this file unmodified.
+
+  2) Redistributions in compiled form (transformed to other DTDs, converted to
+     PDF, epub, HTML and other formats) must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+  THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT "AS IS" AND ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+  EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<p><img src="media/TianocoreTitlePageLogo.jpg" width="300"></p>
+<h3 id="edk-ii-flash-description-fdf-file-specification">EDK II Flash Description (FDF) File Specification</h3>
+<p><strong> Revision 1.28 </strong></p>
+<p><strong> 12/01/2020 05:15:51 </strong></p>
+<h3 id="acknowledgements">Acknowledgements</h3>
+<p>Redistribution and use in source (original document form) and &apos;compiled&apos;
+forms (converted to PDF, epub, HTML and other formats) with or without
+modification, are permitted provided that the following conditions are met:</p>
+<ol>
+<li><p>Redistributions of source code (original document form) must retain the
+above copyright notice, this list of conditions and the following
+disclaimer as the first lines of this file unmodified.</p>
+</li>
+<li><p>Redistributions in compiled form (transformed to other DTDs, converted to
+PDF, epub, HTML and other formats) must reproduce the above copyright
+notice, this list of conditions and the following disclaimer in the
+documentation and/or other materials provided with the distribution.</p>
+</li>
+</ol>
+<p>THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT &quot;AS IS&quot; AND ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+<p>Copyright (c) 2006-2017, Intel Corporation. All rights reserved.</p>
+<h3 id="revision-history">Revision History</h3>
+<table>
+<thead>
+<tr>
+<th>Revision</th>
+<th>Revision History</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>Initial release.</td>
+<td>December 2007</td>
+</tr>
+<tr>
+<td>1.1</td>
+<td>Updated based on errata</td>
+<td>August 2008</td>
+</tr>
+<tr>
+<td>1.2</td>
+<td>Updated based on enhancement requests</td>
+<td>June 2009</td>
+</tr>
+<tr>
+<td>1.21</td>
+<td>Updated based on enhancement requests and errata</td>
+<td>March 2010</td>
+</tr>
+<tr>
+<td></td>
+<td>Added support for SMM_CORE</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Added support for CAPSULE_FLAGS_INITIATE_RESET</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Added Block Statements to all Capsule sections</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Added &quot;Auto&quot; keyword to FFS alignment</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Rule processing for file type lists is alphabetical, i.e., files are added in alphabetical order</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>HSD 203863 Macro Definitions in DSC file are now global to both DSC and FDF files</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PCD Values may be constructed using C-style expressions provided the result of the expression matches the datum type of the PCD</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>FeatureFlagExpression is now defined as a C-style expression using C relational, equality and logical numeric and bitwise operators and/or arithmetic</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>and bitwise operators that evaluate to a value that matches the Datum Type of the PCD. Precedence and associativity follow C standards</td>
+<td></td>
+</tr>
+<tr>
+<td>1.22</td>
+<td>Grammatical and formatting editing</td>
+<td>May 2010</td>
+</tr>
+<tr>
+<td>1.22 w/</td>
+<td>Updated to match the implementation at the time of the UDK2010 SR1 release:</td>
+<td>December 2011</td>
+</tr>
+<tr>
+<td>Errata A</td>
+<td>Updated to support UEFI version 2.3.1 and updated spec release dates in Introduction</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Clarify UEFI&apos;s PI Distribution Package Specification</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Standardize Common data definitions for all specifications</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Added NOTE in 3.2 saying the sections must appear in the order listed above.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Spelling and punctuation fixes</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Do not require the FDF_SPECIFICATION to be updated if that is the only thing that changes.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Removed duplicate content and added the scoping rules for Macros, clarified MACRO Summary</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Added statement to allow specifying an FD in a Capsule as well as to allow any file in a Capsule</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Removed references to system environment variables in the Macros section</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Clarify that C data arrays must be byte arrays for PCD value fields; allowing C format GUID structures as well.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Updated conditional rules in 2.2.8 for how to use macro and PCDs; updated PCD usage in conditional statements</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Add clarification to require a comparison operator for string tokens (no atomic string) in expressions for conditional directives</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Updated expression descriptions</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Allow a PCD&apos;s value to be used in other sections, not just the section it was defined in</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Added table of valid environment variables that can be used in this file; put in table of System Environment variables and the EDK II Global macro values.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Updated how macros can be used in 2.2.6; updated where macros are evaluated</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Provide rules for how macros can be used in different BuildOptions sections</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Make sure that macros are not restricted to only directories</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Prohibit macros in the filename specified in !include statements</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Updated 2.3.3 and 2.4.3 to allow macro and expression for value in a set statement</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Added <code>&lt;Filename&gt;</code> to Macro values.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Clarify that only a limited number of system environment variables, not macros can be used in the !include statement</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Clarify the rules for finding the !include files</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Clarify how macros can be shared between sections</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Add statement about not expanding macros that are in a double quoted string.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Update macro usages in conditional directive statements</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Put in rules for combining sections and where macros can be inherited</td>
+<td></td>
+</tr>
+<tr>
+<td>1.22 w/</td>
+<td>Updates:</td>
+<td>December 2011</td>
+</tr>
+<tr>
+<td>Errata A</td>
+<td>Updated OptionROM section for COMPRESS to PCI_COMPRESS, matching the INF spec.</td>
+<td></td>
+</tr>
+<tr>
+<td>(Cont.)</td>
+<td>Removed CREATE_FILE from all FDF sections that had it</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Add FvBaseAddress attribute in [FV] section</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Added BCD Hex choice for COMP_VER in VTF section</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Changed #elif to #elseif in 3.2.3 to match implementation</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Removed duplicate definition of true in 3.2.3</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Added EBNF for <code>&lt;Extension&gt;</code></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Allow DATA section to contain a GUID value</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Add reserved keyword, BINARY as Rule name, updated rule override information for binary modules</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Clarify that the VTF COMP_VER value is stored in BCD using 1 byte for major and one byte for the minor number, yielding a maximum value 99.99</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Removed support for variable block size in the [FD] section - not currently supported by build tools</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Removed paragraph about build options in section 2.2.6</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Updated priority list; described precedence of the SET statements overriding previous definitions; removing set scoping statements</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Update EBNF for conditionals and removed</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>&lt;SectionStatements&gt;</code> in EBNF</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Remove the word &quot;should&quot; and replace it with other text that means &quot;recommended, but not required&quot;, replaced remaining instances of should with either must or will</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Updated 2.2.8 to include text to describe examples</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Added 2.2.9 section which includes expression table and text</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Updated 2.2.10 to state that macros are evaluated when used, not when entered</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Added the &quot;IN&quot; operator as an Equality Operator - added description and restriction of it&apos;s usage using</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>&lt;MemberExpression&gt;</code></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Define how EDK_GLOBAL values can be used, but not defined in the FDF file</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Add text regarding the FvForceRebase flag</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Removed PART_NAME from [Defines] section, as it is not supported by current tools and none of the FDF files have the [Defines] section</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Removed the GuidCName from <code>&lt;NamedGuid&gt;</code> as this is not supported by tools at this time</td>
+<td></td>
+</tr>
+<tr>
+<td>1.22 w/</td>
+<td>Updates:</td>
+<td>June 2012</td>
+</tr>
+<tr>
+<td>Errata B</td>
+<td>Section 1.3, Updated UEFI and PI specifications to reflect Errata</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Section 2.2.6, Provide clarification on MACRO values</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Section 3.8, Remove undocumented tags that begin with &quot;SEC_&quot; that are used internally by tools</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Sections 2.4.6.2, 3.6, 3.7 and 3.8, Provide explanation of SUBTYPE_GUID in Parameters section</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Sections 3.6, 3.7 and 3.8, Modify the EBNF entries for section SUBTYPE_GUID to allow specifying the GUID value</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>3.6, 3.7 and 3.8, Clarify User Interface entries in parameters section</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Section 3.2.1, Remove invalid reference to ExtendedLine</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Section 3.2.1, Fix the DOS EOL character sequence</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>The FDF Specification Version will not change in the <code>[Defines]</code> section</td>
+<td></td>
+</tr>
+<tr>
+<td>1.22 w/</td>
+<td>Updates</td>
+<td>August 2013</td>
+</tr>
+<tr>
+<td>Errata C</td>
+<td>Section 1.3, Updated UEFI and PI specifications with Errata</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Section 2.3,4.3, 2.4.5, 3.5, 3.6, 3.7, 3.8 and 3.10 Allow binary files to be located outside of the WORKSPACE</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Section 2.4.6 and 2.4.6.1, added type DISPOSABLE to encapsulation file types</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Sections 3.6, 3.7 and 3.8 Clarify that the plain text file for the User Interface is plain ASCII text</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Section 2.1 Updated the figure to remove top-level Makefile</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Section 2.1 Update location of the FDF file</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Section 2.2.8,and 3.2.3 Clarify PCD usage in conditional directive statements</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Included new section PCD RULES</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Added reference to the EDK II Build Specification for PCD Processing Rules</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Added <code>&lt;Afile&gt;</code> Definition to the Capsule section EBNF for appending the contents of a binary file to a section; appends are listed in order first in list first append,</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>second in list is appended after the first. These are strictly data files which can only be used by a driver that has a prior knowledge of the content</td>
+<td></td>
+</tr>
+<tr>
+<td>1.24</td>
+<td>Updates:</td>
+<td>December 2014</td>
+</tr>
+<tr>
+<td></td>
+<td>Changed specification version to 1.24</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Updated FDF_SPECIFICATION to 0x00010018 and updated EBNF to specify this value as 1.24</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Updated UEFI specification and EDK II meta data specifications in section 1.2; added the EDK II UNI Unicode File Specification and EDK II Expression Syntax Specification</td>
+<td></td>
+</tr>
+<tr>
+<td>1.24 w/</td>
+<td>Updates:</td>
+<td>March 2015</td>
+</tr>
+<tr>
+<td>Errata A</td>
+<td>Update link to the EDK II Specifications, fixed the name of the Multi-String .UNI File Format Specification</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>When FvNameGuid is present in an FV section, the EDK II build tools will generate an FvName string in the FV EXT Header</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Removed [UserExtensions] sections 2.9 and 3.11 as these sections should be used in DSC files, not the FDF file.</td>
+<td></td>
+</tr>
+<tr>
+<td>1.25</td>
+<td>Updates:</td>
+<td>June 2015</td>
+</tr>
+<tr>
+<td></td>
+<td>Updated to support UEFI 2.5 and PI 1.4</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Added clarificaiton regarding use of .. and . in path names</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Add support to generate an FMP Capsule in section 3.7 and added new section for FMP Payload data.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Since the above adds a new feature, update minor revision of FDF SPECIFICATION to 0x00010019 Only FDF files that use new feature need to use 0x0010019,</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>older FDF files that do not use the functionality do not need to modify the FDF_SPECIFICATION values</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Added clarification on when the FDF_SPECIFICATION value must be updated to 0x00010019</td>
+<td></td>
+</tr>
+<tr>
+<td>1.24 w/</td>
+<td>Updates:</td>
+<td>July 2015</td>
+</tr>
+<tr>
+<td>Errata A</td>
+<td>- Require a boolean flag, FvNameString to an FV section in order for the tools to generate the the FvNameString entry in an extended FV header.</td>
+<td></td>
+</tr>
+<tr>
+<td>1.26</td>
+<td>Updates:</td>
+<td>January 2016</td>
+</tr>
+<tr>
+<td></td>
+<td>Specification revision to 1.26</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Revised WORKSPACE wording for updated build system that can handle packages located outside of the</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>WORKSPACE directory tree (refer to the TianoCore.org/ EDKII website for additional instructions on setting up a development environment).</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Added new system environment variables,</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>PACKAGES_PATH and EDK_TOOLS_BIN, used by the build system.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Allow INF statements in FD regions.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Clarified [UserExtensions] content in chapter 2 (to match implementation)</td>
+<td></td>
+</tr>
+<tr>
+<td>1.28</td>
+<td>Convert to GitBooks</td>
+<td>June 2017</td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://bugzilla.tianocore.org/show_bug.cgi?id=426" target="_blank">#426</a> IMAGE_TYPE_ID must be provided with value, FDF should mark it as required section</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://bugzilla.tianocore.org/show_bug.cgi?id=373" target="_blank">#373</a> Conditional statement examples incorrect</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://bugzilla.tianocore.org/show_bug.cgi?id=461" target="_blank">#461</a> FDF Spec: add a super script number for the <fmpfiledata></fmpfiledata></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://bugzilla.tianocore.org/show_bug.cgi?id=249" target="_blank">#249</a> FDF spec miss &apos;<uifmpname>&apos; definition</uifmpname></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://bugzilla.tianocore.org/show_bug.cgi?id=350" target="_blank">#350</a> [FDF Spec] Extend the macro usage in the !include statement</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Changed the FDF_SPECIFICATION value from 0x0001001A to 0x0001001B or 1.27</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Extended the FV and Capsule, FILE RAW statement formats to support multiple binary files.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Changed section 3.8 [FmpPayload] to add definitions for MONOTONIC_COUNT and CERTIFICATE_GUID, plus some notes about how these are used.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://bugzilla.tianocore.org/show_bug.cgi?id=142" target="_blank">#142</a> Update EDK II FDF Specification to allow sections in any order</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://bugzilla.tianocore.org/show_bug.cgi?id=478" target="_blank">#478</a> FDF spec: extend the <fmpfiledata> to support <fvstatements> and <fdstatenents></fdstatenents></fvstatements></fmpfiledata></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://bugzilla.tianocore.org/show_bug.cgi?id=353" target="_blank">#353</a> Build spec: Allow nested includes in DSC and FDF files</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://bugzilla.tianocore.org/show_bug.cgi?id=520" target="_blank">#520</a> FDF spec: Update Precedence of PCD Values</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://bugzilla.tianocore.org/show_bug.cgi?id=585" target="_blank">#585</a> FDF Spec: Update the FDF_SPECIFICATION version to 0x0001001B or 1.27</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                    
+                    
+
+<div>
+    <hr>
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II Flash Description (FDF) File Specification</div>
+        <div style="text-align:right">Revision 1.28</div>
+      </h2>  
+    
+</div>
+
+
+
+                
+            </div>
+
+            
+                
+                
+                <a href="1_introduction/#1-introduction" class="navigation navigation-next navigation-unique" aria-label="Next page: 1 Introduction">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"EDK II Flash Description (FDF) File Specification","level":"1.1","depth":1,"next":{"title":"1 Introduction","level":"1.2","depth":1,"anchor":"#1-introduction","path":"1_introduction/README.md","ref":"1_introduction/README.md#1-introduction","articles":[{"title":"1.1 Overview","level":"1.2.1","depth":2,"anchor":"#11-overview","path":"1_introduction/11_overview.md","ref":"1_introduction/11_overview.md#11-overview","articles":[]},{"title":"1.2 Terms","level":"1.2.2","depth":2,"anchor":"#12-terms","path":"1_introduction/12_terms.md","ref":"1_introduction/12_terms.md#12-terms","articles":[]},{"title":"1.3 Related Information","level":"1.2.3","depth":2,"anchor":"#13-related-information","path":"1_introduction/13_related_information.md","ref":"1_introduction/13_related_information.md#13-related-information","articles":[]},{"title":"1.4 Target Audience","level":"1.2.4","depth":2,"anchor":"#14-target-audience","path":"1_introduction/14_target_audience.md","ref":"1_introduction/14_target_audience.md#14-target-audience","articles":[]},{"title":"1.5 Conventions Used in this Document","level":"1.2.5","depth":2,"anchor":"#15-conventions-used-in-this-document","path":"1_introduction/15_conventions_used_in_this_document.md","ref":"1_introduction/15_conventions_used_in_this_document.md#15-conventions-used-in-this-document","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"title":"EDK II Flash Description (FDF) File Specification","version":"Revision 1.28"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2020-12-01T05:15:21.008Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-01T05:15:51.239Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
