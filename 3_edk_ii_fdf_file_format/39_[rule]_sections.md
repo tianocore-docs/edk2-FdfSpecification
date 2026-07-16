@@ -83,7 +83,7 @@ Conditional statements may be used anywhere within this section.
                         || COMPONENT_TYPE == "PE32_PEIM" ):
                         <TS> "FILE" <MTS> <FvType1> <Eq>
                         <FileStatement1>
-                        elif (MODULE_TYPE == "DXE_CORE" 
+                        elif (MODULE_TYPE == "DXE_CORE"
                         || MODULE_TYPE == "DXE_DRIVER"
                         || MODULE_TYPE == "DXE_SAL_DRIVER"
                         || MODULE_TYPE == "SMM_CORE"
@@ -177,12 +177,14 @@ Conditional statements may be used anywhere within this section.
 <Ext>               ::= <FS> "." [a-zA-Z][a-zA-Z0-9]{0,}
 <C16FileType>       ::= "COMPAT16" [<FfsAlignment>]
 <Pe32FileType>      ::= "PE32" <MTS> [<FfsAlignment>]
-                        [<ChkReloc>]
+                        [<XipFlag>] [<ChkReloc>]
+<XipFlag>           ::= "Xip" <Eq> <BoolType> <MTS>
 <ChkReloc>          ::= if (MODULE_TYPE == "SEC"
                         || MODULE_TYPE == "PEI_CORE"
                         || MODULE_TYPE == "PEIM"): [<RelocFlags>]
 <PicFileType>       ::= "PIC" <MTS> [<FfsAlignment>]
-<TeFileType>        ::= "TE" <MTS> [<FfsAlignment>] [<ChkReloc>]
+<TeFileType>        ::= "TE" <MTS> [<FfsAlignment>] [<XipFlag>]
+                        [<ChkReloc>]
 <RawFileType>       ::= {<BinTypes>} {<AcpiFileTypes>} <MTS>
                         [<FfsAlignment>]
 <BinTypes>          ::= {"BIN"} {"RAW"}
@@ -280,6 +282,34 @@ contain binary content.
 Compression sections that use `PI_STD` compression do not have
 `PROCESSING_REQUIRED = TRUE` flag, it is only required for GUIDED sections.
 
+**_Xip_**
+
+Optional keyword for PE32 and TE leaf sections. Specifies whether the PE32 or
+TE section file should be rebased for eXecute-In-Place (XIP) operation when the
+FV has `FvForceRebase = TRUE`.
+
+Valid values: `TRUE`, `FALSE`
+
+Default: If not specified, the file will not be individually marked for XIP
+rebase.
+
+The `Xip`, `Align`, and `RELOCS_STRIPPED`/`RELOCS_RETAINED` keywords may appear
+in any order within the PE32 or TE section definition.
+
+Named rules with `RuleOverride` provide per-module granularity for XIP control.
+
+The following table describes the rebase behavior for a file based on
+`FvForceRebase`, whether any file in the FV has `Xip=TRUE`, and the file's own
+`Xip` setting:
+
+| FvForceRebase | Any file has `Xip=TRUE` | This file's `Xip` | Result |
+|:---:|:---:|:---:|:---|
+| `TRUE` | No | any | Rebase (legacy behavior) |
+| `TRUE` | Yes | `TRUE` | Rebase |
+| `TRUE` | Yes | `FALSE` or not specified | No rebase |
+| `FALSE` | any | any | No rebase |
+| not specified | any | any | See `[FV]` section `FvForceRebase` documentation |
+
 **_User Interface (UI) entries_**
 
 There are three possible methods for specifying a User Interface string. 1)
@@ -312,6 +342,36 @@ Wildcard characters are not permitted
     PEI_DEPEX PEI_DEPEX Optional |.Depex
     VERSION STRING    = "$(INF_VERSION)" Optional BUILD_NUM = $(BUILD_NUM)
     UI UNI_UI Optional | .uni
+  }
+
+[Rule.Common.PEI_CORE]
+  FILE PEI_CORE = $(NAMED_GUID) {
+    PE32     PE32   Align=Auto  Xip=TRUE   $(INF_OUTPUT)/$(MODULE_NAME).efi
+    UI       STRING ="$(MODULE_NAME)" Optional
+    VERSION  STRING ="$(INF_VERSION)" Optional BUILD_NUM=$(BUILD_NUMBER)
+  }
+
+[Rule.Common.PEIM.XIP]
+  FILE PEIM = $(NAMED_GUID) {
+    PEI_DEPEX PEI_DEPEX Optional $(INF_OUTPUT)/$(MODULE_NAME).depex
+    PE32      PE32   Align=Auto  Xip=TRUE   $(INF_OUTPUT)/$(MODULE_NAME).efi
+    UI       STRING="$(MODULE_NAME)" Optional
+    VERSION  STRING="$(INF_VERSION)" Optional BUILD_NUM=$(BUILD_NUMBER)
+  }
+
+[Rule.Common.PEIM.NOXIP]
+  FILE PEIM = $(NAMED_GUID) {
+    PEI_DEPEX PEI_DEPEX Optional $(INF_OUTPUT)/$(MODULE_NAME).depex
+    PE32      PE32   Align=Auto              $(INF_OUTPUT)/$(MODULE_NAME).efi
+    UI       STRING="$(MODULE_NAME)" Optional
+    VERSION  STRING="$(INF_VERSION)" Optional BUILD_NUM=$(BUILD_NUMBER)
+  }
+
+[Rule.Common.DXE_CORE]
+  FILE DXE_CORE = $(NAMED_GUID) {
+    PE32     PE32   Align=Auto              $(INF_OUTPUT)/$(MODULE_NAME).efi
+    UI       STRING ="$(MODULE_NAME)" Optional
+    VERSION  STRING ="$(INF_VERSION)" Optional BUILD_NUM=$(BUILD_NUMBER)
   }
 
 [Rule.Common.PEIM.PE32]
