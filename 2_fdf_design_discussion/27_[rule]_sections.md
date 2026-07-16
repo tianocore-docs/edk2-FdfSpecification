@@ -72,6 +72,12 @@ The generic form of the entries for leaf sections is:
 
 `<SectionType> <FileType> [Options] [{<Filename>} {<Extension>}]`
 
+For PE32 and TE leaf sections, an optional `Xip=TRUE` or `Xip=FALSE` keyword
+may be specified. When `Xip=TRUE` is set and the parent FV uses
+`FvForceRebase = TRUE`, the PE32 or TE image will be rebased for XIP operation.
+The `Xip`, `Align`, and `RELOCS_STRIPPED`/`RELOCS_RETAINED` keywords may appear
+in any order within the leaf section definition.
+
 When processing the FDF file, the following rules apply (in order):
 
 1. If `<SectionType>` not defined or not a legal name, then error
