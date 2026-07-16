@@ -81,6 +81,13 @@ another place. Therefore, the backup FV must be rebased to run at another
 address. The `FvBaseAddress` and the optional `FvForceRebase` attributes must be
 above `FvAlignment` attribute.
 
+When `FvForceRebase` is set to `TRUE`, the rebase behavior depends on whether
+any `[Rule]` section uses the `Xip=TRUE` keyword. If at least one file in the
+FV is marked `Xip=TRUE` through its applicable Rule, only those files are
+rebased. If no files specify `Xip=TRUE`, all eligible files are rebased,
+preserving legacy behavior. Named rules with `RuleOverride` in the `[FV]`
+section's INF statements provide per-module granularity for XIP control.
+
 ### 2.5.1 DEFINE Statements
 
 `DEFINE` statements are used to define Macro definitions that are scoped to the
@@ -469,7 +476,7 @@ The following keywords are used for valid `LEAF_SECTION` types.
 
 The argument, `build #`, is only valid for `VERSION` leaf section. The number
 may be specified in the platform description (DSC) file's `[Defines]` section,
-`BUILD_NUMBER` element. 
+`BUILD_NUMBER` element.
 
 The **_Filename_** is only optional for `VERSION` and `UI`.
 
