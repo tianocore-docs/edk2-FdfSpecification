@@ -318,6 +318,20 @@ The `FvBaseAddress`, if present, must be listed before the `FvAlignment`
 element. If present, the `FvForceRebase` must immediately follow the
 `FvBaseAddress`.
 
+**_FvForceRebase_**
+
+Controls whether PE32/TE images in the FV are rebased to their final execution
+address. The rebase behavior depends on `FvForceRebase`, `FvBaseAddress`, and
+whether any `[Rule]` section specifies the `Xip=TRUE` keyword.
+
+| FvForceRebase | FvBaseAddress | Xip in any Rule | Result |
+|:---:|:---:|:---:|:---|
+| `TRUE` | any | No files have `Xip=TRUE` | Rebase ALL eligible files (legacy) |
+| `TRUE` | any | At least one file has `Xip=TRUE` | Rebase ONLY files with `Xip=TRUE` |
+| `FALSE` | any | any | No rebase |
+| not specified | != 0 | any | Rebase ALL eligible files (legacy, `Xip` not consulted) |
+| not specified | == 0 or not specified | any | No rebase |
+
 #### Parameters
 
 **_FvBaseAddress_**
