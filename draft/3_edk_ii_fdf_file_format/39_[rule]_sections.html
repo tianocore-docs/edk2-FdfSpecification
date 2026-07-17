@@ -775,7 +775,7 @@
     
       <h2>
         <div style="position:absolute;text-align:left">EDK II Flash Description (FDF) File Specification</div>
-        <div style="position:absolute;width:100%;text-align:center">DRAFT [04/30/2025 11:45:16]</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [07/17/2026 06:36:55]</div>
         <div style="text-align:right">Revision 1.28</div>
       </h2>  
     
@@ -864,7 +864,7 @@ typed:</p>
                         || COMPONENT_TYPE == <span class="hljs-string">&quot;PE32_PEIM&quot;</span> ):
                         &lt;TS&gt; <span class="hljs-string">&quot;FILE&quot;</span> &lt;MTS&gt; &lt;FvType1&gt; &lt;Eq&gt;
                         &lt;FileStatement1&gt;
-                        elif (MODULE_TYPE == <span class="hljs-string">&quot;DXE_CORE&quot;</span> 
+                        elif (MODULE_TYPE == <span class="hljs-string">&quot;DXE_CORE&quot;</span>
                         || MODULE_TYPE == <span class="hljs-string">&quot;DXE_DRIVER&quot;</span>
                         || MODULE_TYPE == <span class="hljs-string">&quot;DXE_SAL_DRIVER&quot;</span>
                         || MODULE_TYPE == <span class="hljs-string">&quot;SMM_CORE&quot;</span>
@@ -958,12 +958,14 @@ typed:</p>
 &lt;Ext&gt;               ::= &lt;FS&gt; <span class="hljs-string">&quot;.&quot;</span> [a-zA-Z][a-zA-Z0<span class="hljs-number">-9</span>]{<span class="hljs-number">0</span>,}
 &lt;C16FileType&gt;       ::= <span class="hljs-string">&quot;COMPAT16&quot;</span> [&lt;FfsAlignment&gt;]
 &lt;Pe32FileType&gt;      ::= <span class="hljs-string">&quot;PE32&quot;</span> &lt;MTS&gt; [&lt;FfsAlignment&gt;]
-                        [&lt;ChkReloc&gt;]
+                        [&lt;XipFlag&gt;] [&lt;ChkReloc&gt;]
+&lt;XipFlag&gt;           ::= <span class="hljs-string">&quot;Xip&quot;</span> &lt;Eq&gt; &lt;BoolType&gt; &lt;MTS&gt;
 &lt;ChkReloc&gt;          ::= <span class="hljs-keyword">if</span> (MODULE_TYPE == <span class="hljs-string">&quot;SEC&quot;</span>
                         || MODULE_TYPE == <span class="hljs-string">&quot;PEI_CORE&quot;</span>
                         || MODULE_TYPE == <span class="hljs-string">&quot;PEIM&quot;</span>): [&lt;RelocFlags&gt;]
 &lt;PicFileType&gt;       ::= <span class="hljs-string">&quot;PIC&quot;</span> &lt;MTS&gt; [&lt;FfsAlignment&gt;]
-&lt;TeFileType&gt;        ::= <span class="hljs-string">&quot;TE&quot;</span> &lt;MTS&gt; [&lt;FfsAlignment&gt;] [&lt;ChkReloc&gt;]
+&lt;TeFileType&gt;        ::= <span class="hljs-string">&quot;TE&quot;</span> &lt;MTS&gt; [&lt;FfsAlignment&gt;] [&lt;XipFlag&gt;]
+                        [&lt;ChkReloc&gt;]
 &lt;RawFileType&gt;       ::= {&lt;BinTypes&gt;} {&lt;AcpiFileTypes&gt;} &lt;MTS&gt;
                         [&lt;FfsAlignment&gt;]
 &lt;BinTypes&gt;          ::= {<span class="hljs-string">&quot;BIN&quot;</span>} {<span class="hljs-string">&quot;RAW&quot;</span>}
@@ -1047,6 +1049,61 @@ contain binary content.</p>
 <p><strong><em>COMPRESS</em></strong></p>
 <p>Compression sections that use <code>PI_STD</code> compression do not have
 <code>PROCESSING_REQUIRED = TRUE</code> flag, it is only required for GUIDED sections.</p>
+<p><strong><em>Xip</em></strong></p>
+<p>Optional keyword for PE32 and TE leaf sections. Specifies whether the PE32 or
+TE section file should be rebased for eXecute-In-Place (XIP) operation when the
+FV has <code>FvForceRebase = TRUE</code>.</p>
+<p>Valid values: <code>TRUE</code>, <code>FALSE</code></p>
+<p>Default: If not specified, the file will not be individually marked for XIP
+rebase.</p>
+<p>The <code>Xip</code>, <code>Align</code>, and <code>RELOCS_STRIPPED</code>/<code>RELOCS_RETAINED</code> keywords may appear
+in any order within the PE32 or TE section definition.</p>
+<p>Named rules with <code>RuleOverride</code> provide per-module granularity for XIP control.</p>
+<p>The following table describes the rebase behavior for a file based on
+<code>FvForceRebase</code>, whether any file in the FV has <code>Xip=TRUE</code>, and the file&apos;s own
+<code>Xip</code> setting:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">FvForceRebase</th>
+<th style="text-align:center">Any file has <code>Xip=TRUE</code></th>
+<th style="text-align:center">This file&apos;s <code>Xip</code></th>
+<th style="text-align:left">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>TRUE</code></td>
+<td style="text-align:center">No</td>
+<td style="text-align:center">any</td>
+<td style="text-align:left">Rebase (legacy behavior)</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>TRUE</code></td>
+<td style="text-align:center">Yes</td>
+<td style="text-align:center"><code>TRUE</code></td>
+<td style="text-align:left">Rebase</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>TRUE</code></td>
+<td style="text-align:center">Yes</td>
+<td style="text-align:center"><code>FALSE</code> or not specified</td>
+<td style="text-align:left">No rebase</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>FALSE</code></td>
+<td style="text-align:center">any</td>
+<td style="text-align:center">any</td>
+<td style="text-align:left">No rebase</td>
+</tr>
+<tr>
+<td style="text-align:center">not specified</td>
+<td style="text-align:center">any</td>
+<td style="text-align:center">any</td>
+<td style="text-align:left">See <code>[FV]</code> section <code>FvForceRebase</code> documentation</td>
+</tr>
+</tbody>
+</table>
 <p><strong><em>User Interface (UI) entries</em></strong></p>
 <p>There are three possible methods for specifying a User Interface string. 1)
 Specify the string value in the FDF file, 2) specify a plain ASCII text file
@@ -1070,6 +1127,36 @@ Wildcard characters are not permitted</p>
     PEI_DEPEX PEI_DEPEX Optional |.Depex
     VERSION STRING    = &quot;$(INF_VERSION)&quot; Optional BUILD_NUM = $(BUILD_NUM)
     UI UNI_UI Optional | .uni
+  }
+
+[Rule.Common.PEI_CORE]
+  FILE PEI_CORE = $(NAMED_GUID) {
+    PE32     PE32   Align=Auto  Xip=TRUE   $(INF_OUTPUT)/$(MODULE_NAME).efi
+    UI       STRING =&quot;$(MODULE_NAME)&quot; Optional
+    VERSION  STRING =&quot;$(INF_VERSION)&quot; Optional BUILD_NUM=$(BUILD_NUMBER)
+  }
+
+[Rule.Common.PEIM.XIP]
+  FILE PEIM = $(NAMED_GUID) {
+    PEI_DEPEX PEI_DEPEX Optional $(INF_OUTPUT)/$(MODULE_NAME).depex
+    PE32      PE32   Align=Auto  Xip=TRUE   $(INF_OUTPUT)/$(MODULE_NAME).efi
+    UI       STRING=&quot;$(MODULE_NAME)&quot; Optional
+    VERSION  STRING=&quot;$(INF_VERSION)&quot; Optional BUILD_NUM=$(BUILD_NUMBER)
+  }
+
+[Rule.Common.PEIM.NOXIP]
+  FILE PEIM = $(NAMED_GUID) {
+    PEI_DEPEX PEI_DEPEX Optional $(INF_OUTPUT)/$(MODULE_NAME).depex
+    PE32      PE32   Align=Auto              $(INF_OUTPUT)/$(MODULE_NAME).efi
+    UI       STRING=&quot;$(MODULE_NAME)&quot; Optional
+    VERSION  STRING=&quot;$(INF_VERSION)&quot; Optional BUILD_NUM=$(BUILD_NUMBER)
+  }
+
+[Rule.Common.DXE_CORE]
+  FILE DXE_CORE = $(NAMED_GUID) {
+    PE32     PE32   Align=Auto              $(INF_OUTPUT)/$(MODULE_NAME).efi
+    UI       STRING =&quot;$(MODULE_NAME)&quot; Optional
+    VERSION  STRING =&quot;$(INF_VERSION)&quot; Optional BUILD_NUM=$(BUILD_NUMBER)
   }
 
 [Rule.Common.PEIM.PE32]
@@ -1096,7 +1183,7 @@ Wildcard characters are not permitted</p>
     
       <h2>
         <div style="position:absolute;text-align:left">EDK II Flash Description (FDF) File Specification</div>
-        <div style="position:absolute;width:100%;text-align:center">DRAFT [04/30/2025 11:45:16]</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [07/17/2026 06:36:55]</div>
         <div style="text-align:right">Revision 1.28</div>
       </h2>  
     
@@ -1125,7 +1212,7 @@ Wildcard characters are not permitted</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"3.9 [Rule] Sections","level":"1.4.9","depth":2,"next":{"title":"3.10 PCI OptionRom Section","level":"1.4.10","depth":2,"anchor":"#310-pci-optionrom-section","path":"3_edk_ii_fdf_file_format/310_pci_optionrom_section.md","ref":"3_edk_ii_fdf_file_format/310_pci_optionrom_section.md#310-pci-optionrom-section","articles":[]},"previous":{"title":"3.8 [FmpPayload] Sections","level":"1.4.8","depth":2,"anchor":"#38-fmppayload-sections","path":"3_edk_ii_fdf_file_format/38_[fmppayload]_sections.md","ref":"3_edk_ii_fdf_file_format/38_[fmppayload]_sections.md#38-fmppayload-sections","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II Flash Description (FDF) File Specification","version":"Revision 1.28"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"3_edk_ii_fdf_file_format/39_[rule]_sections.md","mtime":"2025-04-30T23:44:48.977Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-30T23:45:16.534Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3.9 [Rule] Sections","level":"1.4.9","depth":2,"next":{"title":"3.10 PCI OptionRom Section","level":"1.4.10","depth":2,"anchor":"#310-pci-optionrom-section","path":"3_edk_ii_fdf_file_format/310_pci_optionrom_section.md","ref":"3_edk_ii_fdf_file_format/310_pci_optionrom_section.md#310-pci-optionrom-section","articles":[]},"previous":{"title":"3.8 [FmpPayload] Sections","level":"1.4.8","depth":2,"anchor":"#38-fmppayload-sections","path":"3_edk_ii_fdf_file_format/38_[fmppayload]_sections.md","ref":"3_edk_ii_fdf_file_format/38_[fmppayload]_sections.md#38-fmppayload-sections","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II Flash Description (FDF) File Specification","version":"Revision 1.28"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"3_edk_ii_fdf_file_format/39_[rule]_sections.md","mtime":"2026-07-17T18:36:31.896Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-07-17T18:36:55.969Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

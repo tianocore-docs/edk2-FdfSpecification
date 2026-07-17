@@ -775,7 +775,7 @@
     
       <h2>
         <div style="position:absolute;text-align:left">EDK II Flash Description (FDF) File Specification</div>
-        <div style="position:absolute;width:100%;text-align:center">DRAFT [04/30/2025 11:45:16]</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [07/17/2026 06:36:55]</div>
         <div style="text-align:right">Revision 1.28</div>
       </h2>  
     
@@ -862,6 +862,12 @@ swapped to the top and work.</p>
 another place. Therefore, the backup FV must be rebased to run at another
 address. The <code>FvBaseAddress</code> and the optional <code>FvForceRebase</code> attributes must be
 above <code>FvAlignment</code> attribute.</p>
+<p>When <code>FvForceRebase</code> is set to <code>TRUE</code>, the rebase behavior depends on whether
+any <code>[Rule]</code> section uses the <code>Xip=TRUE</code> keyword. If at least one file in the
+FV is marked <code>Xip=TRUE</code> through its applicable Rule, only those files are
+rebased. If no files specify <code>Xip=TRUE</code>, all eligible files are rebased,
+preserving legacy behavior. Named rules with <code>RuleOverride</code> in the <code>[FV]</code>
+section&apos;s INF statements provide per-module granularity for XIP control.</p>
 <h3 id="251-define-statements">2.5.1 DEFINE Statements</h3>
 <p><code>DEFINE</code> statements are used to define Macro definitions that are scoped to the
 individual <code>[FV]</code> sections. <code>DEFINE</code> statements are processed in order, so a
@@ -1165,7 +1171,7 @@ the section type of <code>EFI_SECTION_FREEFORM_SUBTYPE_GUID</code>.</li>
 </ul>
 <p>The argument, <code>build #</code>, is only valid for <code>VERSION</code> leaf section. The number
 may be specified in the platform description (DSC) file&apos;s <code>[Defines]</code> section,
-<code>BUILD_NUMBER</code> element. </p>
+<code>BUILD_NUMBER</code> element.</p>
 <p>The <strong><em>Filename</em></strong> is only optional for <code>VERSION</code> and <code>UI</code>.</p>
 <p>A Unicode string is only valid for <code>VERSION</code> or <code>UI</code> if the Filename is not
 present, and is of the form <code>L&quot;string&quot;</code>.</p>
@@ -1185,7 +1191,7 @@ must contain the data for the section.</p>
     
       <h2>
         <div style="position:absolute;text-align:left">EDK II Flash Description (FDF) File Specification</div>
-        <div style="position:absolute;width:100%;text-align:center">DRAFT [04/30/2025 11:45:16]</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [07/17/2026 06:36:55]</div>
         <div style="text-align:right">Revision 1.28</div>
       </h2>  
     
@@ -1214,7 +1220,7 @@ must contain the data for the section.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"2.5 [FV] Sections","level":"1.3.5","depth":2,"next":{"title":"2.6 [Capsule] Sections","level":"1.3.6","depth":2,"anchor":"#26-capsule-sections","path":"2_fdf_design_discussion/26_[capsule]_sections.md","ref":"2_fdf_design_discussion/26_[capsule]_sections.md#26-capsule-sections","articles":[]},"previous":{"title":"2.4 [FD] Sections","level":"1.3.4","depth":2,"anchor":"#24-fd-sections","path":"2_fdf_design_discussion/24_[fd]_sections.md","ref":"2_fdf_design_discussion/24_[fd]_sections.md#24-fd-sections","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II Flash Description (FDF) File Specification","version":"Revision 1.28"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"2_fdf_design_discussion/25_[fv]_sections.md","mtime":"2025-04-30T23:44:48.976Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-04-30T23:45:16.534Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"2.5 [FV] Sections","level":"1.3.5","depth":2,"next":{"title":"2.6 [Capsule] Sections","level":"1.3.6","depth":2,"anchor":"#26-capsule-sections","path":"2_fdf_design_discussion/26_[capsule]_sections.md","ref":"2_fdf_design_discussion/26_[capsule]_sections.md#26-capsule-sections","articles":[]},"previous":{"title":"2.4 [FD] Sections","level":"1.3.4","depth":2,"anchor":"#24-fd-sections","path":"2_fdf_design_discussion/24_[fd]_sections.md","ref":"2_fdf_design_discussion/24_[fd]_sections.md#24-fd-sections","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"EDK II Flash Description (FDF) File Specification","version":"Revision 1.28"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"2_fdf_design_discussion/25_[fv]_sections.md","mtime":"2026-07-17T18:36:31.895Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-07-17T18:36:55.969Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
